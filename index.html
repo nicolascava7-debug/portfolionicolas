@@ -376,25 +376,80 @@ background-size:60px 60px}
 .bio-name-tag::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#fff;box-shadow:0 0 10px rgba(255,255,255,0.5);transition:width 0.4s cubic-bezier(0.16,1,0.3,1)}
 .bio-name-tag:hover{opacity:1;text-shadow:0 0 20px rgba(255,255,255,0.4),0 0 60px rgba(255,255,255,0.1);letter-spacing:3px;transform:translateY(-2px)}
 .bio-name-tag:hover::after{width:100%}
+
+/* VIDEO GRID */
+.vid-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.vid-grid .prj-video{margin:0;aspect-ratio:1;overflow:hidden}
+.vid-grid .prj-video iframe{width:100%!important;height:100%!important}
+.vid-center{display:flex;justify-content:center;margin:12px 0}
+.vid-center .prj-video{width:calc(50% - 6px);aspect-ratio:1;margin:0;overflow:hidden}
+.vid-center .prj-video iframe{width:100%!important;height:100%!important}
+/* PROBLEMATIQUE HIGHLIGHT */
+.prj-problematique{font-size:18px!important;color:#00FF41!important;padding:16px 20px;border:1px solid rgba(0,255,65,0.3);background:rgba(0,255,65,0.04);margin:14px 0;position:relative;overflow:hidden;animation:probPulse 3s ease-in-out infinite}
+.prj-problematique::before{content:'⚡';position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:22px;opacity:0.3}
+@keyframes probPulse{0%,100%{border-color:rgba(0,255,65,0.2);box-shadow:0 0 5px rgba(0,255,65,0)}50%{border-color:rgba(0,255,65,0.5);box-shadow:0 0 20px rgba(0,255,65,0.1)}}
+/* TEXT READABILITY */
+.prj-text{color:#e2e8f0!important}
+.prj-bloc-item{color:#e2e8f0!important}
+
+/* BENCHMARK TABLES */
+.bench-table{width:100%;border-collapse:collapse;margin:14px 0;font-family:'Montserrat',sans-serif;font-size:14px}
+.bench-table th{font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:2px;color:var(--volt);background:rgba(0,255,65,0.06);padding:12px 14px;text-align:left;border:1px solid rgba(0,255,65,0.15);text-transform:uppercase}
+.bench-table td{padding:13px 15px;border:1px solid var(--slate);color:#e2e8f0;line-height:1.75;font-size:15px;vertical-align:top;transition:all 0.3s}
+.bench-table tr{transition:all 0.3s}
+.bench-table tr:hover td{background:rgba(0,255,65,0.03);border-color:rgba(0,255,65,0.2)}
+.bench-table td:first-child{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;color:var(--volt);white-space:nowrap}
+
+/* TOOLS SECTION ENHANCED */
+.prj-badges{margin:16px 0!important;padding-top:12px;border-top:1px solid rgba(0,255,65,0.1)}
+.prj-badges::before{content:'⚙ OUTILS';display:block;font-family:'Orbitron',sans-serif;font-size:11px;color:var(--volt);letter-spacing:3px;margin-bottom:10px;text-shadow:0 0 8px rgba(0,255,65,0.2)}
+
+/* STREET FIGHTER SELECT */
+.sf-overlay{position:absolute;inset:0;z-index:999;display:flex;flex-direction:column;overflow:hidden;background:#1a1a4a}
+.sf-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.sf-earth{width:280px;height:280px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#3a7a3a 0%,#2a6a2a 20%,#1a5a8a 40%,#1a4a7a 60%,#1a3a6a 80%,#0a2a5a 100%);border:3px solid rgba(100,150,255,0.3);box-shadow:0 0 60px rgba(80,120,255,0.2),inset 0 0 40px rgba(0,0,0,0.3);position:relative;opacity:0.4}
+.sf-earth::after{content:'';position:absolute;inset:0;border-radius:50%;background:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,0.08),transparent 50%)}
+.sf-title{position:relative;z-index:2;text-align:center;padding:20px 0 10px;font-family:'Orbitron',sans-serif;font-size:28px;font-weight:900;color:#FFD700;letter-spacing:4px;text-shadow:0 0 20px rgba(255,215,0,0.4),3px 3px 0 #8B6914}
+.sf-subtitle{position:relative;z-index:2;text-align:center;font-family:'Orbitron',sans-serif;font-size:14px;color:rgba(255,215,0,0.6);letter-spacing:6px;margin-bottom:10px}
+.sf-selected{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;padding:0 30px;flex:1;min-height:0}
+.sf-sel-left,.sf-sel-right{width:140px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;opacity:0;transition:opacity 0.3s}
+.sf-sel-left.show,.sf-sel-right.show{opacity:1}
+.sf-sel-silhouette{width:120px;height:160px;display:flex;align-items:center;justify-content:center}
+.sf-sel-silhouette svg{width:100%;height:100%;filter:drop-shadow(0 0 15px rgba(0,255,65,0.3))}
+.sf-sel-name{font-family:'Orbitron',sans-serif;font-size:16px;font-weight:700;color:#FFD700;letter-spacing:2px;margin-top:6px;text-shadow:0 0 10px rgba(255,215,0,0.3)}
+.sf-sel-info{font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,0.5);margin-top:2px}
+.sf-grid{position:relative;z-index:2;display:flex;justify-content:center;gap:6px;padding:12px 20px 18px;flex-wrap:wrap}
+.sf-char{width:90px;height:90px;border:3px solid rgba(100,150,255,0.5);background:rgba(10,20,60,0.7);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.25s;position:relative;overflow:hidden}
+.sf-char:hover{border-color:#FFD700;box-shadow:0 0 20px rgba(255,215,0,0.4),inset 0 0 15px rgba(255,215,0,0.1);transform:scale(1.1)}
+.sf-char.selected{border-color:#FFD700;box-shadow:0 0 25px rgba(255,215,0,0.6);background:rgba(255,215,0,0.15)}
+.sf-char.selected::after{content:'';position:absolute;inset:0;border:2px solid #FFD700;animation:sfPulse 0.8s ease-in-out infinite}
+@keyframes sfPulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.sf-char img{width:100%;height:100%;object-fit:cover;filter:brightness(0.8);transition:filter 0.2s}
+.sf-char:hover img{filter:brightness(1.1)}
+.sf-char.selected img{filter:brightness(1.2) contrast(1.1)}
+.sf-sel-silhouette img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 0 20px rgba(0,255,65,0.4))}
+.sf-sel-silhouette{width:160px;height:220px;display:flex;align-items:center;justify-content:center}
+.sf-pick-label{position:relative;z-index:2;text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(255,215,0,0.7);letter-spacing:3px;margin-top:6px;min-height:18px}
+.sf-ps{position:relative;z-index:2;text-align:center;font-family:'Orbitron',sans-serif;font-size:11px;color:rgba(100,150,255,0.6);letter-spacing:4px;padding:4px 0 2px}
 /* ANIMATIONS */
 
 /* === TEXT SIZE BOOST === */
-.wc-text,.prj-text{font-size:16px!important;line-height:1.9!important}
-.prj-bloc-item{font-size:15px!important;line-height:1.8!important}
-.prj-stitle{font-size:24px!important}
-.prj-stag{font-size:12px!important}
-.prj-bloc-title{font-size:13px!important}
+.wc-text,.prj-text{font-size:17px!important;line-height:1.95!important}
+.prj-bloc-item{font-size:16px!important;line-height:1.85!important}
+.prj-stitle{font-size:26px!important}
+.prj-stag{font-size:13px!important}
+.prj-bloc-title{font-size:14px!important}
 .wc-title{font-size:28px!important}
-.prj-tree-title{font-size:16px!important}
-.prj-folder-name{font-size:15px!important}
-.prj-page-name{font-size:20px!important}
-.win-title{font-size:12px!important}
-.bio-big-title{font-size:58px!important}
+.prj-tree-title{font-size:18px!important}
+.prj-folder-name{font-size:16px!important}
+.prj-page-name{font-size:22px!important}
+.win-title{font-size:13px!important}
+.bio-big-title{font-size:60px!important}
 .bio-contact-title{font-size:19px!important}
 .bio-mac-body h3{font-size:20px!important}
 .bio-exp-role{font-size:16px!important}
 .bio-edu-school{font-size:16px!important}
-.prj-badge{font-size:12px!important}
+.prj-badge{font-size:13px!important;padding:8px 16px!important;background:rgba(0,255,65,0.04)!important;border-color:rgba(0,255,65,0.2)!important;color:var(--text)!important;letter-spacing:1px}
 .pills-title,.pills-container{font-size:14px}
 .pill-label{font-size:11px!important}
 
@@ -561,7 +616,12 @@ background-size:60px 60px}
     <div class="prj-page" id="digital-loop"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('digital')">← RETOUR</button><div class="prj-page-name">PROJECT: LOOP_LEGACY</div></div><div class="prj-scroll">
       <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div class="prj-stitle">Le Brief</div><div class="prj-text">Le studio indépendant Devolver Digital, reconnu pour ses jeux audacieux à l'identité forte, lance son nouveau projet ambitieux Loop Legacy. Ce jeu propose un concept où le joueur incarne un héros ou une héroïne pris dans une boucle temporelle, dans une mégalopole futuriste : Nox. Dans Loop Legacy, le héros Kortex ou l'héroïne Karma se bat pour briser une boucle temporelle qui piège Nox. Chaque jour se répète, mais les décisions du joueur modifient subtilement chaque boucle.</div><div class="prj-text">Le projet consiste à créer une identité visuelle marquante pour ce nouveau jeu vidéo. Les livrables sont la réalisation d'un moodboard, d'une palette de couleur, d'une typographie et d'un logo typographique, et d'une affiche pour le jeu.</div></div>
       <div class="prj-section"><div class="prj-stag">// section_02 — la cible</div><div class="prj-stitle">Persona : Alex</div><div class="prj-persona"><img src="https://i.ibb.co/nsbGHK9W/Capture-d-cran-2026-04-02-173110.png" alt="Persona Alex"></div></div>
-      <div class="prj-section"><div class="prj-stag">// section_03 — moodboard & benchmark</div><div class="prj-stitle">Moodboard</div><div class="prj-img"><img src="https://i.ibb.co/k6xwL6bg/Capture-d-cran-2026-03-29-192237.png" alt="Moodboard"></div><div class="prj-stitle">Benchmark</div><div class="prj-text">Cyberpunk 2077 : Maximalisme urbain, réalisme, néons publicitaires omniprésents. L'ambiance de la mégalopole Nox. Utiliser ce jeu pour la palette de couleurs (jaune électrique, bleu nuit, magenta) mais éviter le trop-plein de détails pour garder l'esprit "Indépendant".</div><div class="prj-text">Hotline Miami (Devolver) : Rétro-Brutalisme, pixel art, couleurs saturées et vibrantes. L'identité "Punk" de l'éditeur. S'inspirer de l'aspect typographique percutant et des contrastes de couleurs très forts pour le logo.</div><div class="prj-text">Hades : Néo-Classique / Isométrique. Très stylisé, jeux de lumières divines. La gestion de la narration dans la boucle. Intéressant pour le design de Kortex ou Karma : des personnages aux silhouettes iconiques sur le décor sombre de Nox.</div><div class="prj-text">Ghostrunner : Minimalisme High-Tech, froid, tranchant, verticalité extrême, vitesse. Le côté "Kortex/Karma contre la montre". Idéal pour le Moodboard : textures de métal froid, verre brisé et reflets de pluie sur le bitume.</div></div>
+      <div class="prj-section"><div class="prj-stag">// section_03 — moodboard & benchmark</div><div class="prj-stitle">Moodboard</div><div class="prj-img"><img src="https://i.ibb.co/k6xwL6bg/Capture-d-cran-2026-03-29-192237.png" alt="Moodboard"></div><div class="prj-stitle">Benchmark</div><table class="bench-table"><tr><th>Jeu</th><th>Style Visuel</th><th>Points Clés</th><th>Analyse pour Loop Legacy</th></tr>
+<tr><td>Cyberpunk 2077</td><td>Maximalisme urbain, réalisme, néons publicitaires omniprésents</td><td>L'ambiance de la mégalopole Nox. L'idée d'une ville qui "étouffe" le héros.</td><td>Palette de couleurs (jaune électrique, bleu nuit, magenta) mais éviter le trop-plein de détails pour garder l'esprit "Indépendant".</td></tr>
+<tr><td>Hotline Miami</td><td>Rétro-Brutalisme. Pixel art, couleurs saturées et vibrantes</td><td>L'identité "Punk" de l'éditeur. L'urgence de l'action et le côté répétitif du combat.</td><td>S'inspirer de l'aspect typographique percutant et des contrastes de couleurs très forts pour le logo.</td></tr>
+<tr><td>Hades</td><td>Néo-Classique / Isométrique. Très stylisé, jeux de lumières divines</td><td>La gestion de la narration dans la boucle. Chaque mort/répétition apporte une touche visuelle.</td><td>Design de Kortex ou Karma : silhouettes iconiques qui ressortent sur le décor sombre de Nox.</td></tr>
+<tr><td>Ghostrunner</td><td>Minimalisme High-Tech. Froid, tranchant, verticalité extrême</td><td>Le côté "Kortex/Karma contre la montre". L'esthétique des interfaces (HUD) futuristes.</td><td>Moodboard : textures de métal froid, verre brisé et reflets de pluie sur le bitume.</td></tr>
+</table></div>
       <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div class="prj-img"><img src="https://i.ibb.co/1tkD5Yf5/Capture-d-cran-2026-03-29-200104.png" alt="Affiche Loop Legacy"></div><div class="prj-badges"><span class="prj-badge">Adobe Illustrator — Logo</span><span class="prj-badge">Adobe Photoshop — Affiche</span></div></div>
       <div class="prj-section"><div class="prj-stag">// section_05 — compétences</div><div class="prj-stitle">Compétences Validées</div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_01 — Stratégie de communication</div><div class="prj-bloc-item">Analyse du diagnostic (Nox & Devolver) : Étude de l'ADN de Devolver Digital pour définir le positionnement de Loop Legacy.</div><div class="prj-bloc-item">Étude de la cible (Persona) : Création du persona "Alex" pour identifier les besoins et les attentes des joueurs de jeux indépendants.</div><div class="prj-bloc-item">Le Benchmark : Comparaison concurrentielle avec Cyberpunk 2077 et Hotline Miami pour différencier le projet sur le marché.</div><div class="prj-bloc-item">Veille créative : Réalisation du Moodboard pour établir une intention de communication cohérente avec l'univers de la boucle temporelle.</div></div>
@@ -576,10 +636,14 @@ background-size:60px 60px}
     </div></div>
     <!-- ÇA MATCH PAGE -->
     <div class="prj-page" id="digital-match"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('digital')">← RETOUR</button><div class="prj-page-name">PROJECT: ÇA_MATCH</div></div><div class="prj-scroll">
-      <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div class="prj-stitle">Le Brief</div><div class="prj-text">Dans le cadre de ma formation en BTS Communication, j'ai co-créé "Ça Match", un média scolaire digital dédié au sport comme levier de transformation sociale. Ce projet part d'un constat : en 2026, les médias sportifs traditionnels se concentrent sur la performance et les scores, délaissant les enjeux environnementaux et humains. Notre mission est de raconter le sport qui "répare" la société.</div><div class="prj-text">Problématique : Comment le sport peut solutionner les enjeux sociétaux ?</div></div>
+      <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div class="prj-stitle">Le Brief</div><div class="prj-text">Dans le cadre de ma formation en BTS Communication, j'ai co-créé "Ça Match", un média scolaire digital dédié au sport comme levier de transformation sociale. Ce projet part d'un constat : en 2026, les médias sportifs traditionnels se concentrent sur la performance et les scores, délaissant les enjeux environnementaux et humains. Notre mission est de raconter le sport qui "répare" la société.</div><div class="prj-problematique">Problématique : Comment le sport peut solutionner les enjeux sociétaux ?</div></div>
       <div class="prj-section"><div class="prj-stag">// section_02 — la cible</div><div class="prj-stitle">Personas : Léo & Anna</div><div class="prj-persona"><img src="https://i.ibb.co/TMVWF1Ry/Capture-d-cran-2026-04-02-182529.png" alt="Personas"></div></div>
-      <div class="prj-section"><div class="prj-stag">// section_03 — moodboard & benchmark</div><div class="prj-stitle">Moodboard</div><div class="prj-img"><img src="https://i.ibb.co/QFhSYYw9/Capture-d-cran-2026-04-02-183710.png" alt="Moodboard"></div><div class="prj-stitle">Benchmark</div><div class="prj-text">Le marché du sport souffre d'un manque de profondeur. Le groupe L'Équipe, par exemple, a créé une page dédiée au foot féminin et participe à des journées spéciales une fois par an. C'est un début, mais c'est insuffisant. Pour eux, l'humain et le social restent des sujets secondaires, cachés dans des rubriques.</div><div class="prj-text">Pour des géants comme Eurosport, le sport n'est lié qu'au business et à la performance. Leur limite ? Ils montrent des records, mais ils oublient l'impact du sport sur nos vies, notre santé et notre planète.</div></div>
-      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div class="prj-text">Instagram : @camatch__ | Site : nicolascava7.wixsite.com/my-site-1</div><div class="prj-video"><iframe src="https://www.youtube.com/embed/hVjH1LA5jn0" title="Ilona Adam" allowfullscreen></iframe></div><div class="prj-video"><iframe src="https://www.youtube.com/embed/il8nhAAks3A" title="Manifesto" allowfullscreen></iframe></div><div class="prj-video"><iframe src="https://www.youtube.com/embed/453RTqCXtNM" title="Asya" allowfullscreen></iframe></div><div class="prj-badges"><span class="prj-badge">Adobe Illustrator — Logo</span><span class="prj-badge">Wix — Site</span><span class="prj-badge">Glide — Application</span><span class="prj-badge">Adobe Première Pro — Montage vidéo</span><span class="prj-badge">Audacity — Montage audio</span><span class="prj-badge">Canva — Moodboard et prez</span></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_03 — moodboard & benchmark</div><div class="prj-stitle">Moodboard</div><div class="prj-img"><img src="https://i.ibb.co/QFhSYYw9/Capture-d-cran-2026-04-02-183710.png" alt="Moodboard"></div><div class="prj-stitle">Benchmark</div><table class="bench-table"><tr><th>Acteur</th><th>Approche Actuelle</th><th>Limites Identifiées</th><th>Opportunité de Positionnement</th></tr>
+<tr><td>Groupe L'Équipe</td><td>Initiatives ponctuelles : pages dédiées au sport féminin, journées spéciales annuelles</td><td>Traitement de surface. L'humain et le social restent des sujets secondaires relégués en rubriques.</td><td>Intégrer le social au cœur de la ligne éditoriale permanente plutôt qu'en "bonus".</td></tr>
+<tr><td>Eurosport</td><td>Performance & Business : focus exclusif sur les records, les droits et les résultats</td><td>Vision purement comptable. Oubli de l'impact du sport sur la santé, la vie et la planète.</td><td>Humaniser le sport en montrant son rôle d'outil de transformation sociétale et écologique.</td></tr>
+<tr><td>Marché Global</td><td>Manque de profondeur : traitement uniforme centré sur le divertissement</td><td>Déconnexion avec les enjeux de société contemporains.</td><td>Créer un média qui lie performance athlétique et responsabilité citoyenne.</td></tr>
+</table></div>
+      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div class="prj-text">Instagram : @camatch__ | Site : nicolascava7.wixsite.com/my-site-1</div><div class="vid-grid"><div class="prj-video"><iframe src="https://www.youtube.com/embed/hVjH1LA5jn0" title="Ilona Adam" allowfullscreen></iframe></div><div class="prj-video"><iframe src="https://www.youtube.com/embed/il8nhAAks3A" title="Manifesto" allowfullscreen></iframe></div></div><div class="vid-center"><div class="prj-video"><iframe src="https://www.youtube.com/embed/453RTqCXtNM" title="Asya" allowfullscreen></iframe></div></div><div class="prj-badges"><span class="prj-badge">Adobe Illustrator — Logo</span><span class="prj-badge">Wix — Site</span><span class="prj-badge">Glide — Application</span><span class="prj-badge">Adobe Première Pro — Montage vidéo</span><span class="prj-badge">Audacity — Montage audio</span><span class="prj-badge">Canva — Moodboard et prez</span></div></div>
       <div class="prj-section"><div class="prj-stag">// section_05 — compétences</div><div class="prj-stitle">Compétences Validées</div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_01 — Stratégie de communication</div><div class="prj-bloc-item">Analyse du marché : Réalisation d'un benchmark complet pour positionner "Ça Match" comme un média de rupture.</div><div class="prj-bloc-item">Ciblage stratégique : Définition d'un persona précis et de ses besoins en matière de santé mentale et d'engagement social.</div><div class="prj-bloc-item">Élaboration de la problématique : Formulation d'un axe stratégique centré sur le sport comme levier de solutions sociétales.</div></div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_02 — Solutions de communication</div><div class="prj-bloc-item">Direction Artistique : Création d'une identité visuelle cohérente (Logo, charte graphique violet/orange) avec Illustrator.</div><div class="prj-bloc-item">Production Print : Conception des affiches de campagne sous Photoshop en respectant les contraintes de lisibilité urbaine.</div><div class="prj-bloc-item">Conception Rédaction : Rédaction de la ligne éditoriale, du manifeste et du script du spot radio pour susciter l'émotion et l'adhésion.</div></div>
@@ -601,10 +665,14 @@ background-size:60px 60px}
     </div></div>
     <!-- SAMU SOCIAL PAGE -->
     <div class="prj-page" id="print-samu"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('print')">← RETOUR</button><div class="prj-page-name">PROJECT: SAMU_SOCIAL</div></div><div class="prj-scroll">
-      <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div class="prj-stitle">Le Brief</div><div class="prj-text">Concours Mlle Pitch Awards pour le Samusocial de Paris. Mobiliser la générosité publique en valorisant les 30 ans d'actions de l'association. Campagne 360° : affichage urbain, réseaux sociaux et spot radio.</div><div class="prj-text">Problématique : Comment valoriser la diversité des missions du Samusocial pour briser l'indifférence et transformer la perception du sans-abrisme en levier de collecte durable ?</div></div>
+      <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div class="prj-stitle">Le Brief</div><div class="prj-text">Concours Mlle Pitch Awards pour le Samusocial de Paris. Mobiliser la générosité publique en valorisant les 30 ans d'actions de l'association. Campagne 360° : affichage urbain, réseaux sociaux et spot radio.</div><div class="prj-problematique">Problématique : Comment valoriser la diversité des missions du Samusocial pour briser l'indifférence et transformer la perception du sans-abrisme en levier de collecte durable ?</div></div>
       <div class="prj-section"><div class="prj-stag">// section_02 — la cible</div><div class="prj-stitle">Persona : Marc</div><div class="prj-persona"><img src="https://i.ibb.co/rKJpg099/Capture-d-cran-2026-04-02-173831.png" alt="Persona Marc"></div></div>
-      <div class="prj-section"><div class="prj-stag">// section_03 — moodboard & benchmark</div><div class="prj-stitle">Moodboard & Benchmark</div><div class="prj-img"><img src="https://i.ibb.co/B5Ny4Xdw/Capture-d-cran-2026-04-02-174302.png" alt="Moodboard"></div><div class="prj-text">Fondation Abbé Pierre : choc visuel → se différencier par une approche lumineuse. Restos du Cœur : urgence alimentaire → positionner sur l'accompagnement humain. Entourage : approche digitale → rajeunir l'image et faciliter le don.</div></div>
-      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div class="prj-text">Site web : nicolascava7.wixsite.com/samu-social</div><div class="prj-img"><img src="https://i.ibb.co/gZzYdL21/Capture-d-cran-2026-04-02-174437.png" alt="Affiche Samu Social"></div><div class="prj-video"><iframe width="315" height="560" src="https://www.youtube.com/embed/ykhKnnESUDc" title="Tryptique - Samu Social" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="prj-video"><iframe src="https://www.youtube.com/embed/8eGjr3xhmmo" title="Spot Radio" allowfullscreen></iframe></div><div class="prj-badges"><span class="prj-badge">Photoshop</span><span class="prj-badge">Illustrator</span><span class="prj-badge">After Effects</span><span class="prj-badge">Audacity</span><span class="prj-badge">Wix</span></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_03 — moodboard & benchmark</div><div class="prj-stitle">Moodboard & Benchmark</div><div class="prj-img"><img src="https://i.ibb.co/B5Ny4Xdw/Capture-d-cran-2026-04-02-174302.png" alt="Moodboard"></div><table class="bench-table"><tr><th>Acteur</th><th>Style de Communication</th><th>Axe Majeur</th><th>Opportunité pour le Projet</th></tr>
+<tr><td>Fondation pour le Logement des défavorisés</td><td>Indignation & Choc : images fortes pour marquer les esprits</td><td>Sensibilisation par l'émotion brute</td><td>Se différencier via une approche lumineuse axée sur les solutions et l'espoir.</td></tr>
+<tr><td>Restos du Cœur</td><td>Urgence & Masse : message centré sur la survie et l'aide alimentaire</td><td>Réponse immédiate aux besoins primaires</td><td>Mettre en avant l'expertise humaine et médicale et l'accompagnement sur le long terme.</td></tr>
+<tr><td>Entourage</td><td>Digital & Lien Social : communication moderne et dynamique</td><td>Création de réseaux de solidarité de proximité</td><td>Adopter des codes dynamiques pour rajeunir l'image et faciliter le don instantané.</td></tr>
+</table></div>
+      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div class="prj-text">Site web : nicolascava7.wixsite.com/samu-social</div><div class="prj-img"><img src="https://i.ibb.co/gZzYdL21/Capture-d-cran-2026-04-02-174437.png" alt="Affiche Samu Social"></div><div class="vid-grid"><div class="prj-video"><iframe src="https://www.youtube.com/embed/ykhKnnESUDc" title="Tryptique - Samu Social" allowfullscreen></iframe></div><div class="prj-video"><iframe src="https://www.youtube.com/embed/8eGjr3xhmmo" title="Spot Radio" allowfullscreen></iframe></div></div><div class="prj-badges"><span class="prj-badge">Photoshop</span><span class="prj-badge">Illustrator</span><span class="prj-badge">After Effects</span><span class="prj-badge">Audacity</span><span class="prj-badge">Wix</span></div></div>
       <div class="prj-section"><div class="prj-stag">// section_05 — compétences</div><div class="prj-stitle">Compétences Validées</div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_01 — Stratégie</div><div class="prj-bloc-item">Analyse brief annonceur et diagnostic des missions</div><div class="prj-bloc-item">Définition cible (Persona Marc), problématique stratégique</div><div class="prj-bloc-item">Veille concurrentielle positionnement distinctif</div></div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_02 — Solutions</div><div class="prj-bloc-item">Univers graphique + copywriting affichage et digital</div><div class="prj-bloc-item">Réalisation supports print et web, charte éthique</div><div class="prj-bloc-item">Coordination Print/Radio/Digital cohérence 360°</div></div>
@@ -614,10 +682,32 @@ background-size:60px 60px}
   </div></div>
 
   <!-- COMM EVENT -->
-  <div class="os-window" id="win-event" style="width:750px;height:500px;top:40px;left:200px"><div class="win-titlebar" onmousedown="startDrag(event,'win-event')"><div class="win-title">COMMUNICATION ÉVÉNEMENTIELLE</div><div class="win-btns"><div class="win-btn" onclick="toggleFS('win-event')">□</div><div class="win-btn" onclick="minimizeWin('win-event')">_</div><div class="win-btn close" onclick="closeWin('win-event')">✕</div></div></div><div class="win-body" style="padding:0;overflow:hidden">
+  <div class="os-window" id="win-event" style="width:900px;height:620px;top:40px;left:200px"><div class="win-titlebar" onmousedown="startDrag(event,'win-event')"><div class="win-title">COMMUNICATION ÉVÉNEMENTIELLE</div><div class="win-btns"><div class="win-btn" onclick="toggleFS('win-event')">□</div><div class="win-btn" onclick="minimizeWin('win-event')">_</div><div class="win-btn close" onclick="closeWin('win-event')">✕</div></div></div><div class="win-body" style="padding:0;overflow:hidden">
     <div class="prj-page active" id="event-tree"><div class="prj-tree">
-      <div class="prj-tree-title">📂 EVENT_ROOT</div>
-      <div class="prj-folder" style="opacity:0.5;cursor:default"><span>📁</span><span class="prj-folder-name">WE_LOVE_GREEN.prj</span><span class="prj-folder-desc" style="color:var(--volt)">[EN COURS]</span></div>
+      <div class="prj-tree-title">🎮 EVENT_ROOT</div>
+      <div class="prj-folder" onclick="showPrj('event','wlg')"><span>🎮</span><span class="prj-folder-name">WE_LOVE_GREEN.prj</span><span class="prj-folder-desc">Expérience Gaming Festival</span><span class="prj-folder-desc">▸</span></div>
+    </div></div>
+    <!-- WE LOVE GREEN PAGE -->
+    <div class="prj-page" id="event-wlg"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('event')">← RETOUR</button><div class="prj-page-name" style="background:linear-gradient(90deg,var(--volt),#39FF14);-webkit-background-clip:text;-webkit-text-fill-color:transparent">PROJECT: WE_LOVE_GREEN 🎮</div></div><div class="prj-scroll">
+      <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div class="prj-stitle">Le Brief</div><div class="prj-text">Dans le cadre d'un projet scolaire, nous étudions le festival We Love Green, événement précurseur alliant programmation musicale et engagements écoresponsables. L'agence Fest'Event, spécialisée en digitalisation événementielle, a été mandatée pour concevoir une extension numérique interactive. L'enjeu n'est pas de substituer l'expérience physique, mais de l'enrichir via un univers digital inédit.</div><div class="prj-problematique">Problématique : Comment offrir à la Gen Z une expérience de festival virtuelle aussi immersive et engagée que l'événement physique, sans les contraintes de déplacement et avec un impact numérique réduit ?</div></div>
+      <div class="prj-section"><div class="prj-stag">// section_02 — la cible</div><div class="prj-stitle">Persona : Elio</div><div class="prj-persona"><img src="https://i.ibb.co/SX5K9mJP/Capture-d-cran-2026-04-04-114358.png" alt="Persona Elio"></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_03 — moodboard & benchmark</div><div class="prj-stitle">Moodboard</div><div class="prj-img"><img src="https://i.ibb.co/9kzz4fLb/Capture-d-cran-2026-04-04-115303.png" alt="Moodboard"></div><div class="prj-stitle">Benchmark</div><table class="bench-table"><tr><th>Festival</th><th>Plateforme / Modèle</th><th>Points Forts</th><th>Mécaniques Clés</th><th>Leçon pour WLG</th></tr>
+<tr><td>Tomorrowland</td><td>Pangea (Propriétaire 3D)</td><td>Rendu visuel époustouflant et effets spéciaux impossibles dans le monde réel</td><td>Chapitres interactifs et quêtes pour débloquer du contenu exclusif</td><td>Prioriser la narration (storytelling) plutôt que la simple diffusion vidéo.</td></tr>
+<tr><td>Coachella</td><td>Coachellaverse (Metavers Gaming / Fortnite)</td><td>Accessoires réactifs à la musique et intégration de monuments iconiques</td><td>Gamification : collecte d'objets et personnalisation poussée d'avatars</td><td>Les skins et accessoires virtuels sont des moteurs de fidélisation majeurs.</td></tr>
+<tr><td>Ultra Music Festival</td><td>Roblox (Social Gaming)</td><td>Accessibilité massive auprès de la cible 15-25 ans</td><td>Socialisation : danses synchronisées et interactions en direct entre avatars</td><td>La dimension sociale est aussi cruciale que la programmation musicale.</td></tr>
+</table></div>
+      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">🎮 Réalisations — Expérience Gaming</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0"><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/1JYDxxym/Capture-d-cran-2026-04-04-121210.png" alt="Accueil App"></div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/wDmnwb3/Capture-d-cran-2026-04-04-121230.png" alt="Avatar"></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0"><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/zT6vYcYf/Capture-d-cran-2026-04-04-121243.png" alt="Carte Gaming"></div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/3YQdQp7b/Capture-d-cran-2026-04-04-121254.png" alt="Explore Cyberpunk"></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0"><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/FbCK8Xb8/Capture-d-cran-2026-04-04-121305.png" alt="Recyclage Game"></div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/sdhntFTV/Capture-d-cran-2026-04-04-121313.png" alt="Leaderboard"></div></div><div style="display:flex;justify-content:center;margin:14px 0"><div class="prj-img" style="margin:0;width:50%"><img src="https://i.ibb.co/8grTQMph/Capture-d-cran-2026-04-04-121326.png" alt="Récompense VIP"></div></div><div class="prj-badges"><span class="prj-badge">Figma</span></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_05 — compétences</div><div class="prj-stitle">Compétences Validées</div>
+        <div class="prj-bloc"><div class="prj-bloc-title">BLOC_01 — Stratégie de communication</div><div class="prj-bloc-item">Analyser le diagnostic de l'annonceur : Saisir l'ADN de We Love Green (écologie, musique, société) pour s'assurer que l'extension numérique est cohérente.</div><div class="prj-bloc-item">Caractériser les cibles : Identifier les besoins de la Gen Z (15-25 ans), leur usage de Roblox/Twitch et leur préférence pour le Live interactif.</div><div class="prj-bloc-item">Définir les objectifs : Traduire les besoins en indicateurs de notoriété, d'engagement et d'éducation aux enjeux écologiques.</div><div class="prj-bloc-item">Élaborer la note d'intention : Justifier le concept créatif et le choix de la mécanique de jeu (Eco-Coins, quêtes).</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">BLOC_02 — Solutions de communication</div><div class="prj-bloc-item">Concevoir un univers graphique : Définir une interface visuelle éco-responsable et futuriste (3D immersive, carte interactive).</div><div class="prj-bloc-item">Scénariser le parcours utilisateur : De la création d'avatar à l'accès aux scènes et aux interactions sociales.</div><div class="prj-bloc-item">Réaliser des maquettes (Wireframes) : Schématiser les écrans principaux de l'interface pour valider l'ergonomie mobile.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">BLOC_03 — Média & Digital innovant</div><div class="prj-bloc-item">Piloter la gamification : Mise en œuvre du système de points "Eco-Coins" et chasses au trésor en réalité augmentée (AR).</div><div class="prj-bloc-item">Appliquer l'éco-conception : Plateforme "basse consommation" limitant le poids des données transférées.</div><div class="prj-bloc-item">Garantir l'accessibilité mobile : Navigation fluide via une Web App sans téléchargement lourd.</div><div class="prj-bloc-item">Plan de communication média : Canaux e-media et influenceurs culture/gaming pour promouvoir l'expérience.</div></div>
+      </div>
+      <div class="prj-section"><div class="prj-stag">// section_06 — kpi</div><div class="prj-stitle">KPI</div>
+        <div class="prj-bloc"><div class="prj-bloc-title">Notoriété</div><div class="prj-bloc-item">Nombre de visiteurs uniques sur la Web App.</div><div class="prj-bloc-item">Origine géographique : % d'utilisateurs hors Île-de-France.</div><div class="prj-bloc-item">Portée médiatique : Nombre de mentions et articles générés.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">Engagement</div><div class="prj-bloc-item">Durée moyenne de session sur l'interface.</div><div class="prj-bloc-item">Taux de complétion des quêtes collaboratives.</div><div class="prj-bloc-item">Volume d'Eco-Coins générés par la communauté.</div><div class="prj-bloc-item">Taux d'interaction sociale entre avatars.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">Éducation & RSE</div><div class="prj-bloc-item">Taux de participation aux conférences éco-responsables.</div><div class="prj-bloc-item">Score de quiz écologique.</div><div class="prj-bloc-item">Poids carbone de la plateforme (éco-conception).</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">Conversion</div><div class="prj-bloc-item">Taux d'utilisation des récompenses (Eco-Coins → merch, rencontres).</div><div class="prj-bloc-item">Taux de personnalisation d'avatar dès l'entrée.</div></div>
+      </div>
     </div></div>
   </div></div>
 
@@ -738,7 +828,7 @@ const chars='アイウエオカキクケコ0123456789';const fz=14;let cols=Math
 function drawMatrix(){ctx.fillStyle='rgba(5,5,5,0.04)';ctx.fillRect(0,0,canvas.width,canvas.height);cols=Math.floor(canvas.width/fz);while(drops.length<cols)drops.push(1);fc++;for(let i=0;i<cols;i++){if(fc%4!==i%4)continue;const x=i*fz,y=drops[i]*fz;const dist=Math.min(Math.hypot(x-mouseX,y-mouseY),Math.hypot(x-pmX,y-pmY));const p=Math.max(0,1-dist/200);if(p>0.15){ctx.fillStyle=`rgba(0,255,65,${0.3+p*0.7})`;ctx.font=`bold ${fz+p*5}px monospace`;ctx.shadowColor='rgba(0,255,65,0.6)';ctx.shadowBlur=p*14}else{ctx.fillStyle=`rgba(0,30,10,${0.04+Math.random()*0.04})`;ctx.font=`${fz}px monospace`;ctx.shadowColor='transparent';ctx.shadowBlur=0}ctx.fillText(chars[Math.floor(Math.random()*chars.length)],x,y);ctx.shadowBlur=0;if(y>canvas.height&&Math.random()>0.988)drops[i]=0;drops[i]++}requestAnimationFrame(drawMatrix)}
 
 // PETALS
-const petals=[],PETAL_CT=65;
+const petals=[],PETAL_CT=90;
 for(let i=0;i<PETAL_CT;i++){petals.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,size:8+Math.random()*14,rot:Math.random()*Math.PI*2,rotSpd:(Math.random()-0.5)*0.02,spd:0.15+Math.random()*0.4,drift:Math.random()*Math.PI*2,driftSpd:0.005+Math.random()*0.01,opacity:0.35+Math.random()*0.35})}
 function drawPetal(x,y,size,rot,opacity){pCtx.save();pCtx.translate(x,y);pCtx.rotate(rot);pCtx.strokeStyle=`rgba(0,255,65,${opacity})`;pCtx.fillStyle=`rgba(0,255,65,${opacity*0.6})`;pCtx.lineWidth=1;pCtx.beginPath();pCtx.moveTo(0,-size);pCtx.bezierCurveTo(size*0.6,-size*0.5,size*0.5,size*0.3,0,size);pCtx.bezierCurveTo(-size*0.5,size*0.3,-size*0.6,-size*0.5,0,-size);pCtx.fill();pCtx.stroke();pCtx.strokeStyle=`rgba(0,255,65,${opacity*0.5})`;pCtx.beginPath();pCtx.moveTo(0,-size*0.8);pCtx.lineTo(0,size*0.7);pCtx.stroke();pCtx.restore()}
 function animatePetals(){pCtx.clearRect(0,0,petalCanvas.width,petalCanvas.height);for(const p of petals){p.y+=p.spd;p.drift+=p.driftSpd;p.x+=Math.sin(p.drift)*0.3;p.rot+=p.rotSpd;const dx=p.x-mouseX,dy=p.y-mouseY;const dist=Math.sqrt(dx*dx+dy*dy);if(dist<260){const f=(260-dist)/260;p.x+=dx/dist*f*5.5;p.y+=dy/dist*f*5.5;p.rot+=f*0.14;drawPetal(p.x,p.y,p.size*(1+f*0.35),p.rot,Math.min(1,p.opacity+f*0.3))}else drawPetal(p.x,p.y,p.size,p.rot,p.opacity);if(p.y>innerHeight+20){p.y=-20;p.x=Math.random()*innerWidth}}requestAnimationFrame(animatePetals)}
@@ -756,15 +846,15 @@ async function runUnfold(){const icons=document.querySelectorAll('.desktop-icon'
 
 // BOOT
 const bootLines=[{text:'<span class="hack">[BIOS]</span> POST check.................... <span class="ok">[PASS]</span>'},{text:'[SYS] Kernel v6.2.0-NCAVA loading...'},{text:'[SYS] CPU: 12-core @ 4.8GHz.......... <span class="ok">[OK]</span>'},{text:'[SYS] Memory: 16384MB................ <span class="ok">[OK]</span>'},{text:'[NET] Encrypted tunnel established....'},{text:'<span class="hack">[INTRUSION]</span> Scanning target system...'},{text:'<span class="hack">[INTRUSION]</span> Bypassing firewall 1/3... <span class="ok">[DONE]</span>'},{text:'<span class="hack">[INTRUSION]</span> Bypassing firewall 2/3... <span class="ok">[DONE]</span>'},{text:'<span class="alert">[WARNING]</span> Anomalous signature detected'},{text:'<span class="hack">[INTRUSION]</span> Bypassing firewall 3/3... <span class="ok">[DONE]</span>'},{text:'<span class="hack">[INTRUSION]</span> Injecting TRINITY_OS.exe'},{text:'[DATA] Decrypting assets.............. <span class="ok">[OK]</span>'},{text:'[AI] Strategy Engine v4.2............ <span class="ok">[OK]</span>'},{text:'[CORE] SISR + COM................... <span class="warn">[HYBRID]</span>'},{text:'[CORE] Desktop renderer.............. <span class="ok">[OK]</span>'},{text:'<span class="hack">[ACCESS]</span> System compromised. <span class="ok">Welcome, Nicolas.</span>'}];
-async function runBoot(){const log=document.getElementById('boot-log'),bar=document.getElementById('boot-progress-bar'),gl=document.getElementById('boot-glitch'),bc=document.getElementById('boot-center'),tf=document.getElementById('trinity-fill'),tp=document.getElementById('trinity-pct'),tl=document.getElementById('trinity-loader');await sleep(800);for(let i=0;i<bootLines.length;i++){const d=document.createElement('div');d.className='line';d.innerHTML=bootLines[i].text;log.appendChild(d);await sleep(100);d.classList.add('show');bar.style.width=((i+1)/bootLines.length*100)+'%';if(Math.random()>0.88){gl.style.background='rgba(0,255,65,0.03)';await sleep(60);gl.style.background='transparent'}if(i===5||i===10)await sleep(400);else await sleep(220+Math.random()*180)}await sleep(600);bc.style.transition='opacity 0.4s';bc.style.opacity='0';await sleep(400);bc.style.display='none';tl.classList.remove('trinity-hidden');tl.style.display='flex';tl.style.opacity='0';tl.style.transition='opacity 0.5s';await sleep(50);tl.style.opacity='1';await sleep(100);
+async function runBoot(){const log=document.getElementById('boot-log'),bar=document.getElementById('boot-progress-bar'),gl=document.getElementById('boot-glitch'),bc=document.getElementById('boot-center'),tf=document.getElementById('trinity-fill'),tp=document.getElementById('trinity-pct'),tl=document.getElementById('trinity-loader');await sleep(500);for(let i=0;i<bootLines.length;i++){const d=document.createElement('div');d.className='line';d.innerHTML=bootLines[i].text;log.appendChild(d);await sleep(70);d.classList.add('show');bar.style.width=((i+1)/bootLines.length*100)+'%';if(Math.random()>0.88){gl.style.background='rgba(0,255,65,0.03)';await sleep(60);gl.style.background='transparent'}if(i===5||i===10)await sleep(250);else await sleep(140+Math.random()*100)}await sleep(350);bc.style.transition='opacity 0.3s';bc.style.opacity='0';await sleep(400);bc.style.display='none';tl.classList.remove('trinity-hidden');tl.style.display='flex';tl.style.opacity='0';tl.style.transition='opacity 0.5s';await sleep(50);tl.style.opacity='1';await sleep(100);
   // CRT COMPUTER ANIMATION
   await new Promise(function(resolve){
     var cv=document.getElementById('trinity-crt-canvas');
     var logsEl=document.getElementById('trinity-logs');
     if(!cv){resolve();return;}
     var cx=cv.getContext('2d');var W=800,H=500;
-    var crtX=W/2-170,crtY=H/2-120,crtW=340,crtH=250;
-    var screenX=crtX+20,screenY=crtY+16,screenW=crtW-40,screenH=crtH*0.62;
+    var crtX=W/2-210,crtY=H/2-150,crtW=420,crtH=310;
+    var screenX=crtX+25,screenY=crtY+20,screenW=crtW-50,screenH=crtH*0.60;
     var pct=0;var f=0;
     var logMsgs=['[SYS] Mounting filesystem...','[DECRYPT] AES-256 handshake...','[NET] Tunnel established','[CORE] Loading TRINITY_OS...','[GPU] Renderer initialized','[DECRYPTING_FILES...]','[ACCESS_GRANTED]','[SYS] Welcome, Nicolas.'];
     var logIdx=0;
@@ -779,10 +869,10 @@ async function runBoot(){const log=document.getElementById('boot-log'),bar=docum
       cx.lineTo(crtX,crtY+8);cx.quadraticCurveTo(crtX,crtY,crtX+8,crtY);
       cx.fill();cx.shadowColor='#39FF14';cx.shadowBlur=15;cx.stroke();cx.shadowBlur=0;
       // Stand
-      cx.fillStyle='#1a1a1e';cx.fillRect(crtX+crtW/2-40,crtY+crtH,80,18);
-      cx.strokeStyle='#39FF14';cx.lineWidth=1.5;cx.strokeRect(crtX+crtW/2-40,crtY+crtH,80,18);
-      cx.fillRect(crtX+crtW/2-65,crtY+crtH+18,130,10);
-      cx.strokeRect(crtX+crtW/2-65,crtY+crtH+18,130,10);
+      cx.fillStyle='#1a1a1e';cx.fillRect(crtX+crtW/2-50,crtY+crtH,100,22);
+      cx.strokeStyle='#39FF14';cx.lineWidth=1.5;cx.strokeRect(crtX+crtW/2-50,crtY+crtH,100,22);
+      cx.fillRect(crtX+crtW/2-80,crtY+crtH+22,160,12);
+      cx.strokeRect(crtX+crtW/2-80,crtY+crtH+22,160,12);
       // Screen (curved CRT feel)
       cx.fillStyle='#0a1a0a';
       cx.fillRect(screenX,screenY,screenW,screenH);
@@ -797,7 +887,7 @@ async function runBoot(){const log=document.getElementById('boot-log'),bar=docum
       cx.fillStyle='#39FF14';cx.shadowColor='#39FF14';cx.shadowBlur=6;
       cx.beginPath();cx.arc(crtX+crtW-20,crtY+crtH-12,3,0,Math.PI*2);cx.fill();cx.shadowBlur=0;
       // Screen content
-      cx.fillStyle='#39FF14';cx.font='bold 16px monospace';cx.textAlign='center';
+      cx.fillStyle='#39FF14';cx.font='bold 20px monospace';cx.textAlign='center';
       var dots='.'.repeat((Math.floor(f/6)%4));
       cx.fillText('TRINITY_LOADING'+dots,W/2,screenY+30);
       // Progress bar
@@ -809,7 +899,7 @@ async function runBoot(){const log=document.getElementById('boot-log'),bar=docum
       cx.font='bold 11px monospace';cx.fillText(Math.floor(pct*100)+'%',W/2,screenY+70);
       cx.textAlign='start';
       // Update
-      pct=Math.min(1,pct+0.012);
+      pct=Math.min(1,pct+0.009);
       f++;
       // Logs
       if(f%12===0&&logIdx<logMsgs.length&&logsEl){
@@ -946,7 +1036,7 @@ function runRedGlitch(){
   var rect=ov.parentElement.getBoundingClientRect();
   cv.width=Math.floor(rect.width);cv.height=Math.floor(rect.height)-38;
   var cx=cv.getContext('2d');var W=cv.width;var H=cv.height;
-  var f=0;var scanY=0;var glitchBars=[];
+  var f=0;var scanY=0;
   // Red data streams
   var streams=[];
   for(var i=0;i<25;i++){
@@ -968,20 +1058,9 @@ function runRedGlitch(){
         for(var j=0;j<s.chars.length;j++)s.chars[j]=String.fromCharCode(0x30A0+Math.floor(Math.random()*96));
       }
     }
-    // Horizontal glitch bars
-    if(f%3===0&&Math.random()>0.4){
-      glitchBars.push({y:Math.random()*H,h:2+Math.random()*8,life:6+Math.random()*10,shift:Math.random()*20-10});
-    }
-    for(var i=glitchBars.length-1;i>=0;i--){
-      var b=glitchBars[i];b.life--;
-      cx.fillStyle='rgba(220,38,38,'+(b.life/15)+')';
-      cx.fillRect(b.shift,b.y,W,b.h);
-      if(b.life<=0)glitchBars.splice(i,1);
-    }
-    // Central scan line
-    scanY+=5;
-    cx.fillStyle='rgba(255,50,50,0.08)';cx.fillRect(0,scanY%H-2,W,4);
-    cx.fillStyle='rgba(255,255,255,0.03)';cx.fillRect(0,scanY%H,W,1);
+    // Subtle scan line only
+    scanY+=4;
+    cx.fillStyle='rgba(220,38,38,0.03)';cx.fillRect(0,scanY%H-1,W,2);
     f++;
     if(f<65){requestAnimationFrame(draw);}
     else{
@@ -1320,22 +1399,71 @@ function initShoot(){
 
   // === EVENT: Pixel rain ===
   winAnims.event=function(cx,W,H,done){
-    var drops=[];var f=0;
-    for(var i=0;i<200;i++){
-      drops.push({x:Math.random()*W,y:Math.random()*-H,l:4+Math.random()*12,v:6+Math.random()*10,
-        c:'rgba('+Math.floor(Math.random()*100)+','+Math.floor(200+Math.random()*55)+','+Math.floor(Math.random()*100)+','+(0.4+Math.random()*0.6)+')'});
+    var w=document.getElementById('win-event');
+    if(!w){done();return;}
+    var canvasOv=w.querySelector('.win-trans');
+    if(canvasOv)canvasOv.remove();
+    var body=w.querySelector('.win-body');
+    if(body)body.style.opacity='0';
+    var ov=document.createElement('div');
+    ov.className='sf-overlay';
+    var imgs=[
+      {n:'RYU',src:'https://i.ibb.co/dw91mbKh/andrew-rattanakongkham-ryu-new-final-kong-Photoroom.png'},
+      {n:'CHUN-LI',src:'https://i.ibb.co/5h0kGhWm/Untitleddesign-8-1080x-Photoroom.png'},
+      {n:'GUILE',src:'https://i.ibb.co/Zp5vnLdD/bg-f8f8f8-flat-750x-075-f-pad-750x1000-f8f8f8-Photoroom.png'},
+      {n:'AKUMA',src:'https://i.ibb.co/5WYsbQJk/maxresdefault-Photoroom.png'},
+      {n:'CAMMY',src:'https://i.ibb.co/GfXqKNpZ/Capture-d-cran-2026-04-04-130053-Photoroom.png'},
+      {n:'KEN',src:'https://i.ibb.co/yc8c3MFy/c43025ab0de1bad65b008dd8c596e2fd-Photoroom.png'}
+    ];
+    var pick1=-1,pick2=-1;
+    var h='<div class="sf-bg"><div class="sf-earth"></div></div>';
+    h+='<div class="sf-title">SELECT YOUR<br>CHARACTER</div>';
+    h+='<div class="sf-selected">';
+    h+='<div class="sf-sel-left" id="sf-sel-l"><div class="sf-sel-silhouette" id="sf-sil-l"></div><div class="sf-sel-name" id="sf-name-l">?</div><div class="sf-sel-info" style="color:#4a9eff">1P</div></div>';
+    h+='<div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center"><div class="sf-subtitle">VS</div><div class="sf-pick-label" id="sf-pick-msg">CHOISISSEZ 2 COMBATTANTS</div></div>';
+    h+='<div class="sf-sel-right" id="sf-sel-r"><div class="sf-sel-silhouette" id="sf-sil-r"></div><div class="sf-sel-name" id="sf-name-r">?</div><div class="sf-sel-info" style="color:#ff4a4a">2P</div></div>';
+    h+='</div>';
+    h+='<div class="sf-ps">&#9654; PLAYER SELECT &#9664;</div><div class="sf-grid" id="sf-grid">';
+    for(var i=0;i<imgs.length;i++){
+      h+='<div class="sf-char" data-idx="'+i+'"><img src="'+imgs[i].src+'" alt="'+imgs[i].n+'"></div>';
     }
-    function draw(){
-      cx.fillStyle='rgba(5,5,5,0.1)';cx.fillRect(0,0,W,H);
-      for(var i=0;i<drops.length;i++){
-        var d=drops[i];d.y+=d.v;
-        cx.fillStyle=d.c;cx.fillRect(d.x,d.y,2,d.l);
-        if(d.y>H){d.y=-d.l;d.x=Math.random()*W;}
+    h+='</div>';
+    ov.innerHTML=h;
+    w.appendChild(ov);
+    var grid=ov.querySelector('#sf-grid');
+    grid.addEventListener('click',function(e){
+      var el=e.target.closest('.sf-char');
+      if(!el)return;
+      var idx=parseInt(el.dataset.idx);
+      if(pick1===-1){
+        pick1=idx;
+        el.classList.add('selected');
+        var selL=ov.querySelector('#sf-sel-l');
+        var silL=ov.querySelector('#sf-sil-l');
+        var nameL=ov.querySelector('#sf-name-l');
+        selL.classList.add('show');
+        silL.innerHTML='<img src="'+imgs[idx].src+'" alt="'+imgs[idx].n+'">';
+        nameL.textContent=imgs[idx].n;
+        ov.querySelector('#sf-pick-msg').textContent='CHOISISSEZ LE 2ÈME';
+      }else if(pick2===-1&&idx!==pick1){
+        pick2=idx;
+        el.classList.add('selected');
+        var selR=ov.querySelector('#sf-sel-r');
+        var silR=ov.querySelector('#sf-sil-r');
+        var nameR=ov.querySelector('#sf-name-r');
+        selR.classList.add('show');
+        silR.innerHTML='<img src="'+imgs[idx].src+'" alt="'+imgs[idx].n+'">';
+        nameR.textContent=imgs[idx].n;
+        ov.querySelector('#sf-pick-msg').textContent='FIGHT!';
+        ov.querySelector('#sf-pick-msg').style.color='#FF4444';
+        ov.querySelector('#sf-pick-msg').style.fontSize='18px';
+        setTimeout(function(){
+          ov.style.transition='opacity 0.6s';ov.style.opacity='0';
+          if(body){body.style.transition='opacity 0.5s';body.style.opacity='1';}
+          setTimeout(function(){ov.remove();},700);
+        },1200);
       }
-      f++;
-      if(f<70)requestAnimationFrame(draw);else done();
-    }
-    draw();
+    });
   };
 
   // === INSTIT: Code line falls & shatters ===
