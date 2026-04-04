@@ -370,6 +370,12 @@ background-size:60px 60px}
 
 /* HIDE DESKTOP DECORATIONS */
 .perspective-grid,.blueprint-grid,.desktop-watermark{display:none!important}
+
+/* BIO NAME TAG */
+.bio-name-tag{color:#fff;font-family:'Syne',sans-serif;font-size:52px;font-weight:800;letter-spacing:0px;opacity:0.85;position:relative;cursor:default;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);display:inline-block;margin-left:8px}
+.bio-name-tag::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#fff;box-shadow:0 0 10px rgba(255,255,255,0.5);transition:width 0.4s cubic-bezier(0.16,1,0.3,1)}
+.bio-name-tag:hover{opacity:1;text-shadow:0 0 20px rgba(255,255,255,0.4),0 0 60px rgba(255,255,255,0.1);letter-spacing:3px;transform:translateY(-2px)}
+.bio-name-tag:hover::after{width:100%}
 /* ANIMATIONS */
 
 /* === TEXT SIZE BOOST === */
@@ -526,7 +532,7 @@ background-size:60px 60px}
 
   <!-- BIO_LOG V4 -->
   <div class="os-window" id="win-bio" style="width:860px;height:620px;top:20px;left:140px"><div class="win-titlebar" onmousedown="startDrag(event,'win-bio')"><div class="win-title">BIO_LOG.exe</div><div class="win-btns"><div class="win-btn" onclick="toggleFS('win-bio')">□</div><div class="win-btn" onclick="minimizeWin('win-bio')">_</div><div class="win-btn close" onclick="closeWin('win-bio')">✕</div></div></div><div class="win-body"><div class="bio-v4">
-    <div class="bio-big-title">About <span>me_</span></div>
+    <div class="bio-big-title">About <span>me_</span> <span class="bio-name-tag">Nicolas Cava</span></div>
     <div class="bio-grid">
       <div class="bio-grid-left">
         <div class="bio-top-row">
