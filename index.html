@@ -385,7 +385,7 @@ background-size:60px 60px}
 .vid-center .prj-video{width:calc(50% - 6px);aspect-ratio:1;margin:0;overflow:hidden}
 .vid-center .prj-video iframe{width:100%!important;height:100%!important}
 /* PROBLEMATIQUE HIGHLIGHT */
-.prj-problematique{font-size:18px!important;color:#00FF41!important;padding:16px 20px;border:1px solid rgba(0,255,65,0.3);background:rgba(0,255,65,0.04);margin:14px 0;position:relative;overflow:hidden;animation:probPulse 3s ease-in-out infinite}
+.prj-problematique{font-size:19px!important;color:#00FF41!important;padding:16px 20px;border:1px solid rgba(0,255,65,0.3);background:rgba(0,255,65,0.04);margin:14px 0;position:relative;overflow:hidden;animation:probPulse 3s ease-in-out infinite}
 .prj-problematique::before{content:'⚡';position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:22px;opacity:0.3}
 @keyframes probPulse{0%,100%{border-color:rgba(0,255,65,0.2);box-shadow:0 0 5px rgba(0,255,65,0)}50%{border-color:rgba(0,255,65,0.5);box-shadow:0 0 20px rgba(0,255,65,0.1)}}
 /* TEXT READABILITY */
@@ -395,7 +395,7 @@ background-size:60px 60px}
 /* BENCHMARK TABLES */
 .bench-table{width:100%;border-collapse:collapse;margin:14px 0;font-family:'Montserrat',sans-serif;font-size:14px}
 .bench-table th{font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:2px;color:var(--volt);background:rgba(0,255,65,0.06);padding:12px 14px;text-align:left;border:1px solid rgba(0,255,65,0.15);text-transform:uppercase}
-.bench-table td{padding:13px 15px;border:1px solid var(--slate);color:#e2e8f0;line-height:1.75;font-size:15px;vertical-align:top;transition:all 0.3s}
+.bench-table td{padding:14px 16px;border:1px solid var(--slate);color:#e2e8f0;line-height:1.8;font-size:16px;vertical-align:top;transition:all 0.3s}
 .bench-table tr{transition:all 0.3s}
 .bench-table tr:hover td{background:rgba(0,255,65,0.03);border-color:rgba(0,255,65,0.2)}
 .bench-table td:first-child{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;color:var(--volt);white-space:nowrap}
@@ -443,14 +443,14 @@ background-size:60px 60px}
 .cs-title{font-family:'Orbitron',sans-serif;font-size:clamp(22px,4vw,34px);font-weight:900;color:#FFD700;letter-spacing:4px;text-shadow:0 0 20px rgba(255,215,0,0.3),0 4px 0 #8B6914;margin:20px 0 6px;position:relative;z-index:2}
 .cs-subtitle{font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(255,255,255,0.4);letter-spacing:6px;margin-bottom:20px;position:relative;z-index:2}
 .cs-cards{display:flex;gap:24px;justify-content:center;align-items:stretch;position:relative;z-index:2;padding:0 20px;flex-wrap:wrap}
-.cs-card{width:240px;border:2px solid rgba(100,130,200,0.3);background:rgba(10,15,40,0.8);border-radius:8px;cursor:pointer;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);display:flex;flex-direction:column;align-items:center;padding:16px 12px 14px;position:relative;overflow:hidden}
+.cs-card{width:270px;border:2px solid rgba(100,130,200,0.3);background:rgba(10,15,40,0.8);border-radius:8px;cursor:pointer;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);display:flex;flex-direction:column;align-items:center;padding:16px 12px 14px;position:relative;overflow:hidden}
 .cs-card::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,215,0,0.02),transparent 40%,rgba(0,255,65,0.02));opacity:0;transition:opacity 0.3s}
 .cs-card:hover{border-color:rgba(255,215,0,0.6);transform:translateY(-8px) scale(1.03);box-shadow:0 15px 40px rgba(0,0,0,0.5),0 0 25px rgba(255,215,0,0.15)}
 .cs-card:hover::before{opacity:1}
-.cs-card-img{width:160px;height:190px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;position:relative}
+.cs-card-img{width:180px;height:215px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;position:relative}
 .cs-card-img img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.6));transition:transform 0.3s,filter 0.3s}
 .cs-card:hover .cs-card-img img{transform:scale(1.08);filter:drop-shadow(0 6px 20px rgba(255,215,0,0.2))}
-.cs-card-name{font-family:'Orbitron',sans-serif;font-size:20px;font-weight:700;color:#FFD700;letter-spacing:3px;text-shadow:0 0 10px rgba(255,215,0,0.2);margin-bottom:6px}
+.cs-card-name{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:700;color:#FFD700;letter-spacing:3px;text-shadow:0 0 10px rgba(255,215,0,0.2);margin-bottom:6px}
 .cs-card-class{font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,0.4);letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
 .cs-card-stats{width:100%;display:flex;flex-direction:column;gap:4px}
 .cs-stat{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,0.5)}
@@ -464,20 +464,33 @@ background-size:60px 60px}
 /* Card click flash */
 .cs-card.chosen{border-color:#FFD700!important;box-shadow:0 0 40px rgba(255,215,0,0.4)!important;transform:scale(1.05)!important}
 .cs-card.chosen .cs-card-select{opacity:1;color:#FFD700;border-color:#FFD700}
+
+/* BOOT TO CLASS TRANSITION */
+#class-select{opacity:0}
+#class-select.active{display:flex;animation:csReveal 0.8s cubic-bezier(0.16,1,0.3,1) forwards}
+@keyframes csReveal{0%{opacity:0;transform:scale(1.1);filter:blur(8px)}40%{opacity:0.5;filter:blur(3px)}100%{opacity:1;transform:scale(1);filter:blur(0)}}
+.cs-card{opacity:0;transform:translateY(40px)}
+#class-select.active .cs-card:nth-child(1){animation:csCardIn 0.6s 0.3s cubic-bezier(0.16,1,0.3,1) forwards}
+#class-select.active .cs-card:nth-child(2){animation:csCardIn 0.6s 0.5s cubic-bezier(0.16,1,0.3,1) forwards}
+#class-select.active .cs-card:nth-child(3){animation:csCardIn 0.6s 0.7s cubic-bezier(0.16,1,0.3,1) forwards}
+@keyframes csCardIn{0%{opacity:0;transform:translateY(40px) scale(0.9)}100%{opacity:1;transform:translateY(0) scale(1)}}
+.cs-title{opacity:0}
+#class-select.active .cs-title{animation:csTitleIn 0.5s 0.1s ease forwards}
+@keyframes csTitleIn{0%{opacity:0;transform:translateY(-20px);letter-spacing:20px}100%{opacity:1;transform:translateY(0);letter-spacing:4px}}
 /* ANIMATIONS */
 
 /* === TEXT SIZE BOOST === */
-.wc-text,.prj-text{font-size:17px!important;line-height:1.95!important}
-.prj-bloc-item{font-size:16px!important;line-height:1.85!important}
-.prj-stitle{font-size:26px!important}
-.prj-stag{font-size:13px!important}
-.prj-bloc-title{font-size:14px!important}
+.wc-text,.prj-text{font-size:18px!important;line-height:2!important}
+.prj-bloc-item{font-size:17px!important;line-height:1.9!important}
+.prj-stitle{font-size:28px!important}
+.prj-stag{font-size:14px!important}
+.prj-bloc-title{font-size:15px!important}
 .wc-title{font-size:28px!important}
-.prj-tree-title{font-size:18px!important}
-.prj-folder-name{font-size:16px!important}
-.prj-page-name{font-size:22px!important}
-.win-title{font-size:13px!important}
-.bio-big-title{font-size:60px!important}
+.prj-tree-title{font-size:20px!important}
+.prj-folder-name{font-size:17px!important}
+.prj-page-name{font-size:24px!important}
+.win-title{font-size:14px!important}
+.bio-big-title{font-size:62px!important}
 .bio-contact-title{font-size:19px!important}
 .bio-mac-body h3{font-size:20px!important}
 .bio-exp-role{font-size:16px!important}
@@ -492,6 +505,7 @@ background-size:60px 60px}
 .prj-section::before{content:'';position:absolute;left:0;top:0;width:3px;height:0;background:var(--volt);box-shadow:0 0 10px var(--volt);transition:height 1s ease}
 .anim-s.vis::before{height:100%}
 #pills-blue .prj-section::before{display:none!important}
+#pills-red .prj-section::before{display:none!important}
 
 /* === PIXEL RAIN TRANSITION (blue pill) === */
 #pill-transition-blue{position:absolute;inset:0;z-index:10;display:none;overflow:hidden;background:rgba(5,5,5,0.98)}
@@ -925,6 +939,8 @@ async function runUnfold(){const icons=document.querySelectorAll('.desktop-icon'
 // BOOT
 const bootLines=[{text:'<span class="hack">[BIOS]</span> POST check.................... <span class="ok">[PASS]</span>'},{text:'[SYS] Kernel v6.2.0-NCAVA loading...'},{text:'[SYS] CPU: 12-core @ 4.8GHz.......... <span class="ok">[OK]</span>'},{text:'[SYS] Memory: 16384MB................ <span class="ok">[OK]</span>'},{text:'[NET] Encrypted tunnel established....'},{text:'<span class="hack">[INTRUSION]</span> Scanning target system...'},{text:'<span class="hack">[INTRUSION]</span> Bypassing firewall 1/3... <span class="ok">[DONE]</span>'},{text:'<span class="hack">[INTRUSION]</span> Bypassing firewall 2/3... <span class="ok">[DONE]</span>'},{text:'<span class="alert">[WARNING]</span> Anomalous signature detected'},{text:'<span class="hack">[INTRUSION]</span> Bypassing firewall 3/3... <span class="ok">[DONE]</span>'},{text:'<span class="hack">[INTRUSION]</span> Injecting TRINITY_OS.exe'},{text:'[DATA] Decrypting assets.............. <span class="ok">[OK]</span>'},{text:'[AI] Strategy Engine v4.2............ <span class="ok">[OK]</span>'},{text:'[CORE] SISR + COM................... <span class="warn">[HYBRID]</span>'},{text:'[CORE] Desktop renderer.............. <span class="ok">[OK]</span>'},{text:'<span class="hack">[ACCESS]</span> System compromised. <span class="ok">Welcome, Nicolas.</span>'}];
 async function runBoot(){const log=document.getElementById('boot-log'),bar=document.getElementById('boot-progress-bar'),gl=document.getElementById('boot-glitch'),bc=document.getElementById('boot-center'),tf=document.getElementById('trinity-fill'),tp=document.getElementById('trinity-pct'),tl=document.getElementById('trinity-loader');await sleep(500);for(let i=0;i<bootLines.length;i++){const d=document.createElement('div');d.className='line';d.innerHTML=bootLines[i].text;log.appendChild(d);await sleep(70);d.classList.add('show');bar.style.width=((i+1)/bootLines.length*100)+'%';if(Math.random()>0.88){gl.style.background='rgba(0,255,65,0.03)';await sleep(60);gl.style.background='transparent'}if(i===5||i===10)await sleep(250);else await sleep(140+Math.random()*100)}await sleep(350);bc.style.transition='opacity 0.3s';bc.style.opacity='0';await sleep(400);bc.style.display='none';
+  // SMOOTH TRANSITION TO CLASS SELECT
+  await sleep(300);
   // CLASS SELECT SCREEN
   var csEl=document.getElementById('class-select');
   csEl.classList.add('active');
