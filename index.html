@@ -58,7 +58,7 @@ background-image:linear-gradient(rgba(0,255,65,0.03) 1px,transparent 1px),linear
 background-size:60px 60px}
 /* Corner brackets */
 .corner-bracket{position:fixed;z-index:3;pointer-events:none;font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(0,255,65,0.2)}
-.corner-bracket.tl{top:10px;left:10px}.corner-bracket.tr{top:10px;right:10px;text-align:right}.corner-bracket.bl{bottom:46px;left:10px}.corner-bracket.br{bottom:46px;right:10px;text-align:right}
+.corner-bracket.tl{top:10px;left:10px}.corner-bracket.tr{top:10px;right:10px;text-align:right}.corner-bracket.bl{bottom:56px;left:10px}.corner-bracket.br{bottom:56px;right:10px;text-align:right}
 .bracket-shape{font-size:18px;line-height:1;color:rgba(0,255,65,0.15)}
 
 /* HEX STREAMS */
@@ -88,7 +88,7 @@ background-size:60px 60px}
 .desktop-watermark{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Orbitron',sans-serif;font-size:clamp(60px,12vw,140px);font-weight:900;color:var(--volt);opacity:0.04;letter-spacing:12px;z-index:3;pointer-events:none;white-space:nowrap;user-select:none}
 
 /* ICONS */
-.desktop-icons{position:absolute;top:20px;left:24px;display:flex;flex-direction:column;gap:16px;z-index:5}
+.desktop-icons{position:absolute;top:20px;left:24px;display:grid;grid-template-columns:110px 110px;gap:12px 8px;z-index:5}
 .desktop-icon{display:flex;flex-direction:column;align-items:center;gap:8px;width:110px;padding:12px 8px;border:1px solid transparent;border-radius:2px;cursor:pointer;transition:all 0.2s;user-select:none;position:relative}
 .desktop-icon:hover{background:rgba(0,255,65,0.04);border-color:rgba(0,255,65,0.15)}
 .desktop-icon svg{width:56px;height:56px;filter:drop-shadow(0 0 4px rgba(0,255,65,0.15))}
@@ -103,24 +103,24 @@ background-size:60px 60px}
 .desktop-icon.dropping{animation:iconDrop 0.6s cubic-bezier(0.16,1,0.3,1) forwards}
 
 /* TASKBAR */
-#taskbar{position:fixed;bottom:0;left:0;right:0;height:36px;background:rgba(5,5,5,0.92);backdrop-filter:blur(16px);border-top:1px solid var(--slate);display:flex;align-items:center;padding:0 12px;z-index:1000;gap:8px}
-.tb-start{font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;color:var(--volt);border:1px solid var(--slate);padding:4px 12px;cursor:pointer;transition:all 0.2s;letter-spacing:2px}
+#taskbar{position:fixed;bottom:0;left:0;right:0;height:48px;background:rgba(5,5,5,0.92);backdrop-filter:blur(16px);border-top:1px solid var(--slate);display:flex;align-items:center;padding:0 18px;z-index:1000;gap:12px}
+.tb-start{font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--volt);border:1px solid var(--slate);padding:7px 18px;cursor:pointer;transition:all 0.2s;letter-spacing:2px}
 .tb-start:hover{border-color:var(--volt);box-shadow:0 0 10px rgba(0,255,65,0.15);background:rgba(0,255,65,0.04)}
-.tb-session{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--volt);letter-spacing:1px;opacity:0.6;margin-left:4px}
-.tb-sep{width:1px;height:18px;background:var(--slate);margin:0 6px}
+.tb-session{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--volt);letter-spacing:1px;opacity:0.6;margin-left:4px}
+.tb-sep{width:1px;height:26px;background:var(--slate);margin:0 6px}
 .tb-windows{display:flex;gap:4px;flex:1;overflow-x:auto}
-.tb-win-btn{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-mid);background:rgba(0,255,65,0.03);border:1px solid var(--slate);padding:4px 12px;cursor:pointer;transition:all 0.2s;white-space:nowrap}
+.tb-win-btn{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-mid);background:rgba(0,255,65,0.03);border:1px solid var(--slate);padding:6px 16px;cursor:pointer;transition:all 0.2s;white-space:nowrap}
 .tb-win-btn:hover{border-color:var(--slate-light);color:var(--text)}
 .tb-win-btn.active{border-color:var(--volt);color:var(--volt);background:rgba(0,255,65,0.06)}
-.tb-right{margin-left:auto;display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-muted)}
-.tb-status .dot{width:5px;height:5px;border-radius:50%;background:var(--volt);box-shadow:0 0 4px var(--volt);animation:pulse 2s infinite;display:inline-block;margin-right:5px}
+.tb-right{margin-left:auto;display:flex;align-items:center;gap:18px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-muted)}
+.tb-status .dot{width:7px;height:7px;border-radius:50%;background:var(--volt);box-shadow:0 0 4px var(--volt);animation:pulse 2s infinite;display:inline-block;margin-right:5px}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
 
 /* WINDOWS */
 .os-window{position:absolute;background:var(--glass-bg);backdrop-filter:var(--glass-blur);border:1px solid var(--slate);display:none;flex-direction:column;z-index:100;min-width:380px;min-height:280px;box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 1px rgba(0,255,65,0.1);animation:winOpen 0.3s cubic-bezier(0.16,1,0.3,1)}
 @keyframes winOpen{0%{opacity:0;transform:scale(0.92)}100%{opacity:1;transform:scale(1)}}
 .os-window.active{z-index:200;border-color:var(--slate-light)}
-.os-window.fullscreen{top:0!important;left:0!important;width:100vw!important;height:calc(100vh - 36px)!important}
+.os-window.fullscreen{top:0!important;left:0!important;width:100vw!important;height:calc(100vh - 48px)!important}
 .win-titlebar{display:flex;align-items:center;height:38px;padding:0 14px;background:rgba(0,0,0,0.4);border-bottom:1px solid var(--slate);cursor:grab;user-select:none;flex-shrink:0}
 .win-title{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-mid);letter-spacing:1px;flex:1}
 .win-btns{display:flex;gap:8px}
@@ -327,10 +327,49 @@ background-size:60px 60px}
 .theme-preview span{flex:1;border-radius:2px}
 
 
+
+/* TRINITY CRT ZOOM */
+#trinity-loader{display:flex;align-items:center;justify-content:center;position:absolute;inset:0;z-index:4}
+#trinity-crt-canvas{position:relative;z-index:2}
+#trinity-zoom-overlay{transition:none}
+@keyframes trinityZoomIn{
+  0%{top:50%;left:50%;width:180px;height:120px;transform:translate(-50%,-50%);border-radius:8px;opacity:1}
+  60%{top:10%;left:10%;width:80vw;height:80vh;transform:translate(0,0);border-radius:4px;opacity:1;filter:blur(2px)}
+  100%{top:0;left:0;width:100vw;height:100vh;transform:none;border-radius:0;opacity:1;filter:blur(0)}
+}
+.trinity-zoom-active{animation:trinityZoomIn 0.7s cubic-bezier(0.16,1,0.3,1) forwards!important}
+
 /* WIN TRANSITIONS */
 .win-trans{position:absolute;inset:0;z-index:999;overflow:hidden;pointer-events:none}
 .win-trans canvas{width:100%;height:100%;display:block}
 
+
+/* HOVER EFFECTS ALL PAGES */
+.prj-text{transition:all 0.3s ease}
+.prj-text:hover{color:var(--text)!important;transform:translateX(4px);text-shadow:0 0 8px rgba(0,255,65,0.08)}
+.prj-bloc{transition:all 0.3s ease}
+.prj-bloc:hover{border-color:rgba(0,255,65,0.2);background:rgba(0,255,65,0.02);transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,0.3)}
+.prj-bloc-title{transition:all 0.3s}
+.prj-bloc:hover .prj-bloc-title{text-shadow:0 0 12px rgba(0,255,65,0.4)}
+.prj-stitle{transition:all 0.3s}
+.prj-stitle:hover{text-shadow:0 0 15px rgba(0,255,65,0.3);transform:translateX(3px)}
+.prj-persona{transition:all 0.4s ease}
+.prj-persona:hover{border-color:rgba(0,255,65,0.3);box-shadow:0 0 20px rgba(0,255,65,0.1);transform:scale(1.01)}
+.prj-persona img{transition:transform 0.5s}
+.prj-persona:hover img{transform:scale(1.03)}
+.prj-video{transition:all 0.3s}
+.prj-video:hover{box-shadow:0 0 25px rgba(0,255,65,0.2);border-color:rgba(0,255,65,0.3)}
+.prj-tree-title{transition:all 0.3s}
+.prj-tree-title:hover{text-shadow:0 0 15px rgba(0,255,65,0.4)}
+.prj-page-name{transition:all 0.3s}
+.prj-page-header:hover .prj-page-name{text-shadow:0 0 12px rgba(0,255,65,0.3)}
+.bio-v4{transition:all 0.3s}
+.bio-quote{transition:all 0.3s}
+.bio-quote:hover{color:var(--text);transform:translateX(3px)}
+
+
+/* HIDE DESKTOP DECORATIONS */
+.perspective-grid,.blueprint-grid,.desktop-watermark{display:none!important}
 /* ANIMATIONS */
 
 /* === TEXT SIZE BOOST === */
@@ -358,6 +397,7 @@ background-size:60px 60px}
 .prj-section{position:relative}
 .prj-section::before{content:'';position:absolute;left:0;top:0;width:3px;height:0;background:var(--volt);box-shadow:0 0 10px var(--volt);transition:height 1s ease}
 .anim-s.vis::before{height:100%}
+#pills-blue .prj-section::before{display:none!important}
 
 /* === PIXEL RAIN TRANSITION (blue pill) === */
 #pill-transition-blue{position:absolute;inset:0;z-index:10;display:none;overflow:hidden;background:rgba(5,5,5,0.98)}
@@ -392,7 +432,7 @@ background-size:60px 60px}
 .os-window{animation:wo 0.4s cubic-bezier(0.16,1,0.3,1)}
 @keyframes wo{0%{opacity:0;transform:scale(0.9) translateY(10px)}100%{opacity:1;transform:none}}
 .desktop-icon{animation:il 4s ease-in-out infinite}
-.desktop-icon:nth-child(1){animation-delay:0s}.desktop-icon:nth-child(2){animation-delay:.5s}.desktop-icon:nth-child(3){animation-delay:1s}.desktop-icon:nth-child(4){animation-delay:1.5s}.desktop-icon:nth-child(5){animation-delay:2s}.desktop-icon:nth-child(6){animation-delay:2.5s}
+.desktop-icon:nth-child(1){animation-delay:0s}.desktop-icon:nth-child(2){animation-delay:.3s}.desktop-icon:nth-child(3){animation-delay:.6s}.desktop-icon:nth-child(4){animation-delay:.9s}.desktop-icon:nth-child(5){animation-delay:1.2s}.desktop-icon:nth-child(6){animation-delay:1.5s}.desktop-icon:nth-child(7){animation-delay:1.8s}
 @keyframes il{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .desktop-icon svg{animation:sp 3s ease-in-out infinite}
 @keyframes sp{0%,100%{filter:drop-shadow(0 0 4px rgba(0,255,65,0.15))}50%{filter:drop-shadow(0 0 14px rgba(0,255,65,0.4))}}
@@ -446,7 +486,15 @@ background-size:60px 60px}
   <div class="hack-streams" id="hack-streams"></div>
   <div class="boot-glitch-overlay" id="boot-glitch"></div>
   <div id="boot-center"><div id="boot-log"></div><div id="boot-progress"><div id="boot-progress-bar"></div></div></div>
-  <div id="trinity-loader" class="trinity-hidden"><div class="trinity-title">TRINITY_LOADING<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span></div><div class="trinity-bar-wrap"><div class="trinity-bar"><div class="trinity-bar-fill" id="trinity-fill"></div></div><div class="trinity-pct" id="trinity-pct">0%</div></div></div>
+  <div id="trinity-loader" class="trinity-hidden">
+  <canvas id="trinity-crt-canvas" width="800" height="500"></canvas>
+  <div id="trinity-logs" style="position:absolute;right:60px;top:50%;transform:translateY(-50%);font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(0,255,65,0.4);line-height:1.8;text-align:left;max-height:200px;overflow:hidden"></div>
+</div>
+<div id="trinity-zoom-overlay" style="position:fixed;inset:0;z-index:10001;pointer-events:none;display:none;background:#000">
+  <div id="trinity-zoom-screen" style="position:absolute;background:#0a1a0a;border:2px solid #39FF14;box-shadow:0 0 30px rgba(57,255,20,0.3);overflow:hidden">
+    <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,65,0.03) 2px,rgba(0,255,65,0.03) 4px);pointer-events:none;z-index:2"></div>
+  </div>
+</div>
 </div>
 <div id="unfold-overlay"><div id="unfold-flash"></div><div id="unfold-name">NICOLAS CAVA</div></div>
 <div id="user-auth">USER_SESSION: <strong>NICOLAS CAVA</strong></div>
@@ -468,12 +516,12 @@ background-size:60px 60px}
   <div class="desktop-watermark">NICOLAS CAVA</div>
   <div class="desktop-icons" id="desktop-icons">
     <div class="desktop-icon" ondblclick="openWindow('bio')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><rect x="10" y="3" width="22" height="36" rx="2"/><circle cx="21" cy="14" r="5" opacity="0.4"/><path d="M14 28 Q17 23 21 23 Q25 23 28 28" opacity="0.4"/></svg><div class="desktop-icon-label">BIO_LOG.exe</div></div>
+    <div class="desktop-icon" ondblclick="openWindow('pills')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><rect x="6" y="12" width="12" height="22" rx="6" fill="rgba(37,99,235,0.15)" stroke="rgba(37,99,235,0.6)"/><line x1="6" y1="23" x2="18" y2="23" stroke="rgba(37,99,235,0.4)" stroke-width="0.8"/><rect x="24" y="8" width="12" height="22" rx="6" fill="rgba(235,37,37,0.15)" stroke="rgba(235,37,37,0.6)"/><line x1="24" y1="19" x2="36" y2="19" stroke="rgba(235,37,37,0.4)" stroke-width="0.8"/><line x1="19" y1="20" x2="23" y2="17" stroke="var(--volt)" stroke-width="0.6" opacity="0.4" stroke-dasharray="1 2"/></svg><div class="desktop-icon-label">MATRIX_PILLS.exe</div></div>
     <div class="desktop-icon" ondblclick="openWindow('digital')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><path d="M6 10 L6 36 L36 36 L36 10 L26 10 L24 6 L16 6 L14 10 Z"/><line x1="14" y1="20" x2="28" y2="20" opacity="0.3"/><line x1="14" y1="26" x2="24" y2="26" opacity="0.3"/></svg><div class="desktop-icon-label">FIELD_DATA.lnk</div></div>
+    <div class="desktop-icon" ondblclick="openWindow('arcade')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><rect x="6" y="10" width="30" height="20" rx="3"/><circle cx="15" cy="20" r="4" opacity="0.4"/><line x1="15" y1="17" x2="15" y2="23" stroke-width="1" opacity="0.5"/><line x1="12" y1="20" x2="18" y2="20" stroke-width="1" opacity="0.5"/><circle cx="29" cy="18" r="1.5" fill="var(--volt)" opacity="0.6"/><circle cx="26" cy="22" r="1.5" fill="var(--volt)" opacity="0.4"/><line x1="14" y1="30" x2="18" y2="34" stroke-width="1.5"/><line x1="28" y1="30" x2="24" y2="34" stroke-width="1.5"/></svg><div class="desktop-icon-label">GAME.exe</div></div>
     <div class="desktop-icon" ondblclick="openWindow('print')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><rect x="8" y="6" width="26" height="30" rx="1"/><path d="M18 6 L18 18 L24 14 L30 18 L30 6" fill="rgba(0,255,65,0.06)"/><line x1="12" y1="24" x2="28" y2="24" opacity="0.3"/></svg><div class="desktop-icon-label">RAW_FILES.zip</div></div>
     <div class="desktop-icon" ondblclick="openWindow('event')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><circle cx="21" cy="21" r="14"/><circle cx="21" cy="21" r="6" opacity="0.4"/><line x1="21" y1="7" x2="21" y2="3"/><line x1="21" y1="39" x2="21" y2="35"/></svg><div class="desktop-icon-label">FUTURE_SCAN.bin</div></div>
     <div class="desktop-icon" ondblclick="openWindow('instit')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><rect x="8" y="8" width="26" height="26" rx="3"/><line x1="14" y1="16" x2="28" y2="16" opacity="0.4"/><line x1="14" y1="21" x2="28" y2="21" opacity="0.3"/><line x1="14" y1="26" x2="24" y2="26" opacity="0.3"/></svg><div class="desktop-icon-label">CORE_PROTOCOL.cfg</div></div>
-    <div class="desktop-icon" ondblclick="openWindow('pills')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><rect x="6" y="12" width="12" height="22" rx="6" fill="rgba(37,99,235,0.15)" stroke="rgba(37,99,235,0.6)"/><line x1="6" y1="23" x2="18" y2="23" stroke="rgba(37,99,235,0.4)" stroke-width="0.8"/><rect x="24" y="8" width="12" height="22" rx="6" fill="rgba(235,37,37,0.15)" stroke="rgba(235,37,37,0.6)"/><line x1="24" y1="19" x2="36" y2="19" stroke="rgba(235,37,37,0.4)" stroke-width="0.8"/><line x1="19" y1="20" x2="23" y2="17" stroke="var(--volt)" stroke-width="0.6" opacity="0.4" stroke-dasharray="1 2"/></svg><div class="desktop-icon-label">MATRIX_PILLS.exe</div></div>
-    <div class="desktop-icon" ondblclick="openWindow('arcade')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><rect x="6" y="10" width="30" height="20" rx="3"/><circle cx="15" cy="20" r="4" opacity="0.4"/><line x1="15" y1="17" x2="15" y2="23" stroke-width="1" opacity="0.5"/><line x1="12" y1="20" x2="18" y2="20" stroke-width="1" opacity="0.5"/><circle cx="29" cy="18" r="1.5" fill="var(--volt)" opacity="0.6"/><circle cx="26" cy="22" r="1.5" fill="var(--volt)" opacity="0.4"/><line x1="14" y1="30" x2="18" y2="34" stroke-width="1.5"/><line x1="28" y1="30" x2="24" y2="34" stroke-width="1.5"/></svg><div class="desktop-icon-label">GAME.exe</div></div>
   </div>
 
   <!-- BIO_LOG V4 -->
@@ -593,15 +641,11 @@ background-size:60px 60px}
         <div class="prj-bloc" style="border-left:3px solid rgba(236,72,153,0.6)"><div class="prj-bloc-title" style="color:#f472b6">PINTEREST / BEHANCE — L'ESTHÉTIQUE</div><div class="prj-bloc-item" style="font-size:16px">Pour stocker des références esthétiques, du glitch-art et des interfaces typées "Cyber".</div></div>
       </div>
     </div></div>
-    <div class="prj-page" id="pills-red"><div class="prj-page-header"><button class="prj-back" onclick="backToPills()">← RETOUR</button><div class="prj-page-name">INSPIRATIONS</div></div><div class="prj-scroll" id="red-scroll">
-      <div id="red-typewriter-content">
-        <div class="tw-line" data-tw="[LOG: EXPERIMENTAL_SECTION] Hors des sentiers balisés, mon temps se divise entre l'expérimentation visuelle et la logique pure. Pour moi, créer est une extension naturelle de la curiosité."></div>
-        <div class="tw-title" data-tw="Game Development" style="opacity:0"></div>
-        <div class="tw-line" data-tw="Je ne me contente pas de consommer des mondes virtuels, je cherche à en définir les règles. Je développe des expériences interactives où le gameplay rencontre une esthétique radicale. Chaque jeu est un prototype, une itération sur l'interaction homme-machine."></div>
-        <div class="tw-title" data-tw="Digital Alchemy & Visual Modding" style="opacity:0"></div>
-        <div class="tw-line" data-tw="Fasciné par les esthétiques hybrides, je m'amuse à déconstruire et ré-imaginer des identités visuelles fortes. À la manière de l'univers visuel de Trinity (Laylow), je retravaille des covers d'albums pour leur injecter une dose de &quot;glitch&quot; et de futurisme froid. C'est ici que la technologie rencontre l'émotion brute : modifier l'existant pour créer une nouvelle réalité visuelle, entre organique et synthétique."></div>
-        <div class="tw-img" id="red-cover-img"><img src="https://i.ibb.co/WNCdP4f9/5b02b5d5-fd63-410d-a56f-a771d99baa71.png" alt="Cover Alternative"></div>
-      </div>
+    <div class="prj-page" id="pills-red" style="position:relative"><div id="red-glitch-overlay" style="position:absolute;inset:0;z-index:10;display:none;background:#050505"><canvas id="red-glitch-canvas"></canvas></div><div class="prj-page-header" style="position:relative;z-index:11"><button class="prj-back" onclick="backToPills()">← RETOUR</button><div class="prj-page-name">INSPIRATIONS</div></div><div class="prj-scroll" id="red-scroll" style="position:relative;z-index:11">
+      <div class="prj-section anim-s"><div class="prj-stag">// log_experimental</div><div class="prj-stitle">Section Expérimentale</div><div class="prj-text" style="border-left:3px solid rgba(220,38,38,0.5);padding-left:16px;background:rgba(220,38,38,0.02)">[LOG: EXPERIMENTAL_SECTION] Hors des sentiers balisés, mon temps se divise entre l'expérimentation visuelle et la logique pure. Pour moi, créer est une extension naturelle de la curiosité.</div></div>
+      <div class="prj-section anim-s"><div class="prj-stag">// game_dev</div><div class="prj-stitle">Game Development</div><div class="prj-text">Je ne me contente pas de consommer des mondes virtuels, je cherche à en définir les règles. Je développe des expériences interactives où le gameplay rencontre une esthétique radicale. Chaque jeu est un prototype, une itération sur l'interaction homme-machine.</div></div>
+      <div class="prj-section anim-s"><div class="prj-stag">// digital_alchemy</div><div class="prj-stitle">Digital Alchemy & Visual Modding</div><div class="prj-text">Fasciné par les esthétiques hybrides, je m'amuse à déconstruire et ré-imaginer des identités visuelles fortes. À la manière de l'univers visuel de Trinity (Laylow), je retravaille des covers d'albums pour leur injecter une dose de "glitch" et de futurisme froid. C'est ici que la technologie rencontre l'émotion brute : modifier l'existant pour créer une nouvelle réalité visuelle, entre organique et synthétique.</div></div>
+      <div class="prj-section anim-s"><div class="prj-img"><img src="https://i.ibb.co/WNCdP4f9/5b02b5d5-fd63-410d-a56f-a771d99baa71.png" alt="Cover Alternative"></div></div>
     </div></div>
   </div></div>
 
@@ -691,7 +735,7 @@ function drawMatrix(){ctx.fillStyle='rgba(5,5,5,0.04)';ctx.fillRect(0,0,canvas.w
 const petals=[],PETAL_CT=65;
 for(let i=0;i<PETAL_CT;i++){petals.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,size:8+Math.random()*14,rot:Math.random()*Math.PI*2,rotSpd:(Math.random()-0.5)*0.02,spd:0.15+Math.random()*0.4,drift:Math.random()*Math.PI*2,driftSpd:0.005+Math.random()*0.01,opacity:0.35+Math.random()*0.35})}
 function drawPetal(x,y,size,rot,opacity){pCtx.save();pCtx.translate(x,y);pCtx.rotate(rot);pCtx.strokeStyle=`rgba(0,255,65,${opacity})`;pCtx.fillStyle=`rgba(0,255,65,${opacity*0.6})`;pCtx.lineWidth=1;pCtx.beginPath();pCtx.moveTo(0,-size);pCtx.bezierCurveTo(size*0.6,-size*0.5,size*0.5,size*0.3,0,size);pCtx.bezierCurveTo(-size*0.5,size*0.3,-size*0.6,-size*0.5,0,-size);pCtx.fill();pCtx.stroke();pCtx.strokeStyle=`rgba(0,255,65,${opacity*0.5})`;pCtx.beginPath();pCtx.moveTo(0,-size*0.8);pCtx.lineTo(0,size*0.7);pCtx.stroke();pCtx.restore()}
-function animatePetals(){pCtx.clearRect(0,0,petalCanvas.width,petalCanvas.height);for(const p of petals){p.y+=p.spd;p.drift+=p.driftSpd;p.x+=Math.sin(p.drift)*0.3;p.rot+=p.rotSpd;const dx=p.x-mouseX,dy=p.y-mouseY;const dist=Math.sqrt(dx*dx+dy*dy);if(dist<180){const f=(180-dist)/180;p.x+=dx/dist*f*3;p.y+=dy/dist*f*3;p.rot+=f*0.08;drawPetal(p.x,p.y,p.size*(1+f*0.2),p.rot,Math.min(1,p.opacity+f*0.3))}else drawPetal(p.x,p.y,p.size,p.rot,p.opacity);if(p.y>innerHeight+20){p.y=-20;p.x=Math.random()*innerWidth}}requestAnimationFrame(animatePetals)}
+function animatePetals(){pCtx.clearRect(0,0,petalCanvas.width,petalCanvas.height);for(const p of petals){p.y+=p.spd;p.drift+=p.driftSpd;p.x+=Math.sin(p.drift)*0.3;p.rot+=p.rotSpd;const dx=p.x-mouseX,dy=p.y-mouseY;const dist=Math.sqrt(dx*dx+dy*dy);if(dist<260){const f=(260-dist)/260;p.x+=dx/dist*f*5.5;p.y+=dy/dist*f*5.5;p.rot+=f*0.14;drawPetal(p.x,p.y,p.size*(1+f*0.35),p.rot,Math.min(1,p.opacity+f*0.3))}else drawPetal(p.x,p.y,p.size,p.rot,p.opacity);if(p.y>innerHeight+20){p.y=-20;p.x=Math.random()*innerWidth}}requestAnimationFrame(animatePetals)}
 
 // GLITCH
 function triggerGlitch(){const els=document.querySelectorAll('.glitch-text');const el=els[Math.floor(Math.random()*els.length)];if(!el)return;el.classList.add('active');setTimeout(()=>el.classList.remove('active'),150)}
@@ -706,7 +750,88 @@ async function runUnfold(){const icons=document.querySelectorAll('.desktop-icon'
 
 // BOOT
 const bootLines=[{text:'<span class="hack">[BIOS]</span> POST check.................... <span class="ok">[PASS]</span>'},{text:'[SYS] Kernel v6.2.0-NCAVA loading...'},{text:'[SYS] CPU: 12-core @ 4.8GHz.......... <span class="ok">[OK]</span>'},{text:'[SYS] Memory: 16384MB................ <span class="ok">[OK]</span>'},{text:'[NET] Encrypted tunnel established....'},{text:'<span class="hack">[INTRUSION]</span> Scanning target system...'},{text:'<span class="hack">[INTRUSION]</span> Bypassing firewall 1/3... <span class="ok">[DONE]</span>'},{text:'<span class="hack">[INTRUSION]</span> Bypassing firewall 2/3... <span class="ok">[DONE]</span>'},{text:'<span class="alert">[WARNING]</span> Anomalous signature detected'},{text:'<span class="hack">[INTRUSION]</span> Bypassing firewall 3/3... <span class="ok">[DONE]</span>'},{text:'<span class="hack">[INTRUSION]</span> Injecting TRINITY_OS.exe'},{text:'[DATA] Decrypting assets.............. <span class="ok">[OK]</span>'},{text:'[AI] Strategy Engine v4.2............ <span class="ok">[OK]</span>'},{text:'[CORE] SISR + COM................... <span class="warn">[HYBRID]</span>'},{text:'[CORE] Desktop renderer.............. <span class="ok">[OK]</span>'},{text:'<span class="hack">[ACCESS]</span> System compromised. <span class="ok">Welcome, Nicolas.</span>'}];
-async function runBoot(){const log=document.getElementById('boot-log'),bar=document.getElementById('boot-progress-bar'),gl=document.getElementById('boot-glitch'),bc=document.getElementById('boot-center'),tf=document.getElementById('trinity-fill'),tp=document.getElementById('trinity-pct'),tl=document.getElementById('trinity-loader');await sleep(800);for(let i=0;i<bootLines.length;i++){const d=document.createElement('div');d.className='line';d.innerHTML=bootLines[i].text;log.appendChild(d);await sleep(100);d.classList.add('show');bar.style.width=((i+1)/bootLines.length*100)+'%';if(Math.random()>0.88){gl.style.background='rgba(0,255,65,0.03)';await sleep(60);gl.style.background='transparent'}if(i===5||i===10)await sleep(400);else await sleep(220+Math.random()*180)}await sleep(600);bc.style.transition='opacity 0.4s';bc.style.opacity='0';await sleep(400);bc.style.display='none';tl.classList.remove('trinity-hidden');tl.style.display='flex';tl.style.opacity='0';tl.style.transition='opacity 0.5s';await sleep(50);tl.style.opacity='1';await sleep(300);const dur=2500,st=Date.now();await new Promise(res=>{function tick(){const e=Date.now()-st,p=Math.min(e/dur,1),ea=p<0.5?2*p*p:(1-Math.pow(-2*p+2,2)/2);tf.style.width=Math.floor(ea*100)+'%';tp.textContent=Math.floor(ea*100)+'%';if(p<1)requestAnimationFrame(tick);else res()}requestAnimationFrame(tick)});await sleep(300);tl.style.transition='opacity 0.2s';tl.style.opacity='0';await sleep(200);tl.style.display='none';document.getElementById('boot-screen').style.transition='opacity 0.3s';document.getElementById('boot-screen').style.opacity='0';await sleep(300);document.getElementById('boot-screen').classList.add('hidden');drawMatrix();animatePetals();document.getElementById('desktop').classList.add('visible');await runUnfold();try{sessionStorage.setItem('ncava_booted','1')}catch(e){}}
+async function runBoot(){const log=document.getElementById('boot-log'),bar=document.getElementById('boot-progress-bar'),gl=document.getElementById('boot-glitch'),bc=document.getElementById('boot-center'),tf=document.getElementById('trinity-fill'),tp=document.getElementById('trinity-pct'),tl=document.getElementById('trinity-loader');await sleep(800);for(let i=0;i<bootLines.length;i++){const d=document.createElement('div');d.className='line';d.innerHTML=bootLines[i].text;log.appendChild(d);await sleep(100);d.classList.add('show');bar.style.width=((i+1)/bootLines.length*100)+'%';if(Math.random()>0.88){gl.style.background='rgba(0,255,65,0.03)';await sleep(60);gl.style.background='transparent'}if(i===5||i===10)await sleep(400);else await sleep(220+Math.random()*180)}await sleep(600);bc.style.transition='opacity 0.4s';bc.style.opacity='0';await sleep(400);bc.style.display='none';tl.classList.remove('trinity-hidden');tl.style.display='flex';tl.style.opacity='0';tl.style.transition='opacity 0.5s';await sleep(50);tl.style.opacity='1';await sleep(100);
+  // CRT COMPUTER ANIMATION
+  await new Promise(function(resolve){
+    var cv=document.getElementById('trinity-crt-canvas');
+    var logsEl=document.getElementById('trinity-logs');
+    if(!cv){resolve();return;}
+    var cx=cv.getContext('2d');var W=800,H=500;
+    var crtX=W/2-170,crtY=H/2-120,crtW=340,crtH=250;
+    var screenX=crtX+20,screenY=crtY+16,screenW=crtW-40,screenH=crtH*0.62;
+    var pct=0;var f=0;
+    var logMsgs=['[SYS] Mounting filesystem...','[DECRYPT] AES-256 handshake...','[NET] Tunnel established','[CORE] Loading TRINITY_OS...','[GPU] Renderer initialized','[DECRYPTING_FILES...]','[ACCESS_GRANTED]','[SYS] Welcome, Nicolas.'];
+    var logIdx=0;
+    function drawCRT(){
+      cx.clearRect(0,0,W,H);
+      // PC Body
+      cx.fillStyle='#1a1a1e';cx.strokeStyle='#39FF14';cx.lineWidth=2;
+      cx.beginPath();cx.moveTo(crtX+8,crtY);cx.lineTo(crtX+crtW-8,crtY);
+      cx.quadraticCurveTo(crtX+crtW,crtY,crtX+crtW,crtY+8);
+      cx.lineTo(crtX+crtW,crtY+crtH-8);cx.quadraticCurveTo(crtX+crtW,crtY+crtH,crtX+crtW-8,crtY+crtH);
+      cx.lineTo(crtX+8,crtY+crtH);cx.quadraticCurveTo(crtX,crtY+crtH,crtX,crtY+crtH-8);
+      cx.lineTo(crtX,crtY+8);cx.quadraticCurveTo(crtX,crtY,crtX+8,crtY);
+      cx.fill();cx.shadowColor='#39FF14';cx.shadowBlur=15;cx.stroke();cx.shadowBlur=0;
+      // Stand
+      cx.fillStyle='#1a1a1e';cx.fillRect(crtX+crtW/2-40,crtY+crtH,80,18);
+      cx.strokeStyle='#39FF14';cx.lineWidth=1.5;cx.strokeRect(crtX+crtW/2-40,crtY+crtH,80,18);
+      cx.fillRect(crtX+crtW/2-65,crtY+crtH+18,130,10);
+      cx.strokeRect(crtX+crtW/2-65,crtY+crtH+18,130,10);
+      // Screen (curved CRT feel)
+      cx.fillStyle='#0a1a0a';
+      cx.fillRect(screenX,screenY,screenW,screenH);
+      cx.strokeStyle='#39FF14';cx.lineWidth=1.5;
+      cx.shadowColor='#39FF14';cx.shadowBlur=8;
+      cx.strokeRect(screenX,screenY,screenW,screenH);cx.shadowBlur=0;
+      // Scanlines
+      for(var i=0;i<screenH;i+=3){
+        cx.fillStyle='rgba(0,255,65,0.02)';cx.fillRect(screenX,screenY+i,screenW,1);
+      }
+      // Power LED
+      cx.fillStyle='#39FF14';cx.shadowColor='#39FF14';cx.shadowBlur=6;
+      cx.beginPath();cx.arc(crtX+crtW-20,crtY+crtH-12,3,0,Math.PI*2);cx.fill();cx.shadowBlur=0;
+      // Screen content
+      cx.fillStyle='#39FF14';cx.font='bold 16px monospace';cx.textAlign='center';
+      var dots='.'.repeat((Math.floor(f/6)%4));
+      cx.fillText('TRINITY_LOADING'+dots,W/2,screenY+30);
+      // Progress bar
+      var barX=screenX+20,barY=screenY+45,barW=screenW-40,barH=8;
+      cx.fillStyle='rgba(0,255,65,0.15)';cx.fillRect(barX,barY,barW,barH);
+      cx.fillStyle='#39FF14';cx.shadowColor='#39FF14';cx.shadowBlur=6;
+      cx.fillRect(barX,barY,barW*pct,barH);cx.shadowBlur=0;
+      // Percentage
+      cx.font='bold 11px monospace';cx.fillText(Math.floor(pct*100)+'%',W/2,screenY+70);
+      cx.textAlign='start';
+      // Update
+      pct=Math.min(1,pct+0.012);
+      f++;
+      // Logs
+      if(f%12===0&&logIdx<logMsgs.length&&logsEl){
+        var line=document.createElement('div');line.textContent=logMsgs[logIdx];
+        line.style.opacity='0';line.style.transition='opacity 0.3s';
+        logsEl.appendChild(line);setTimeout(function(){line.style.opacity='1';},20);
+        logIdx++;logsEl.scrollTop=logsEl.scrollHeight;
+      }
+      if(pct<1){requestAnimationFrame(drawCRT);}
+      else{setTimeout(resolve,200);}
+    }
+    drawCRT();
+  });
+  // ZOOM INTO CRT SCREEN
+  var zoomOv=document.getElementById('trinity-zoom-overlay');
+  var zoomScreen=document.getElementById('trinity-zoom-screen');
+  zoomOv.style.display='block';
+  // Position zoom screen at CRT screen location
+  zoomScreen.style.cssText='position:absolute;background:#0a1a0a;border:2px solid #39FF14;box-shadow:0 0 30px rgba(57,255,20,0.3);overflow:hidden;top:50%;left:50%;width:180px;height:120px;transform:translate(-50%,-50%);border-radius:8px;';
+  await sleep(50);
+  zoomScreen.classList.add('trinity-zoom-active');
+  await sleep(700);
+  // Flash
+  zoomOv.style.background='rgba(57,255,20,0.15)';await sleep(80);
+  zoomOv.style.background='#000';await sleep(100);
+  zoomOv.style.transition='opacity 0.3s';zoomOv.style.opacity='0';
+  tl.style.display='none';
+  document.getElementById('boot-screen').classList.add('hidden');drawMatrix();animatePetals();document.getElementById('desktop').classList.add('visible');await runUnfold();try{sessionStorage.setItem('ncava_booted','1')}catch(e){}}
 async function skipBoot(){document.getElementById('boot-screen').classList.add('hidden');drawMatrix();animatePetals();document.getElementById('desktop').classList.add('visible');document.getElementById('user-auth').classList.add('visible')}
 function sleep(ms){return new Promise(r=>setTimeout(r,ms))}
 
@@ -734,7 +859,7 @@ function showPillPage(color){
   var target=document.getElementById('pills-'+color);
   target.classList.add('active');target.style.display='flex';
   if(color==='blue'){runPixelRain();}
-  if(color==='red'){runTypewriter();}
+  if(color==='red'){runRedGlitch();}
 }
 function backToPills(){var win=document.querySelector('#win-pills .win-body');win.querySelectorAll('.prj-page').forEach(function(p){p.classList.remove('active');p.style.display='none';});var m=document.getElementById('pills-main');m.classList.add('active');m.style.display='flex';}
 
@@ -804,41 +929,62 @@ function runPixelRain(){
   draw();
 }
 
-// TYPEWRITER for red pill
-function runTypewriter(){
-  var lines=document.querySelectorAll('#red-typewriter-content .tw-line, #red-typewriter-content .tw-title');
-  var img=document.getElementById('red-cover-img');
-  // Reset all
-  lines.forEach(function(el){el.textContent='';el.classList.remove('typing','done');el.style.opacity='0';});
-  if(img)img.classList.remove('show');
-  var idx=0;
-  function typeLine(){
-    if(idx>=lines.length){
-      if(img)setTimeout(function(){img.classList.add('show');},300);
-      return;
-    }
-    var el=lines[idx];
-    var text=el.getAttribute('data-tw');
-    if(!text){idx++;typeLine();return;}
-    el.style.opacity='1';
-    el.classList.add('typing');
-    var ci=0;
-    var speed=el.classList.contains('tw-title')?40:12;
-    function typeChar(){
-      if(ci<text.length){
-        // Handle &quot; entities
-        if(text.substr(ci,6)==='&quot;'){el.innerHTML+='"';ci+=6;}
-        else if(text.substr(ci,5)==='&amp;'){el.innerHTML+='&';ci+=5;}
-        else{el.innerHTML+=text[ci];ci++;}
-        setTimeout(typeChar,speed);
-      }else{
-        el.classList.remove('typing');el.classList.add('done');
-        idx++;setTimeout(typeLine,200);
+// RED GLITCH TRANSITION
+function runRedGlitch(){
+  var cv=document.getElementById('red-glitch-canvas');
+  var ov=document.getElementById('red-glitch-overlay');
+  var scroll=document.getElementById('red-scroll');
+  if(!cv||!ov)return;
+  ov.style.display='block';
+  if(scroll)scroll.style.opacity='0';
+  var rect=ov.parentElement.getBoundingClientRect();
+  cv.width=Math.floor(rect.width);cv.height=Math.floor(rect.height)-38;
+  var cx=cv.getContext('2d');var W=cv.width;var H=cv.height;
+  var f=0;var scanY=0;var glitchBars=[];
+  // Red data streams
+  var streams=[];
+  for(var i=0;i<25;i++){
+    streams.push({x:Math.random()*W,y:Math.random()*H,len:40+Math.random()*100,spd:8+Math.random()*15,chars:[]});
+    for(var j=0;j<8;j++)streams[i].chars.push(String.fromCharCode(0x30A0+Math.floor(Math.random()*96)));
+  }
+  function draw(){
+    cx.fillStyle='rgba(5,5,5,0.15)';cx.fillRect(0,0,W,H);
+    // Red/crimson data streams falling
+    for(var i=0;i<streams.length;i++){
+      var s=streams[i];s.y+=s.spd;
+      for(var j=0;j<s.chars.length;j++){
+        var alpha=1-j/s.chars.length;
+        cx.fillStyle=j===0?'rgba(255,200,200,0.9)':'rgba(220,38,38,'+alpha*0.7+')';
+        cx.font=(10+Math.random()*4)+'px monospace';
+        cx.fillText(s.chars[j],s.x,s.y-j*14);
+      }
+      if(s.y>H+s.len){s.y=-s.len;s.x=Math.random()*W;
+        for(var j=0;j<s.chars.length;j++)s.chars[j]=String.fromCharCode(0x30A0+Math.floor(Math.random()*96));
       }
     }
-    typeChar();
+    // Horizontal glitch bars
+    if(f%3===0&&Math.random()>0.4){
+      glitchBars.push({y:Math.random()*H,h:2+Math.random()*8,life:6+Math.random()*10,shift:Math.random()*20-10});
+    }
+    for(var i=glitchBars.length-1;i>=0;i--){
+      var b=glitchBars[i];b.life--;
+      cx.fillStyle='rgba(220,38,38,'+(b.life/15)+')';
+      cx.fillRect(b.shift,b.y,W,b.h);
+      if(b.life<=0)glitchBars.splice(i,1);
+    }
+    // Central scan line
+    scanY+=5;
+    cx.fillStyle='rgba(255,50,50,0.08)';cx.fillRect(0,scanY%H-2,W,4);
+    cx.fillStyle='rgba(255,255,255,0.03)';cx.fillRect(0,scanY%H,W,1);
+    f++;
+    if(f<65){requestAnimationFrame(draw);}
+    else{
+      ov.style.transition='opacity 0.4s';ov.style.opacity='0';
+      if(scroll){scroll.style.transition='opacity 0.5s';scroll.style.opacity='1';}
+      setTimeout(function(){ov.style.display='none';ov.style.opacity='1';},500);
+    }
   }
-  setTimeout(typeLine,400);
+  draw();
 }
 
 
@@ -1037,23 +1183,55 @@ function initShoot(){
 
   // === BIO: Pink pixel roses ===
   winAnims.bio=function(cx,W,H,done){
-    var petals=[];var f=0;
-    for(var i=0;i<120;i++){
-      petals.push({x:Math.random()*W,y:Math.random()*-H,s:3+Math.random()*6,v:3+Math.random()*5,r:Math.random()*Math.PI*2});
+    var roses=[];var f=0;var P=2.5;
+    for(var i=0;i<30;i++){
+      roses.push({x:Math.random()*W,y:-40-Math.random()*H,v:1.2+Math.random()*1.5,wobble:Math.random()*Math.PI*2,sc:0.7+Math.random()*0.8});
+    }
+    function px(x,y,w,h,col){cx.fillStyle=col;cx.fillRect(x,y,w,h);}
+    function drawRose(ox,oy,sc){
+      cx.save();cx.translate(ox,oy);var s=P*sc;
+      // === FLOWER HEAD (reds) ===
+      // Dark red shadows
+      px(-s*2,-s*5,s,s,'#5c1a1a');px(s,-s*5,s,s,'#5c1a1a');
+      px(-s*3,-s*4,s,s,'#5c1a1a');px(s*2,-s*4,s,s,'#5c1a1a');
+      // Mid red body
+      px(-s*2,-s*4,s*4,s,'#b83030');
+      px(-s*3,-s*3,s*6,s*2,'#c84040');
+      px(-s*2.5,-s*1,s*5,s,'#b83030');
+      // Light red highlights
+      px(-s,-s*4,s*2,s,'#d85050');
+      px(-s*2,-s*3,s,s,'#d85050');px(s,-s*2,s,s,'#d85050');
+      // Dark red depth
+      px(-s,-s*2,s,s,'#7a2020');px(s*0.5,-s*3,s,s,'#7a2020');
+      // === STEM (dark green zigzag) ===
+      px(-s*0.5,0,s,s*2,'#2d5a1e');
+      px(0,s*2,s,s,'#2d5a1e');
+      px(-s*0.5,s*3,s,s,'#2d5a1e');
+      px(-s,s*4,s,s*2,'#2d5a1e');
+      px(-s*0.5,s*6,s,s,'#2d5a1e');
+      px(0,s*7,s,s*2,'#2d5a1e');
+      // === LEAVES ===
+      // Top leaf (right)
+      px(s*0.5,s,s*2,s,'#5a8a30');px(s*2.5,s*0.5,s*2,s,'#6a9a40');
+      px(s*1.5,s*1.5,s,s*0.5,'#4a7a28');
+      // Bottom leaf (left)
+      px(-s*2.5,s*5,s*2,s,'#6a9a40');px(-s*4.5,s*4.5,s*2,s,'#5a8a30');
+      px(-s*3,s*5.5,s,s*0.5,'#4a7a28');
+      cx.restore();
     }
     function draw(){
-      cx.fillStyle='rgba(5,5,5,0.12)';cx.fillRect(0,0,W,H);
-      for(var i=0;i<petals.length;i++){
-        var p=petals[i];p.y+=p.v;p.x+=Math.sin(p.r+=0.03)*1.5;
-        cx.fillStyle='rgba(255,'+Math.floor(80+Math.random()*100)+','+Math.floor(140+Math.random()*80)+','+(0.5+Math.random()*0.5)+')';
-        // Draw pixel rose (small cross shape)
-        var s=p.s;
-        cx.fillRect(p.x,p.y,s,s);cx.fillRect(p.x-s*0.5,p.y+s*0.3,s*2,s*0.4);
-        cx.fillRect(p.x+s*0.3,p.y-s*0.5,s*0.4,s*2);
-        if(p.y>H+10){p.y=-10;p.x=Math.random()*W;}
+      cx.clearRect(0,0,W,H);
+      cx.fillStyle='#050505';cx.fillRect(0,0,W,H);
+      for(var i=0;i<roses.length;i++){
+        var r=roses[i];
+        r.y+=r.v;
+        r.wobble+=0.012;
+        r.x+=Math.sin(r.wobble)*0.4;
+        drawRose(r.x,r.y,r.sc);
+        if(r.y>H+60){r.y=-60;r.x=Math.random()*W;}
       }
       f++;
-      if(f<75)requestAnimationFrame(draw);else done();
+      if(f<100)requestAnimationFrame(draw);else done();
     }
     draw();
   };
@@ -1087,7 +1265,7 @@ function initShoot(){
         if(p.y>H+20){p.y=-30;p.x=Math.random()*W;}
       }
       f++;
-      if(f<80)requestAnimationFrame(draw);else done();
+      if(f<85)requestAnimationFrame(draw);else done();
     }
     draw();
   };
@@ -1115,7 +1293,7 @@ function initShoot(){
     }
     function draw(){
       cx.fillStyle='rgba(5,5,5,0.08)';cx.fillRect(0,0,W,H);
-      px.x+=5;
+      px.x+=0;
       trail.push({x:px.x,y:px.y,a:1});
       // Draw trail
       for(var i=trail.length-1;i>=0;i--){
@@ -1129,7 +1307,7 @@ function initShoot(){
       // Red scan line
       cx.fillStyle='rgba(220,38,38,0.04)';cx.fillRect(0,px.y-40,W,80);
       f++;
-      if(px.x<W+40)requestAnimationFrame(draw);else done();
+      px.x+=5;if(px.x<W+40)requestAnimationFrame(draw);else done();
     }
     draw();
   };
@@ -1238,8 +1416,8 @@ function initShoot(){
       cx.beginPath();cx.arc(x+w*0.5,y+h*0.88,6,0,Math.PI*2);cx.fill();
       // Antenna
       cx.strokeStyle='#555';cx.lineWidth=2;
-      cx.beginPath();cx.moveTo(x+w*0.35,y);cx.lineTo(x+w*0.2,y-30);cx.stroke();
-      cx.beginPath();cx.moveTo(x+w*0.65,y);cx.lineTo(x+w*0.8,y-30);cx.stroke();
+      cx.beginPath();cx.moveTo(x+w*0.35,y);cx.lineTo(x+w*0.2,y-40);cx.stroke();
+      cx.beginPath();cx.moveTo(x+w*0.65,y);cx.lineTo(x+w*0.8,y-40);cx.stroke();
       // Legs
       cx.fillStyle='#333';
       cx.fillRect(x+10,y+h,8,15);cx.fillRect(x+w-18,y+h,8,15);
@@ -1280,7 +1458,7 @@ function initShoot(){
           cx.fillRect(tvX+30,tvY+tvH*0.5,(tvW-60)*pct,6);cx.shadowBlur=0;
           cx.textAlign='start';
         }
-        if(f>70)done();
+        if(f>65)done();
       }
       f++;
       if(f<200)requestAnimationFrame(draw);else done();
