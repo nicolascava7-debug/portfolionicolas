@@ -624,6 +624,40 @@ background-size:60px 60px}
 #lightbox-corners::before,#lightbox-corners::after{content:'';position:absolute;width:20px;height:20px;border:1px solid var(--volt)}
 #lightbox-corners::before{top:0;left:0;border-right:none;border-bottom:none}
 #lightbox-corners::after{bottom:0;right:0;border-left:none;border-top:none}
+
+/* === STAGE PAGES (Amber/Orange theme to distinguish from projects) === */
+.stage-accent{--stage:#FB923C;--stage-bg:rgba(251,146,60,0.06);--stage-border:rgba(251,146,60,0.3)}
+.prj-folder.stage-folder{border-left:3px solid var(--stage-border)}
+.prj-folder.stage-folder:hover{background:var(--stage-bg);border-color:var(--stage-border)}
+.prj-folder.stage-folder .prj-folder-name{color:#FB923C}
+.prj-folder.stage-folder .stage-tag{display:inline-block;padding:2px 8px;background:rgba(251,146,60,0.15);color:#FB923C;border:1px solid rgba(251,146,60,0.4);border-radius:2px;font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2px;margin-left:6px}
+.stage-page .prj-stag{color:#FB923C!important;border-left-color:#FB923C!important}
+.stage-page .prj-bloc{border-color:rgba(251,146,60,0.15)!important;background:rgba(251,146,60,0.02)!important}
+.stage-page .prj-bloc-title{color:#FB923C!important}
+.stage-page .prj-bloc-item{border-left-color:rgba(251,146,60,0.2)!important}
+.stage-page .prj-bloc-item:hover{border-left-color:#FB923C!important;color:var(--text)!important}
+.stage-page .prj-bloc:hover{border-color:rgba(251,146,60,0.35)!important;background:rgba(251,146,60,0.04)!important;box-shadow:0 4px 20px rgba(251,146,60,0.08)}
+.stage-page .prj-bloc:hover .prj-bloc-title{text-shadow:0 0 12px rgba(251,146,60,0.4)!important}
+.stage-page .prj-problematique{color:#FB923C!important;border-color:rgba(251,146,60,0.4)!important;background:rgba(251,146,60,0.04)!important}
+.stage-page .prj-badge{border-color:rgba(251,146,60,0.25);color:#FB923C}
+.stage-page .prj-back{color:#FB923C!important;border-color:#FB923C!important}
+.stage-page .prj-back:hover{background:#FB923C!important;color:#000!important}
+.stage-page .prj-stitle:hover{text-shadow:0 0 15px rgba(251,146,60,0.3)!important}
+.stage-page .prj-text:hover{text-shadow:0 0 8px rgba(251,146,60,0.15)!important}
+.stage-page .prj-section::before{background:#FB923C!important;box-shadow:0 0 10px #FB923C!important}
+.stage-header{background:linear-gradient(90deg,rgba(251,146,60,0.08),transparent)!important;border-bottom-color:rgba(251,146,60,0.3)!important}
+.stage-header::after{background:#FB923C!important;box-shadow:0 0 10px #FB923C!important}
+.stage-header .prj-page-name{color:#FB923C!important}
+.stage-badge-top{display:inline-flex;align-items:center;gap:8px;padding:4px 12px;background:rgba(251,146,60,0.12);border:1px solid rgba(251,146,60,0.4);border-radius:2px;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:3px;color:#FB923C;text-transform:uppercase;margin-left:auto}
+.stage-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0;padding:14px;border:1px dashed rgba(251,146,60,0.3);background:rgba(251,146,60,0.02);border-radius:3px}
+.stage-info-item{display:flex;flex-direction:column;gap:3px}
+.stage-info-label{font-family:'JetBrains Mono',monospace;font-size:9px;color:#FB923C;letter-spacing:2px;text-transform:uppercase;opacity:0.8}
+.stage-info-val{font-family:'Montserrat',sans-serif;font-size:13px;color:var(--text);font-weight:600}
+.stage-caption{font-family:'JetBrains Mono',monospace;font-size:11px;color:#FB923C;letter-spacing:2px;text-transform:uppercase;margin-top:8px;text-align:center}
+.stage-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.stage-carousel{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0}
+.stage-carousel .prj-img{margin:0}
+.stage-carousel .prj-img img{max-height:260px}
 </style>
 </head>
 <body>
@@ -741,6 +775,7 @@ background-size:60px 60px}
       <div class="prj-tree-title">📂 DIGITAL_ROOT</div>
       <div class="prj-folder" onclick="showPrj('digital','loop')"><span>📁</span><span class="prj-folder-name">LOOP_LEGACY.prj</span><span class="prj-folder-desc">Branding Jeu Vidéo</span><span class="prj-folder-desc">▸</span></div>
       <div class="prj-folder" onclick="showPrj('digital','match')"><span>📁</span><span class="prj-folder-name">CA_MATCH.prj</span><span class="prj-folder-desc">Média Sport Digital</span><span class="prj-folder-desc">▸</span></div>
+      <div class="prj-folder stage-folder" onclick="showPrj('digital','publicis')"><span>💼</span><span class="prj-folder-name">PUBLICIS_RAZORFISH.stage</span><span class="stage-tag">STAGE</span><span class="prj-folder-desc">Mai–Juil 2025</span><span class="prj-folder-desc">▸</span></div>
     </div></div>
     <!-- LOOP LEGACY PAGE -->
     <div class="prj-page" id="digital-loop"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('digital')">← RETOUR</button><div class="prj-page-name">PROJECT: LOOP_LEGACY</div></div><div class="prj-scroll">
@@ -809,6 +844,46 @@ background-size:60px 60px}
         <div class="prj-bloc"><div class="prj-bloc-title">KPI de Conversion</div><div class="prj-bloc-item">Nombre d'abonnés "Le Club" : Volume d'utilisateurs payant l'abonnement à prix "café".</div><div class="prj-bloc-item">Téléchargements App : Nombre d'installations de l'application mobile.</div><div class="prj-bloc-item">Taux de Mentors certifiés : Nombre d'utilisateurs passant du statut de lecteur à ambassadeur actif.</div></div>
       </div>
     </div></div>
+    <!-- PUBLICIS RAZORFISH STAGE PAGE -->
+    <div class="prj-page stage-page" id="digital-publicis"><div class="prj-page-header stage-header"><button class="prj-back" onclick="backToTree('digital')">← RETOUR</button><div class="prj-page-name">STAGE: PUBLICIS_RAZORFISH</div><div class="stage-badge-top">◆ STAGE</div></div><div class="prj-scroll">
+      <div class="prj-section"><div class="prj-stag">// section_01 — contexte</div><div class="prj-stitle">Contexte et enjeux</div>
+        <div class="stage-info-grid">
+          <div class="stage-info-item"><div class="stage-info-label">▸ Période</div><div class="stage-info-val">Mai – Juillet 2025</div></div>
+          <div class="stage-info-item"><div class="stage-info-label">▸ Poste</div><div class="stage-info-val">Assistant Chef de Projet Digital Junior</div></div>
+          <div class="stage-info-item"><div class="stage-info-label">▸ Structure</div><div class="stage-info-val">Razorfish — Groupe Publicis</div></div>
+          <div class="stage-info-item"><div class="stage-info-label">▸ Tuteur</div><div class="stage-info-val">Chef de Projet Senior</div></div>
+        </div>
+        <div class="prj-text">Razorfish, l'agence de transformation digitale du groupe Publicis, accompagne des clients majeurs dans leur stratégie numérique. Intégré au pôle gestion de projet, ma mission consistait à assurer le lien entre les besoins business des clients et la réalisation technique et créative des solutions digitales (sites web, campagnes marketing, outils CRM).</div>
+      </div>
+      <div class="prj-section"><div class="prj-stag">// section_02 — acteurs & contraintes</div><div class="prj-stitle">Acteurs et contraintes</div><div class="prj-text">Sous la supervision d'un Chef de Projet Senior, j'ai évolué dans un environnement agile. La principale complexité résidait dans la coordination transverse de multiples pôles d'expertise (Design/UI, Produit, Développement Tech). L'enjeu était de respecter des délais de production extrêmement serrés (deadlines de campagnes) tout en garantissant un niveau de qualité "grand compte".</div></div>
+      <div class="prj-section"><div class="prj-stag">// section_03 — méthodologie</div><div class="prj-stitle">Méthodologie & actions menées</div>
+        <div class="prj-bloc"><div class="prj-bloc-title">▸ CADRAGE & BRIEF</div><div class="prj-bloc-item">Participation à la définition des besoins clients et à la rédaction des briefs créatifs et techniques pour les équipes internes.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">▸ COORDINATION & PLANNING</div><div class="prj-bloc-item">Suivi de l'avancement des livrables, organisation des points de synchronisation entre créatifs et développeurs, gestion des plannings de production.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">▸ OPTIMISATION UX (SCREEB)</div><div class="prj-bloc-item">Utilisation de l'outil Screeb pour collecter les feedbacks utilisateurs en temps réel, analyser les parcours et proposer des axes d'amélioration sur les interfaces.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">▸ RECETTE & SUIVI</div><div class="prj-bloc-item">Contrôle de la conformité des livrables avant la mise en production (QA) et suivi du déploiement des dispositifs marketing.</div></div>
+      </div>
+      <div class="prj-section"><div class="prj-stag">// section_04 — productions</div><div class="prj-stitle">Productions</div>
+        <div class="stage-gallery">
+          <div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/Xff5Lb21/Capture-d-cran-2025-06-11-235616.png" alt="Test Screeb survey Nissan"></div><div class="stage-caption">Test sur Screeb — mise en place de survey</div></div>
+          <div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/0pGbjkYH/Capture-d-cran-2025-06-11-235837.png" alt="Arbre Screeb"></div><div class="stage-caption">Arbre de décision Screeb</div></div>
+        </div>
+        <div class="stage-gallery" style="margin-top:18px">
+          <div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/VW6YXCdL/Capture-d-cran-2025-06-13-110401.png" alt="Présentation tuteurs Screeb"></div><div class="stage-caption">Présentation des tests Screeb devant mes 2 tuteurs</div></div>
+          <div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/HLysZDFK/Capture-d-cran-2025-06-24-114846.png" alt="Veille Ile-de-France Mobilités"></div><div class="stage-caption">Veille & benchmark concurrentiel — survey des autres sites</div></div>
+        </div>
+      </div>
+      <div class="prj-section"><div class="prj-stag">// section_05 — résultats</div><div class="prj-stitle">Résultats et évaluation</div><div class="prj-text">Cette expérience a permis d'assurer la livraison fluide de plusieurs dispositifs web dans le respect des plannings initiaux. L'intégration d'outils d'analyse comme Screeb a favorisé une approche "User-Centric", permettant d'ajuster les interfaces en fonction des comportements réels des utilisateurs.</div></div>
+      <div class="prj-section"><div class="prj-stag">// section_06 — compétences</div><div class="prj-stitle">Compétences (Référentiel BTS Communication)</div>
+        <div class="prj-bloc"><div class="prj-bloc-title">BLOC_01 — Stratégie de communication</div><div class="prj-bloc-item">Pilotage de projet : suivre les étapes d'un projet complexe, de la phase de réflexion stratégique jusqu'au déploiement opérationnel.</div><div class="prj-bloc-item">Analyse de performance : utilisation de données utilisateurs pour justifier des choix d'optimisation marketing.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">BLOC_02 — Solutions de communication</div><div class="prj-bloc-item">Coordination transverse : faire le lien entre des métiers différents (graphistes, développeurs) pour assurer la cohérence d'une solution globale.</div><div class="prj-bloc-item">Gestion relation client/prestataire : participation au suivi de la satisfaction client et à la gestion des retours correctifs.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">BLOC_03 — Solutions digitales innovantes</div><div class="prj-bloc-item">Maîtrise d'outils MarTech : appropriation d'outils spécialisés dans l'analyse de l'expérience utilisateur (Screeb) et la gestion de projet (Jira/Asana).</div><div class="prj-bloc-item">Culture Tech : compréhension des enjeux techniques liés au développement web pour mieux anticiper les contraintes de production.</div></div>
+      </div>
+      <div class="prj-section"><div class="prj-stag">// section_07 — kpi</div><div class="prj-stitle">Indicateurs de Performance (KPI)</div>
+        <div class="prj-bloc"><div class="prj-bloc-title">Respect des Deadlines</div><div class="prj-bloc-item">Taux de livraison des jalons de projet à 100 % dans les temps impartis.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">Qualité UX</div><div class="prj-bloc-item">Nombre de feedbacks utilisateurs collectés via Screeb et taux de transformation de ces retours en tickets d'optimisation (backlog).</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">Fluidité de production</div><div class="prj-bloc-item">Réduction des allers-retours correctifs grâce à une rédaction de briefs plus précise et un suivi rigoureux.</div></div>
+      </div>
+    </div></div>
   </div></div>
 
   <!-- COMM PRINT -->
@@ -870,6 +945,7 @@ background-size:60px 60px}
     <div class="prj-page active" id="instit-tree"><div class="prj-tree">
       <div class="prj-tree-title">📂 INSTIT_ROOT</div>
       <div class="prj-folder" onclick="showPrj('instit','veolia')"><span>📁</span><span class="prj-folder-name">VEOLIA_CARES.prj</span><span class="prj-folder-desc">Marque Employeur</span><span class="prj-folder-desc">▸</span></div>
+      <div class="prj-folder stage-folder" onclick="showPrj('instit','sos')"><span>💼</span><span class="prj-folder-name">SOS_RACISME.stage</span><span class="stage-tag">STAGE</span><span class="prj-folder-desc">Oct–Nov 2025</span><span class="prj-folder-desc">▸</span></div>
     </div></div>
     <!-- VEOLIA CARES PAGE -->
     <div class="prj-page" id="instit-veolia"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('instit')">← RETOUR</button><div class="prj-page-name">PROJECT: VEOLIA_CARES</div></div><div class="prj-scroll">
@@ -890,6 +966,56 @@ background-size:60px 60px}
         <div class="prj-bloc"><div class="prj-bloc-title">Performance Interne (Adhésion)</div><div class="prj-bloc-item">Taux d'ouverture et de clic : mesurer l'intérêt pour les newsletters ou articles intranet dédiés à "Veolia Cares".</div><div class="prj-bloc-item">Taux d'utilisation du programme : suivi du nombre de collaborateurs demandant le congé parental de 10 semaines ou la journée de bénévolat.</div></div>
         <div class="prj-bloc"><div class="prj-bloc-title">Performance Digitale (Visibilité)</div><div class="prj-bloc-item">Engagement Social Media : nombre de partages et de commentaires sur LinkedIn et Instagram avec le hashtag de la campagne.</div><div class="prj-bloc-item">Taux de complétion des vidéos : analyser si les vidéos de témoignages de collaborateurs sont regardées jusqu'au bout.</div></div>
         <div class="prj-bloc"><div class="prj-bloc-title">Performance Marque Employeur (Attractivité)</div><div class="prj-bloc-item">Volume de candidatures : suivi de l'augmentation des CV reçus mentionnant les avantages sociaux comme motivation.</div><div class="prj-bloc-item">Score Glassdoor / Great Place to Work : observation de l'évolution de la perception de l'entreprise par les salariés et les candidats.</div></div>
+      </div>
+    </div></div>
+    <!-- SOS RACISME STAGE PAGE -->
+    <div class="prj-page stage-page" id="instit-sos"><div class="prj-page-header stage-header"><button class="prj-back" onclick="backToTree('instit')">← RETOUR</button><div class="prj-page-name">STAGE: SOS_RACISME</div><div class="stage-badge-top">◆ STAGE</div></div><div class="prj-scroll">
+      <div class="prj-section"><div class="prj-stag">// section_01 — contexte</div><div class="prj-stitle">Contexte et enjeux</div>
+        <div class="stage-info-grid">
+          <div class="stage-info-item"><div class="stage-info-label">▸ Période</div><div class="stage-info-val">Octobre – Novembre 2025</div></div>
+          <div class="stage-info-item"><div class="stage-info-label">▸ Poste</div><div class="stage-info-val">Assistant Chargé de Communication & Relations Presse</div></div>
+          <div class="stage-info-item"><div class="stage-info-label">▸ Structure</div><div class="stage-info-val">SOS Racisme — Association</div></div>
+          <div class="stage-info-item"><div class="stage-info-label">▸ Tutrice</div><div class="stage-info-val">Responsable de la Communication</div></div>
+        </div>
+        <div class="prj-text">SOS Racisme est une organisation qui place la réactivité au cœur de sa stratégie. L'enjeu principal consistait à assurer une présence constante dans l'espace médiatique en lien avec l'actualité sociale. L'objectif était d'optimiser la visibilité de l'association, tant dans la presse traditionnelle que sur les supports numériques, pour porter ses combats et ses campagnes.</div>
+      </div>
+      <div class="prj-section"><div class="prj-stag">// section_02 — acteurs & contraintes</div><div class="prj-stitle">Acteurs et contraintes</div><div class="prj-text">Travaillant sous la direction du Responsable de la Communication, j'ai évolué dans un environnement exigeant une grande agilité. La principale contrainte était de concilier l'urgence de l'actualité brûlante avec la rigueur nécessaire au respect de la charte graphique et éditoriale institutionnelle de l'association.</div></div>
+      <div class="prj-section"><div class="prj-stag">// section_03 — méthodologie</div><div class="prj-stitle">Méthodologie & actions menées</div>
+        <div class="prj-bloc"><div class="prj-bloc-title">▸ VEILLE MÉDIATIQUE</div><div class="prj-bloc-item">Analyse quotidienne de la presse et du web pour identifier les opportunités de réaction immédiate.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">▸ PRODUCTION ÉDITORIALE</div><div class="prj-bloc-item">Rédaction de communiqués de presse et d'articles pour le site internet.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">▸ CRÉATION GRAPHIQUE</div><div class="prj-bloc-item">Conception de visuels adaptés aux réseaux sociaux pour appuyer les messages de l'organisation.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">▸ DIFFUSION & TERRAIN</div><div class="prj-bloc-item">Envoi des communiqués aux bases de données journalistes et actions de sensibilisation directe auprès du public pour la collecte de signatures (pétitions).</div></div>
+      </div>
+      <div class="prj-section"><div class="prj-stag">// section_04 — productions</div><div class="prj-stitle">Productions</div>
+        <div class="stage-gallery">
+          <div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/rRdSqYyt/1762516770795.jpg" alt="Visuel recrutement SOS Racisme"></div><div class="stage-caption">Création d'un visuel pour le recrutement</div></div>
+          <div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/5Qhc5gj/Capture-d-cran-2025-11-14-174258.png" alt="Diffusion tract"></div><div class="stage-caption">Diffusion de tract — Lancement de soirée</div></div>
+        </div>
+        <div class="prj-stitle" style="margin-top:22px;font-size:16px!important">Communiqué — 10 ans du 13 novembre 2015</div>
+        <div class="prj-text" style="font-size:13px">Exemple d'un communiqué de presse rédigé pour les attentats de novembre 2015, en respectant la charte et le ton employés par l'association.</div>
+        <div class="stage-carousel">
+          <div class="prj-img"><img src="https://i.ibb.co/99jcd8Pq/13-novembre.jpg" alt="Communiqué 13 novembre 1"></div>
+          <div class="prj-img"><img src="https://i.ibb.co/9HdmmtQW/13-novembre-2.jpg" alt="Communiqué 13 novembre 2"></div>
+          <div class="prj-img"><img src="https://i.ibb.co/B5ZT2hTQ/13-novembre-3.jpg" alt="Communiqué 13 novembre 3"></div>
+          <div class="prj-img"><img src="https://i.ibb.co/FNJczw9/13-novembre-4.jpg" alt="Communiqué 13 novembre 4"></div>
+          <div class="prj-img"><img src="https://i.ibb.co/FkPBRx87/13-novembre-5.jpg" alt="Communiqué 13 novembre 5"></div>
+        </div>
+        <div class="stage-gallery" style="margin-top:22px">
+          <div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/VW3q6sbQ/Capture-d-cran-2026-04-05-192136.png" alt="Mise en place communiqué WordPress"></div><div class="stage-caption">Mise en place de communiqués sur le site via WordPress</div></div>
+          <div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/BHyb3TJ3/Capture-d-cran-2026-04-05-192238.png" alt="Article site web publié"></div><div class="stage-caption">Article publié — Affaire Thays</div></div>
+        </div>
+      </div>
+      <div class="prj-section"><div class="prj-stag">// section_05 — compétences</div><div class="prj-stitle">Compétences</div>
+        <div class="prj-bloc"><div class="prj-bloc-title">BLOC_01 — Pilotage de la stratégie</div><div class="prj-bloc-item">Analyse de l'environnement : identifier des opportunités de prise de parole grâce à une veille active, permettant d'ajuster la communication au contexte social.</div><div class="prj-bloc-item">Suivi et évaluation : analyse des retours du public lors des actions de terrain pour mesurer l'efficacité des messages de sensibilisation.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">BLOC_02 — Solutions de communication</div><div class="prj-bloc-item">Polyvalence éditoriale : adapter mon écriture aux différents supports (style journalistique pour les communiqués, style direct pour les réseaux sociaux).</div><div class="prj-bloc-item">Chaîne graphique : réalisation de visuels cohérents et coordination de la fabrication de supports physiques (tracts) avec des prestataires imprimeurs.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">BLOC_03 — Solutions digitales</div><div class="prj-bloc-item">Gestion de supports numériques : administration autonome du site internet sous WordPress, gestion de l'intégration des textes et des médias pour assurer la mise à jour des contenus.</div></div>
+      </div>
+      <div class="prj-section"><div class="prj-stag">// section_06 — kpi</div><div class="prj-stitle">KPI</div>
+        <div class="prj-text" style="font-size:13px;font-style:italic">Le stage a permis de maintenir une présence digitale continue et d'atteindre les objectifs fixés en termes de mobilisation (signatures). Chaque production a fait l'objet d'un processus de validation rigoureux auprès de ma tutrice, garantissant la conformité des messages diffusés.</div>
+        <div class="prj-bloc"><div class="prj-bloc-title">Performance Presse & Visibilité</div><div class="prj-bloc-item">Taux de reprise médiatique : nombre d'articles ou de citations obtenus dans la presse locale et nationale suite à l'envoi des CP.</div><div class="prj-bloc-item">Réactivité de diffusion : capacité à diffuser un communiqué en moins de 2 heures après un événement d'actualité majeur (Fast-Checking et réaction à chaud).</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">Performance Digitale (Web & RS)</div><div class="prj-bloc-item">Taux d'engagement moyen : mesure des interactions (likes, partages, commentaires) sur les visuels Instagram et Twitter, comparé aux campagnes précédentes.</div><div class="prj-bloc-item">Trafic Web (WordPress) : suivi du nombre de vues sur les nouveaux articles publiés et temps moyen passé sur la page.</div><div class="prj-bloc-item">Croissance de l'audience : évolution du nombre d'abonnés sur les différents supports durant la période de stage.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">Performance de Mobilisation (Terrain)</div><div class="prj-bloc-item">Volume de collecte : nombre de signatures physiques récoltées lors des opérations de sensibilisation (pétitions).</div><div class="prj-bloc-item">Taux de conversion terrain : ratio entre le nombre de personnes abordées et le nombre de signatures effectives.</div></div>
+        <div class="prj-bloc"><div class="prj-bloc-title">Qualité et Conformité</div><div class="prj-bloc-item">Indice de validation : 100 % des supports produits (visuels et textes) validés par la tutrice de stage, garantissant le respect strict de la charte graphique et de la ligne éditoriale.</div></div>
       </div>
     </div></div>
   </div></div>
