@@ -597,6 +597,26 @@ background-size:60px 60px}
 @keyframes cf{0%,85%,87%,89%,91%,100%{opacity:1}86%,88%,90%{opacity:.3}}
 #pills-main div[onclick]{transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
 #pills-main div[onclick]:hover{transform:scale(1.06)}
+
+/* ENLARGED IMAGES */
+.prj-img-lg img{max-height:640px!important}
+.logo-item-lg img{max-height:460px!important}
+
+/* IMAGE LIGHTBOX */
+.prj-img img,.logo-item img,.edito-grid img{cursor:zoom-in;transition:opacity 0.2s}
+.prj-img img:hover,.logo-item img:hover,.edito-grid img:hover{opacity:0.88}
+#lightbox{position:fixed;inset:0;z-index:20000;background:rgba(5,5,5,0.95);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:40px;cursor:zoom-out;animation:lbFade 0.25s ease-out}
+#lightbox.active{display:flex}
+@keyframes lbFade{from{opacity:0}to{opacity:1}}
+#lightbox-inner{position:relative;max-width:95vw;max-height:92vh;display:flex;flex-direction:column;align-items:center;gap:14px}
+#lightbox img{max-width:95vw;max-height:85vh;object-fit:contain;border:1px solid rgba(0,255,65,0.3);box-shadow:0 0 60px rgba(0,255,65,0.15),0 20px 80px rgba(0,0,0,0.8);background:rgba(0,0,0,0.4)}
+#lightbox-caption{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--volt);letter-spacing:3px;text-transform:uppercase;text-align:center;text-shadow:0 0 10px rgba(0,255,65,0.4)}
+#lightbox-close{position:absolute;top:-38px;right:0;width:32px;height:32px;background:transparent;border:1px solid var(--volt);color:var(--volt);font-family:'JetBrains Mono',monospace;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+#lightbox-close:hover{background:var(--volt);color:var(--bg);box-shadow:0 0 12px var(--volt)}
+#lightbox-corners{position:absolute;inset:-8px;pointer-events:none}
+#lightbox-corners::before,#lightbox-corners::after{content:'';position:absolute;width:20px;height:20px;border:1px solid var(--volt)}
+#lightbox-corners::before{top:0;left:0;border-right:none;border-bottom:none}
+#lightbox-corners::after{bottom:0;right:0;border-left:none;border-top:none}
 </style>
 </head>
 <body>
@@ -695,7 +715,7 @@ background-size:60px 60px}
       <div class="bio-grid-left">
         <div class="bio-top-row">
           <div class="bio-polaroids"><div class="bio-paperclip">📎</div><div class="bio-polaroid p1"><img src="https://i.ibb.co/6JnmSWQt/1765889253923.jpg" alt="NC"><div class="bio-polaroid-caption">NC_2026.jpg</div></div><div class="bio-polaroid p2"><img src="https://i.ibb.co/7tSCfK7z/IMG-4947.png" alt="NC2"><div class="bio-polaroid-caption">portrait_02.jpg</div></div></div>
-          <div class="bio-contact-card"><div class="bio-contact-title">Contact</div><div class="bio-contact-row"><div class="bio-contact-icon">📞</div><div>07.81.62.96.71</div></div><div class="bio-contact-row"><div class="bio-contact-icon">✉</div><div>nicolascava.pro@gmail.com</div></div><div class="bio-contact-row"><div class="bio-contact-icon">🔗</div><div>linkedin.com/in/nicolas-cava</div></div><div class="bio-contact-row"><div class="bio-contact-icon">🌐</div><div>portfolio.ncava.dev</div></div><div class="bio-keywords"><span class="bio-keyword">digital</span><span class="bio-keyword">techs</span><span class="bio-keyword">ia</span><span class="bio-keyword">cyberpunk</span><span class="bio-keyword">ordinateurs</span></div></div>
+          <div class="bio-contact-card"><div class="bio-contact-title">Contact</div><div class="bio-contact-row"><div class="bio-contact-icon">📞</div><div>07.81.62.96.71</div></div><div class="bio-contact-row"><div class="bio-contact-icon">✉</div><div><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6907000a0605081a0a081f0847191b06290e04080005470a0604">[email&#160;protected]</a></div></div><div class="bio-contact-row"><div class="bio-contact-icon">🔗</div><div>linkedin.com/in/nicolas-cava</div></div><div class="bio-contact-row"><div class="bio-contact-icon">🌐</div><div>portfolio.ncava.dev</div></div><div class="bio-keywords"><span class="bio-keyword">digital</span><span class="bio-keyword">techs</span><span class="bio-keyword">ia</span><span class="bio-keyword">cyberpunk</span><span class="bio-keyword">ordinateurs</span></div></div>
         </div>
         <div class="bio-collage"><img src="https://i.ibb.co/vvgstBbH/photo-collage.png" alt="Collage"></div>
       </div>
@@ -725,7 +745,7 @@ background-size:60px 60px}
 <tr><td>Hades</td><td>Néo-Classique / Isométrique. Très stylisé, jeux de lumières divines</td><td>La gestion de la narration dans la boucle. Chaque mort/répétition apporte une touche visuelle.</td><td>Design de Kortex ou Karma : silhouettes iconiques qui ressortent sur le décor sombre de Nox.</td></tr>
 <tr><td>Ghostrunner</td><td>Minimalisme High-Tech. Froid, tranchant, verticalité extrême</td><td>Le côté "Kortex/Karma contre la montre". L'esthétique des interfaces (HUD) futuristes.</td><td>Moodboard : textures de métal froid, verre brisé et reflets de pluie sur le bitume.</td></tr>
 </table></div>
-      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div class="prj-img"><img src="https://i.ibb.co/1tkD5Yf5/Capture-d-cran-2026-03-29-200104.png" alt="Affiche Loop Legacy"></div><div class="prj-badges"><span class="prj-badge">Adobe Illustrator — Logo</span><span class="prj-badge">Adobe Photoshop — Affiche</span></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;margin:14px 0"><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/1tkD5Yf5/Capture-d-cran-2026-03-29-200104.png" alt="Affiche Loop Legacy"></div><div class="logo-caption" style="margin-top:8px">Affiche Loop Legacy</div></div><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/prhcwSs3/Capture-d-cran-2026-04-05-115509.png" alt="Mockup jeux PS5"></div><div class="logo-caption" style="margin-top:8px">Mockup Jeux PS5</div></div></div><div class="prj-badges"><span class="prj-badge">Adobe Illustrator — Logo</span><span class="prj-badge">Adobe Photoshop — Affiche</span></div></div>
       <div class="prj-section"><div class="prj-stag">// section_05 — compétences</div><div class="prj-stitle">Compétences Validées</div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_01 — Stratégie de communication</div><div class="prj-bloc-item">Analyse du diagnostic (Nox & Devolver) : Étude de l'ADN de Devolver Digital pour définir le positionnement de Loop Legacy.</div><div class="prj-bloc-item">Étude de la cible (Persona) : Création du persona "Alex" pour identifier les besoins et les attentes des joueurs de jeux indépendants.</div><div class="prj-bloc-item">Le Benchmark : Comparaison concurrentielle avec Cyberpunk 2077 et Hotline Miami pour différencier le projet sur le marché.</div><div class="prj-bloc-item">Veille créative : Réalisation du Moodboard pour établir une intention de communication cohérente avec l'univers de la boucle temporelle.</div></div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_02 — Solutions de communication</div><div class="prj-bloc-item">Rédaction de la promesse : Traduction du concept "Briser la boucle dans Nox" en un message visuel percutant.</div><div class="prj-bloc-item">Création de l'identité visuelle : Conception du logo typographique (choix de la graisse, des symboles de cycle/glitch) et de la charte graphique (palette de couleurs néon/obscurité).</div><div class="prj-bloc-item">Production de l'affiche : Maîtrise des outils PAO pour hiérarchiser l'information et créer un visuel attractif.</div><div class="prj-bloc-item">Gestion des contraintes techniques : Respect des formats d'exportation, de la résolution (300 dpi) et des droits d'auteur.</div></div>
@@ -751,7 +771,7 @@ background-size:60px 60px}
           <div class="logo-item"><img src="https://i.ibb.co/hxzdR9pr/Capture-d-cran-2025-10-11-195748-Photoroom.png" alt="Logo Principal"><div class="logo-caption">Logo Principal</div></div>
           <div class="logo-item"><img src="https://i.ibb.co/g8LVnXB/Capture-d-cran-2026-01-05-154041-Photoroom.png" alt="Logo Secondaire"><div class="logo-caption">Logo Secondaire</div></div>
           <div class="logo-item"><img src="https://i.ibb.co/SDrTwsNP/Capture-d-cran-2025-10-11-195823-Photoroom.png" alt="Pictogramme"><div class="logo-caption">Logo Pictogramme</div></div>
-          <div class="logo-item"><img src="https://i.ibb.co/4R1TsfrK/Capture-d-cran-2026-04-04-161656.png" alt="Palette de couleurs"><div class="logo-caption">Palette de Couleurs</div></div>
+          <div class="logo-item logo-item-lg"><img src="https://i.ibb.co/4R1TsfrK/Capture-d-cran-2026-04-04-161656.png" alt="Palette de couleurs"><div class="logo-caption">Palette de Couleurs</div></div>
         </div>
       </div>
       <div class="prj-section"><div class="prj-stag">// section_03c — ligne éditoriale</div><div class="prj-stitle">Ligne Éditoriale</div>
@@ -799,7 +819,7 @@ background-size:60px 60px}
 <tr><td>Restos du Cœur</td><td>Urgence & Masse : message centré sur la survie et l'aide alimentaire</td><td>Réponse immédiate aux besoins primaires</td><td>Mettre en avant l'expertise humaine et médicale et l'accompagnement sur le long terme.</td></tr>
 <tr><td>Entourage</td><td>Digital & Lien Social : communication moderne et dynamique</td><td>Création de réseaux de solidarité de proximité</td><td>Adopter des codes dynamiques pour rajeunir l'image et faciliter le don instantané.</td></tr>
 </table></div>
-      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div class="prj-text">Site web : nicolascava7.wixsite.com/samu-social</div><div class="prj-img"><img src="https://i.ibb.co/gZzYdL21/Capture-d-cran-2026-04-02-174437.png" alt="Affiche Samu Social"></div><div class="vid-grid"><div class="prj-video"><iframe src="https://www.youtube.com/embed/ykhKnnESUDc" title="Tryptique - Samu Social" allowfullscreen></iframe></div><div class="prj-video"><iframe src="https://www.youtube.com/embed/8eGjr3xhmmo" title="Spot Radio" allowfullscreen></iframe></div></div><div class="prj-badges"><span class="prj-badge">Photoshop</span><span class="prj-badge">Illustrator</span><span class="prj-badge">After Effects</span><span class="prj-badge">Audacity</span><span class="prj-badge">Wix</span></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div class="prj-text">Site web : nicolascava7.wixsite.com/samu-social</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;margin:14px 0"><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/Cp3ynH1M/Capture-d-cran-2026-04-05-115137.png" alt="Affiche Samu Social"></div><div class="logo-caption" style="margin-top:8px">Affiche Samu Social</div></div><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/VpCKNsfV/Chat-GPT-Image-5-avr-2026-12-03-16.png" alt="Mockup abri bus"></div><div class="logo-caption" style="margin-top:8px">Mockup Abri Bus</div></div></div><div class="vid-grid"><div class="prj-video"><iframe src="https://www.youtube.com/embed/ykhKnnESUDc" title="Tryptique - Samu Social" allowfullscreen></iframe></div><div class="prj-video"><iframe src="https://www.youtube.com/embed/8eGjr3xhmmo" title="Spot Radio" allowfullscreen></iframe></div></div><div class="prj-badges"><span class="prj-badge">Photoshop</span><span class="prj-badge">Illustrator</span><span class="prj-badge">After Effects</span><span class="prj-badge">Audacity</span><span class="prj-badge">Wix</span></div></div>
       <div class="prj-section"><div class="prj-stag">// section_05 — compétences</div><div class="prj-stitle">Compétences Validées</div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_01 — Stratégie</div><div class="prj-bloc-item">Analyse brief annonceur et diagnostic des missions</div><div class="prj-bloc-item">Définition cible (Persona Marc), problématique stratégique</div><div class="prj-bloc-item">Veille concurrentielle positionnement distinctif</div></div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_02 — Solutions</div><div class="prj-bloc-item">Univers graphique + copywriting affichage et digital</div><div class="prj-bloc-item">Réalisation supports print et web, charte éthique</div><div class="prj-bloc-item">Coordination Print/Radio/Digital cohérence 360°</div></div>
@@ -938,7 +958,7 @@ background-size:60px 60px}
   <div id="taskbar"><div class="tb-start" onclick="toggleTMenu()">[T]</div><div class="tb-session">SESSION: N. CAVA</div><div class="tb-sep"></div><div class="tb-windows" id="tb-windows"></div><div class="tb-right"><div class="tb-status"><span class="dot"></span> TRINITY_NET</div><div id="tb-clock">00:00:00</div></div></div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // INIT
 (function(){const c=document.getElementById('hack-streams');const d='0x4F2A SYN ACK ENCRYPT PAYLOAD KERNEL TCP/IP DNS';for(let i=0;i<10;i++){const s=document.createElement('div');s.className='hack-stream';s.style.left=(i*10+Math.random()*3)+'%';s.style.animationDuration=(4+Math.random()*8)+'s';s.style.animationDelay=(Math.random()*4)+'s';let t='';const w=d.split(' ');for(let j=0;j<40;j++)t+=w[Math.floor(Math.random()*w.length)]+'\n';s.textContent=t;c.appendChild(s)}})();
 (function(){const h='0123456789ABCDEF';for(const id of['hex1','hex2']){const el=document.getElementById(id);let t='';for(let i=0;i<300;i++){for(let j=0;j<2;j++)t+=h[Math.floor(Math.random()*16)];t+=' ';if(i%8===7)t+='\n'}el.textContent=t}})();
@@ -1764,8 +1784,44 @@ try{(function(){
   document.querySelectorAll('.prj-scroll,.win-body').forEach(function(c){c.addEventListener('scroll',reveal);});
   var _o=openWindow;openWindow=function(id){_o(id);setTimeout(reveal,100);setTimeout(reveal,400);};
   var _p=showPillPage;showPillPage=function(c){_p(c);setTimeout(reveal,100);setTimeout(reveal,400);};
-  var _s=showPrj;showPrj=function(a,b){_s(a,b);setTimeout(reveal,100);setTimeout(reveal,400);};
-  setInterval(reveal,800);
+})();}catch(e){console.warn(e)}
+
+// IMAGE LIGHTBOX
+try{(function(){
+  var lb=document.createElement('div');
+  lb.id='lightbox';
+  lb.innerHTML='<div id="lightbox-inner"><div id="lightbox-corners"></div><button id="lightbox-close" aria-label="Fermer">×</button><img id="lightbox-img" src="" alt=""><div id="lightbox-caption"></div></div>';
+  document.body.appendChild(lb);
+  var lbImg=document.getElementById('lightbox-img');
+  var lbCap=document.getElementById('lightbox-caption');
+  function openLB(src,cap){lbImg.src=src;lbCap.textContent=cap||'';lb.classList.add('active');}
+  function closeLB(){lb.classList.remove('active');lbImg.src='';}
+  window._openLB=openLB;
+  function bindImage(img){
+    if(img._lbBound)return;
+    if(img.closest('a[href]'))return;
+    img._lbBound=true;
+    img.style.cursor='zoom-in';
+    img.addEventListener('click',function(e){
+      e.preventDefault();e.stopPropagation();
+      var cap=img.alt||'';
+      var wrapper=img.parentElement;
+      var capEl=wrapper&&wrapper.parentElement&&wrapper.parentElement.querySelector('.logo-caption');
+      if(capEl)cap=capEl.textContent;
+      openLB(img.src,cap);
+    });
+  }
+  function scan(){
+    document.querySelectorAll('.prj-img img, .logo-item img, .edito-grid img').forEach(bindImage);
+  }
+  scan();
+  // Re-scan periodically and on common triggers
+  setInterval(scan,1500);
+  if(window.MutationObserver){
+    new MutationObserver(scan).observe(document.body,{childList:true,subtree:true});
+  }
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.id==='lightbox-inner'||e.target.id==='lightbox-close'||e.target.closest('#lightbox-close'))closeLB();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('active'))closeLB();});
 })();}catch(e){console.warn(e)}
 </script>
 </body>
