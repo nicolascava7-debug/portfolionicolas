@@ -91,7 +91,8 @@ background-size:60px 60px}
 .desktop-icons{position:absolute;top:20px;left:24px;display:grid;grid-template-columns:110px 110px;gap:12px 8px;z-index:5}
 .desktop-icon{display:flex;flex-direction:column;align-items:center;gap:8px;width:110px;padding:12px 8px;border:1px solid transparent;border-radius:2px;cursor:pointer;transition:all 0.2s;user-select:none;position:relative}
 .desktop-icon:hover{background:rgba(0,255,65,0.04);border-color:rgba(0,255,65,0.15)}
-.desktop-icon svg{width:56px;height:56px;filter:drop-shadow(0 0 4px rgba(0,255,65,0.15))}
+.desktop-icon svg{width:56px;height:56px;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.5)) drop-shadow(0 0 3px rgba(255,255,255,0.1));transition:transform 0.25s}
+.desktop-icon:hover svg{transform:scale(1.1)}
 .desktop-icon-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text);text-align:center;line-height:1.3;text-shadow:0 1px 3px rgba(0,0,0,0.8)}
 /* Hover ring */
 .desktop-icon::after{content:'';position:absolute;top:4px;width:64px;height:64px;border:1px solid transparent;border-radius:50%;transition:all 0.4s;opacity:0}
@@ -106,13 +107,19 @@ background-size:60px 60px}
 #taskbar{position:fixed;bottom:0;left:0;right:0;height:48px;background:rgba(5,5,5,0.92);backdrop-filter:blur(16px);border-top:1px solid var(--slate);display:flex;align-items:center;padding:0 18px;z-index:1000;gap:12px}
 .tb-start{font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--volt);border:1px solid var(--slate);padding:7px 18px;cursor:pointer;transition:all 0.2s;letter-spacing:2px}
 .tb-start:hover{border-color:var(--volt);box-shadow:0 0 10px rgba(0,255,65,0.15);background:rgba(0,255,65,0.04)}
-.tb-session{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--volt);letter-spacing:1px;opacity:0.6;margin-left:4px}
+.tb-session{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;color:var(--volt);letter-spacing:2px;opacity:1;margin-left:6px;padding:5px 12px;border:1px solid rgba(0,255,65,0.4);background:rgba(0,255,65,0.06);text-shadow:0 0 8px rgba(0,255,65,0.4)}
 .tb-sep{width:1px;height:26px;background:var(--slate);margin:0 6px}
 .tb-windows{display:flex;gap:4px;flex:1;overflow-x:auto}
 .tb-win-btn{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-mid);background:rgba(0,255,65,0.03);border:1px solid var(--slate);padding:6px 16px;cursor:pointer;transition:all 0.2s;white-space:nowrap}
 .tb-win-btn:hover{border-color:var(--slate-light);color:var(--text)}
 .tb-win-btn.active{border-color:var(--volt);color:var(--volt);background:rgba(0,255,65,0.06)}
-.tb-right{margin-left:auto;display:flex;align-items:center;gap:18px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-muted)}
+.tb-right{margin-left:auto;display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-muted)}
+.tb-tray{display:flex;align-items:center;gap:10px;padding:4px 12px;border:1px solid var(--slate);background:rgba(0,0,0,0.3);border-radius:3px;color:var(--text-mid)}
+.tb-tray .tray-lang{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:1px;color:var(--volt);padding-right:2px;border-right:1px solid var(--slate);padding-right:8px}
+.tb-tray .tray-icon{width:15px;height:15px;color:var(--text-mid);transition:color 0.2s}
+.tb-tray .tray-battery{width:22px;height:12px}
+.tb-tray .tray-icon:hover{color:var(--volt)}
+.tb-tray .tray-pct{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:var(--volt)}
 .tb-status .dot{width:7px;height:7px;border-radius:50%;background:var(--volt);box-shadow:0 0 4px var(--volt);animation:pulse 2s infinite;display:inline-block;margin-right:5px}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
 
@@ -554,7 +561,7 @@ background-size:60px 60px}
 .desktop-icon:nth-child(1){animation-delay:0s}.desktop-icon:nth-child(2){animation-delay:.3s}.desktop-icon:nth-child(3){animation-delay:.6s}.desktop-icon:nth-child(4){animation-delay:.9s}.desktop-icon:nth-child(5){animation-delay:1.2s}.desktop-icon:nth-child(6){animation-delay:1.5s}.desktop-icon:nth-child(7){animation-delay:1.8s}
 @keyframes il{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .desktop-icon svg{animation:sp 3s ease-in-out infinite}
-@keyframes sp{0%,100%{filter:drop-shadow(0 0 4px rgba(0,255,65,0.15))}50%{filter:drop-shadow(0 0 14px rgba(0,255,65,0.4))}}
+@keyframes sp{0%,100%{filter:drop-shadow(0 2px 6px rgba(0,0,0,0.5)) drop-shadow(0 0 3px rgba(255,255,255,0.1))}50%{filter:drop-shadow(0 3px 10px rgba(0,0,0,0.6)) drop-shadow(0 0 8px rgba(255,255,255,0.2))}}
 .bio-polaroid.p1{animation:pw1 6s ease-in-out infinite}
 .bio-polaroid.p2{animation:pw2 6s ease-in-out infinite 1.5s}
 @keyframes pw1{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(-3deg) translateY(-4px)}}
@@ -603,8 +610,8 @@ background-size:60px 60px}
 .logo-item-lg img{max-height:460px!important}
 
 /* IMAGE LIGHTBOX */
-.prj-img img,.logo-item img,.edito-grid img{cursor:zoom-in;transition:opacity 0.2s}
-.prj-img img:hover,.logo-item img:hover,.edito-grid img:hover{opacity:0.88}
+.prj-img img,.logo-item img,.edito-grid img,.prj-persona img{cursor:zoom-in;transition:opacity 0.2s}
+.prj-img img:hover,.logo-item img:hover,.edito-grid img:hover,.prj-persona img:hover{opacity:0.88}
 #lightbox{position:fixed;inset:0;z-index:20000;background:rgba(5,5,5,0.95);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:40px;cursor:zoom-out;animation:lbFade 0.25s ease-out}
 #lightbox.active{display:flex}
 @keyframes lbFade{from{opacity:0}to{opacity:1}}
@@ -699,13 +706,13 @@ background-size:60px 60px}
 <div id="desktop">
   <div class="desktop-watermark">NICOLAS CAVA</div>
   <div class="desktop-icons" id="desktop-icons">
-    <div class="desktop-icon" ondblclick="openWindow('bio')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><rect x="10" y="3" width="22" height="36" rx="2"/><circle cx="21" cy="14" r="5" opacity="0.4"/><path d="M14 28 Q17 23 21 23 Q25 23 28 28" opacity="0.4"/></svg><div class="desktop-icon-label">BIO_LOG.exe</div></div>
-    <div class="desktop-icon" ondblclick="openWindow('pills')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><rect x="6" y="12" width="12" height="22" rx="6" fill="rgba(37,99,235,0.15)" stroke="rgba(37,99,235,0.6)"/><line x1="6" y1="23" x2="18" y2="23" stroke="rgba(37,99,235,0.4)" stroke-width="0.8"/><rect x="24" y="8" width="12" height="22" rx="6" fill="rgba(235,37,37,0.15)" stroke="rgba(235,37,37,0.6)"/><line x1="24" y1="19" x2="36" y2="19" stroke="rgba(235,37,37,0.4)" stroke-width="0.8"/><line x1="19" y1="20" x2="23" y2="17" stroke="var(--volt)" stroke-width="0.6" opacity="0.4" stroke-dasharray="1 2"/></svg><div class="desktop-icon-label">MATRIX_PILLS.exe</div></div>
-    <div class="desktop-icon" ondblclick="openWindow('digital')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><path d="M6 10 L6 36 L36 36 L36 10 L26 10 L24 6 L16 6 L14 10 Z"/><line x1="14" y1="20" x2="28" y2="20" opacity="0.3"/><line x1="14" y1="26" x2="24" y2="26" opacity="0.3"/></svg><div class="desktop-icon-label">FIELD_DATA.lnk</div></div>
-    <div class="desktop-icon" ondblclick="openWindow('arcade')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><rect x="6" y="10" width="30" height="20" rx="3"/><circle cx="15" cy="20" r="4" opacity="0.4"/><line x1="15" y1="17" x2="15" y2="23" stroke-width="1" opacity="0.5"/><line x1="12" y1="20" x2="18" y2="20" stroke-width="1" opacity="0.5"/><circle cx="29" cy="18" r="1.5" fill="var(--volt)" opacity="0.6"/><circle cx="26" cy="22" r="1.5" fill="var(--volt)" opacity="0.4"/><line x1="14" y1="30" x2="18" y2="34" stroke-width="1.5"/><line x1="28" y1="30" x2="24" y2="34" stroke-width="1.5"/></svg><div class="desktop-icon-label">GAME.exe</div></div>
-    <div class="desktop-icon" ondblclick="openWindow('print')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><rect x="8" y="6" width="26" height="30" rx="1"/><path d="M18 6 L18 18 L24 14 L30 18 L30 6" fill="rgba(0,255,65,0.06)"/><line x1="12" y1="24" x2="28" y2="24" opacity="0.3"/></svg><div class="desktop-icon-label">RAW_FILES.zip</div></div>
-    <div class="desktop-icon" ondblclick="openWindow('event')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><circle cx="21" cy="21" r="14"/><circle cx="21" cy="21" r="6" opacity="0.4"/><line x1="21" y1="7" x2="21" y2="3"/><line x1="21" y1="39" x2="21" y2="35"/></svg><div class="desktop-icon-label">FUTURE_SCAN.bin</div></div>
-    <div class="desktop-icon" ondblclick="openWindow('instit')"><svg viewBox="0 0 42 42" fill="none" stroke="var(--volt)" stroke-width="1.2"><rect x="8" y="8" width="26" height="26" rx="3"/><line x1="14" y1="16" x2="28" y2="16" opacity="0.4"/><line x1="14" y1="21" x2="28" y2="21" opacity="0.3"/><line x1="14" y1="26" x2="24" y2="26" opacity="0.3"/></svg><div class="desktop-icon-label">CORE_PROTOCOL.cfg</div></div>
+    <div class="desktop-icon" ondblclick="openWindow('bio')"><svg viewBox="0 0 42 42" fill="none"><defs><linearGradient id="g-bio" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs><rect x="6" y="8" width="30" height="26" rx="3" fill="url(#g-bio)" stroke="#0EA5E9" stroke-width="1.2"/><rect x="6" y="8" width="30" height="7" rx="3" fill="#0C4A6E" opacity="0.6"/><circle cx="16" cy="22" r="4" fill="#fff" opacity="0.95"/><path d="M10 32 Q12 26 16 26 Q20 26 22 32" fill="#fff" opacity="0.95"/><line x1="26" y1="20" x2="33" y2="20" stroke="#fff" stroke-width="1.2" opacity="0.8"/><line x1="26" y1="24" x2="31" y2="24" stroke="#fff" stroke-width="1" opacity="0.6"/><line x1="26" y1="28" x2="33" y2="28" stroke="#fff" stroke-width="1" opacity="0.6"/></svg><div class="desktop-icon-label">BIO_LOG.exe</div></div>
+    <div class="desktop-icon" ondblclick="openWindow('pills')"><svg viewBox="0 0 42 42" fill="none"><defs><linearGradient id="g-pillB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#60A5FA"/><stop offset="1" stop-color="#1D4ED8"/></linearGradient><linearGradient id="g-pillR" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F87171"/><stop offset="1" stop-color="#B91C1C"/></linearGradient></defs><rect x="5" y="12" width="13" height="24" rx="6.5" fill="url(#g-pillB)" stroke="#1E40AF" stroke-width="1"/><ellipse cx="11.5" cy="17" rx="3" ry="1.5" fill="#fff" opacity="0.5"/><rect x="24" y="6" width="13" height="24" rx="6.5" fill="url(#g-pillR)" stroke="#991B1B" stroke-width="1" transform="rotate(20 30.5 18)"/><ellipse cx="26" cy="10" rx="2.5" ry="1.3" fill="#fff" opacity="0.5" transform="rotate(20 30.5 18)"/></svg><div class="desktop-icon-label">MATRIX_PILLS.exe</div></div>
+    <div class="desktop-icon" ondblclick="openWindow('digital')"><svg viewBox="0 0 42 42" fill="none"><defs><linearGradient id="g-dig" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#047857"/></linearGradient></defs><path d="M5 11 L5 35 L37 35 L37 14 L21 14 L18 11 Z" fill="url(#g-dig)" stroke="#065F46" stroke-width="1.2"/><path d="M5 11 L5 15 L37 15 L37 14 L21 14 L18 11 Z" fill="#064E3B" opacity="0.6"/><rect x="10" y="20" width="22" height="2" rx="1" fill="#fff" opacity="0.6"/><rect x="10" y="25" width="16" height="2" rx="1" fill="#fff" opacity="0.5"/><rect x="10" y="30" width="12" height="2" rx="1" fill="#fff" opacity="0.4"/></svg><div class="desktop-icon-label">FIELD_DATA.lnk</div></div>
+    <div class="desktop-icon" ondblclick="openWindow('arcade')"><svg viewBox="0 0 42 42" fill="none"><defs><linearGradient id="g-game" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D946EF"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><path d="M12 13 Q6 13 5 20 L3 30 Q3 35 7 35 Q10 35 12 31 L14 27 L28 27 L30 31 Q32 35 35 35 Q39 35 39 30 L37 20 Q36 13 30 13 Z" fill="url(#g-game)" stroke="#6D28D9" stroke-width="1.2"/><circle cx="11" cy="21" r="1.6" fill="#fff"/><rect x="9.2" y="19.2" width="3.6" height="3.6" fill="#fff" opacity="0"/><line x1="8" y1="21" x2="14" y2="21" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="11" y1="18" x2="11" y2="24" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><circle cx="28" cy="19" r="1.6" fill="#FBBF24"/><circle cx="32" cy="22" r="1.6" fill="#34D399"/><circle cx="24" cy="22" r="1.6" fill="#F87171"/><circle cx="28" cy="25" r="1.6" fill="#60A5FA"/></svg><div class="desktop-icon-label">GAME.exe</div></div>
+    <div class="desktop-icon" ondblclick="openWindow('print')"><svg viewBox="0 0 42 42" fill="none"><defs><linearGradient id="g-print" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#D97706"/></linearGradient></defs><rect x="7" y="5" width="28" height="33" rx="2" fill="url(#g-print)" stroke="#92400E" stroke-width="1.2"/><rect x="7" y="5" width="28" height="7" rx="2" fill="#78350F" opacity="0.5"/><path d="M19 5 L19 17 L21 15 L23 17 L23 5" fill="#fff" opacity="0.9"/><line x1="12" y1="22" x2="30" y2="22" stroke="#fff" stroke-width="1.2" opacity="0.7"/><line x1="12" y1="27" x2="26" y2="27" stroke="#fff" stroke-width="1.2" opacity="0.6"/><line x1="12" y1="32" x2="28" y2="32" stroke="#fff" stroke-width="1.2" opacity="0.5"/></svg><div class="desktop-icon-label">RAW_FILES.zip</div></div>
+    <div class="desktop-icon" ondblclick="openWindow('event')"><svg viewBox="0 0 42 42" fill="none"><defs><radialGradient id="g-radar" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#5EEAD4"/><stop offset="1" stop-color="#0F766E"/></radialGradient></defs><circle cx="21" cy="21" r="16" fill="url(#g-radar)" stroke="#0D9488" stroke-width="1.2"/><circle cx="21" cy="21" r="11" fill="none" stroke="#fff" stroke-width="0.7" opacity="0.5"/><circle cx="21" cy="21" r="6" fill="none" stroke="#fff" stroke-width="0.7" opacity="0.6"/><circle cx="21" cy="21" r="2" fill="#fff"/><path d="M21 21 L35 15 A16 16 0 0 0 21 5 Z" fill="#fff" opacity="0.25"/><line x1="5" y1="21" x2="37" y2="21" stroke="#fff" stroke-width="0.5" opacity="0.4"/><line x1="21" y1="5" x2="21" y2="37" stroke="#fff" stroke-width="0.5" opacity="0.4"/></svg><div class="desktop-icon-label">FUTURE_SCAN.bin</div></div>
+    <div class="desktop-icon" ondblclick="openWindow('instit')"><svg viewBox="0 0 42 42" fill="none"><defs><linearGradient id="g-inst" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FB7185"/><stop offset="1" stop-color="#BE123C"/></linearGradient></defs><path d="M9 5 L28 5 L35 12 L35 37 L9 37 Z" fill="url(#g-inst)" stroke="#881337" stroke-width="1.2"/><path d="M28 5 L28 12 L35 12 Z" fill="#fff" opacity="0.4"/><line x1="13" y1="19" x2="31" y2="19" stroke="#fff" stroke-width="1.3" opacity="0.8"/><line x1="13" y1="24" x2="31" y2="24" stroke="#fff" stroke-width="1.3" opacity="0.7"/><line x1="13" y1="29" x2="26" y2="29" stroke="#fff" stroke-width="1.3" opacity="0.6"/><circle cx="32" cy="34" r="4" fill="#FDE047" stroke="#92400E" stroke-width="0.8"/><path d="M30 34 L31.5 35.5 L34 33" stroke="#92400E" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg><div class="desktop-icon-label">CORE_PROTOCOL.cfg</div></div>
   </div>
 
   <!-- BIO_LOG V4 -->
@@ -819,7 +826,7 @@ background-size:60px 60px}
 <tr><td>Restos du Cœur</td><td>Urgence & Masse : message centré sur la survie et l'aide alimentaire</td><td>Réponse immédiate aux besoins primaires</td><td>Mettre en avant l'expertise humaine et médicale et l'accompagnement sur le long terme.</td></tr>
 <tr><td>Entourage</td><td>Digital & Lien Social : communication moderne et dynamique</td><td>Création de réseaux de solidarité de proximité</td><td>Adopter des codes dynamiques pour rajeunir l'image et faciliter le don instantané.</td></tr>
 </table></div>
-      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div class="prj-text">Site web : nicolascava7.wixsite.com/samu-social</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;margin:14px 0"><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/Cp3ynH1M/Capture-d-cran-2026-04-05-115137.png" alt="Affiche Samu Social"></div><div class="logo-caption" style="margin-top:8px">Affiche Samu Social</div></div><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/VpCKNsfV/Chat-GPT-Image-5-avr-2026-12-03-16.png" alt="Mockup abri bus"></div><div class="logo-caption" style="margin-top:8px">Mockup Abri Bus</div></div></div><div class="vid-grid"><div class="prj-video"><iframe src="https://www.youtube.com/embed/ykhKnnESUDc" title="Tryptique - Samu Social" allowfullscreen></iframe></div><div class="prj-video"><iframe src="https://www.youtube.com/embed/8eGjr3xhmmo" title="Spot Radio" allowfullscreen></iframe></div></div><div class="prj-badges"><span class="prj-badge">Photoshop</span><span class="prj-badge">Illustrator</span><span class="prj-badge">After Effects</span><span class="prj-badge">Audacity</span><span class="prj-badge">Wix</span></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div class="prj-text">Site web : nicolascava7.wixsite.com/samu-social</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;margin:14px 0"><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/Cp3ynH1M/Capture-d-cran-2026-04-05-115137.png" alt="Affiche Samu Social"></div><div class="logo-caption" style="margin-top:8px">Affiche Samu Social</div></div><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/fGLHtYRb/Designer.png" alt="Mockup abri bus"></div><div class="logo-caption" style="margin-top:8px">Mockup Abri Bus</div></div></div><div class="vid-grid"><div class="prj-video"><iframe src="https://www.youtube.com/embed/ykhKnnESUDc" title="Tryptique - Samu Social" allowfullscreen></iframe></div><div class="prj-video"><iframe src="https://www.youtube.com/embed/8eGjr3xhmmo" title="Spot Radio" allowfullscreen></iframe></div></div><div class="prj-badges"><span class="prj-badge">Photoshop</span><span class="prj-badge">Illustrator</span><span class="prj-badge">After Effects</span><span class="prj-badge">Audacity</span><span class="prj-badge">Wix</span></div></div>
       <div class="prj-section"><div class="prj-stag">// section_05 — compétences</div><div class="prj-stitle">Compétences Validées</div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_01 — Stratégie</div><div class="prj-bloc-item">Analyse brief annonceur et diagnostic des missions</div><div class="prj-bloc-item">Définition cible (Persona Marc), problématique stratégique</div><div class="prj-bloc-item">Veille concurrentielle positionnement distinctif</div></div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_02 — Solutions</div><div class="prj-bloc-item">Univers graphique + copywriting affichage et digital</div><div class="prj-bloc-item">Réalisation supports print et web, charte éthique</div><div class="prj-bloc-item">Coordination Print/Radio/Digital cohérence 360°</div></div>
@@ -895,16 +902,20 @@ background-size:60px 60px}
 
   <!-- ARCADE -->
   <div class="os-window" id="win-arcade" style="width:520px;height:500px;top:40px;left:220px"><div class="win-titlebar" onmousedown="startDrag(event,'win-arcade')"><div class="win-title">GAME.exe — ARCADE</div><div class="win-btns"><div class="win-btn" onclick="toggleFS('win-arcade')">□</div><div class="win-btn" onclick="minimizeWin('win-arcade')">_</div><div class="win-btn close" onclick="closeWin('win-arcade')">✕</div></div></div><div class="win-body" style="padding:0;overflow:hidden">
-    <div id="arcade-menu" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:20px;padding:30px">
+    <div id="arcade-menu" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:14px;padding:20px 30px">
       <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--volt);letter-spacing:5px">// SELECT_GAME</div>
       <div style="font-family:'Orbitron',sans-serif;font-size:22px;font-weight:900;letter-spacing:3px;margin-bottom:10px">ARCADE STATION</div>
-      <div onclick="startArcadeGame('dodge')" style="cursor:pointer;width:90%;padding:18px 20px;border:1px solid var(--slate);background:rgba(0,255,65,0.02);transition:all 0.3s;display:flex;align-items:center;gap:16px" onmouseover="this.style.borderColor='var(--volt)';this.style.transform='translateX(6px)'" onmouseout="this.style.borderColor='var(--slate)';this.style.transform='none'">
+      <div onclick="startArcadeGame('dodge')" style="cursor:pointer;width:90%;padding:14px 18px;border:1px solid var(--slate);background:rgba(0,255,65,0.02);transition:all 0.3s;display:flex;align-items:center;gap:14px" onmouseover="this.style.borderColor='var(--volt)';this.style.transform='translateX(6px)'" onmouseout="this.style.borderColor='var(--slate)';this.style.transform='none'">
         <div style="font-size:28px">⚡</div>
         <div><div style="font-family:'Orbitron',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;color:var(--volt)">MATRIX_DODGE</div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);margin-top:4px">Esquive les données corrompues</div></div>
       </div>
-      <div onclick="startArcadeGame('shoot')" style="cursor:pointer;width:90%;padding:18px 20px;border:1px solid var(--slate);background:rgba(0,255,65,0.02);transition:all 0.3s;display:flex;align-items:center;gap:16px" onmouseover="this.style.borderColor='var(--volt)';this.style.transform='translateX(6px)'" onmouseout="this.style.borderColor='var(--slate)';this.style.transform='none'">
+      <div onclick="startArcadeGame('shoot')" style="cursor:pointer;width:90%;padding:14px 18px;border:1px solid var(--slate);background:rgba(0,255,65,0.02);transition:all 0.3s;display:flex;align-items:center;gap:14px" onmouseover="this.style.borderColor='var(--volt)';this.style.transform='translateX(6px)'" onmouseout="this.style.borderColor='var(--slate)';this.style.transform='none'">
         <div style="font-size:28px">🎯</div>
         <div><div style="font-family:'Orbitron',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;color:var(--volt)">CYBER_SHOOT</div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);margin-top:4px">Élimine les virus avant qu'ils ne se propagent</div></div>
+      </div>
+      <div onclick="startArcadeGame('fight')" style="cursor:pointer;width:90%;padding:14px 18px;border:1px solid var(--slate);background:rgba(0,255,65,0.02);transition:all 0.3s;display:flex;align-items:center;gap:14px" onmouseover="this.style.borderColor='var(--volt)';this.style.transform='translateX(6px)'" onmouseout="this.style.borderColor='var(--slate)';this.style.transform='none'">
+        <div style="font-size:28px">🥊</div>
+        <div><div style="font-family:'Orbitron',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;color:var(--volt)">NEON_FIGHTER</div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);margin-top:4px">Combat 1v1 contre l'IA — mets K.O. ton adversaire</div></div>
       </div>
     </div>
     <div id="arcade-dodge" style="display:none;flex-direction:column;align-items:center;height:100%;background:#0a0a0a">
@@ -921,6 +932,14 @@ background-size:60px 60px}
         <div id="shoot-score" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--volt);letter-spacing:2px">SCORE: 0 | VIE: 5</div>
       </div>
       <canvas id="shoot-canvas" width="480" height="410" style="border:1px solid var(--slate);cursor:crosshair"></canvas>
+    </div>
+    <div id="arcade-fight" style="display:none;flex-direction:column;align-items:center;height:100%;background:#0a0a0a">
+      <div style="display:flex;align-items:center;justify-content:space-between;width:100%;padding:8px 16px">
+        <button onclick="backToArcade()" style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--volt);background:none;border:1px solid var(--volt);padding:4px 12px;cursor:pointer;letter-spacing:1px">← MENU</button>
+        <div id="fight-round" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--volt);letter-spacing:2px">ROUND 1</div>
+      </div>
+      <canvas id="fight-canvas" width="480" height="380" style="border:1px solid var(--slate)"></canvas>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);padding:6px;text-align:center">← → bouger | A poing | S coup de pied | SPACE restart</div>
     </div>
   </div></div>
 
@@ -942,7 +961,7 @@ background-size:60px 60px}
       <div class="theme-card active" onclick="setTheme('matrix',this)"><div class="theme-name">MATRIX_DEFAULT</div><div class="theme-preview"><span style="background:#050505"></span><span style="background:#00FF41"></span><span style="background:#1E293B"></span></div></div>
       <div class="theme-card" onclick="setTheme('cyber',this)"><div class="theme-name">CYBER_PUNK</div><div class="theme-preview"><span style="background:#0a000a"></span><span style="background:#FF00FF"></span><span style="background:#2B1B3B"></span></div></div>
       <div class="theme-card" onclick="setTheme('retro',this)"><div class="theme-name">RETRO_DOS</div><div class="theme-preview"><span style="background:#000080"></span><span style="background:#FFFF00"></span><span style="background:#00008B"></span></div></div>
-      <div class="theme-card" onclick="setTheme('stark',this)"><div class="theme-name">STARK_TECH</div><div class="theme-preview"><span style="background:#e8ecf0"></span><span style="background:#00BFFF"></span><span style="background:#c0c8d0"></span></div></div>
+      <div class="theme-card" onclick="setTheme('stark',this)"><div class="theme-name">STARK_TECH</div><div class="theme-preview"><span style="background:#f1f5f9"></span><span style="background:#1D4ED8"></span><span style="background:#64748B"></span></div></div>
     </div>
   </div></div>
 
@@ -955,7 +974,7 @@ background-size:60px 60px}
     <div class="tm-footer">NICOLAS CAVA © 2026</div>
   </div>
 
-  <div id="taskbar"><div class="tb-start" onclick="toggleTMenu()">[T]</div><div class="tb-session">SESSION: N. CAVA</div><div class="tb-sep"></div><div class="tb-windows" id="tb-windows"></div><div class="tb-right"><div class="tb-status"><span class="dot"></span> TRINITY_NET</div><div id="tb-clock">00:00:00</div></div></div>
+  <div id="taskbar"><div class="tb-start" onclick="toggleTMenu()">[T]</div><div class="tb-session">◆ NICOLAS CAVA</div><div class="tb-sep"></div><div class="tb-windows" id="tb-windows"></div><div class="tb-right"><div class="tb-status"><span class="dot"></span> TRINITY_NET</div><div class="tb-tray"><span class="tray-lang">FRA</span><svg class="tray-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="Wi-Fi"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg><svg class="tray-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="Volume"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg><svg class="tray-icon tray-battery" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="1.6" title="Batterie"><rect x="1" y="1" width="20" height="12" rx="1.5"/><rect x="22.5" y="4.5" width="2" height="5" rx="0.5" fill="currentColor" stroke="none"/><rect x="3" y="3" width="16" height="8" rx="0.5" fill="currentColor" stroke="none"/></svg><span class="tray-pct">100%</span></div><div id="tb-clock">00:00:00</div></div></div>
 </div>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
@@ -975,7 +994,7 @@ const chars='アイウエオカキクケコ0123456789';const fz=14;let cols=Math
 function drawMatrix(){ctx.fillStyle='rgba(5,5,5,0.04)';ctx.fillRect(0,0,canvas.width,canvas.height);cols=Math.floor(canvas.width/fz);while(drops.length<cols)drops.push(1);fc++;for(let i=0;i<cols;i++){if(fc%4!==i%4)continue;const x=i*fz,y=drops[i]*fz;const dist=Math.min(Math.hypot(x-mouseX,y-mouseY),Math.hypot(x-pmX,y-pmY));const p=Math.max(0,1-dist/200);if(p>0.15){ctx.fillStyle=`rgba(0,255,65,${0.3+p*0.7})`;ctx.font=`bold ${fz+p*5}px monospace`;ctx.shadowColor='rgba(0,255,65,0.6)';ctx.shadowBlur=p*14}else{ctx.fillStyle=`rgba(0,30,10,${0.04+Math.random()*0.04})`;ctx.font=`${fz}px monospace`;ctx.shadowColor='transparent';ctx.shadowBlur=0}ctx.fillText(chars[Math.floor(Math.random()*chars.length)],x,y);ctx.shadowBlur=0;if(y>canvas.height&&Math.random()>0.988)drops[i]=0;drops[i]++}requestAnimationFrame(drawMatrix)}
 
 // PETALS
-const petals=[],PETAL_CT=90;
+const petals=[],PETAL_CT=110;
 for(let i=0;i<PETAL_CT;i++){petals.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,size:8+Math.random()*14,rot:Math.random()*Math.PI*2,rotSpd:(Math.random()-0.5)*0.02,spd:0.15+Math.random()*0.4,drift:Math.random()*Math.PI*2,driftSpd:0.005+Math.random()*0.01,opacity:0.35+Math.random()*0.35})}
 function drawPetal(x,y,size,rot,opacity){pCtx.save();pCtx.translate(x,y);pCtx.rotate(rot);pCtx.strokeStyle=`rgba(0,255,65,${opacity})`;pCtx.fillStyle=`rgba(0,255,65,${opacity*0.6})`;pCtx.lineWidth=1;pCtx.beginPath();pCtx.moveTo(0,-size);pCtx.bezierCurveTo(size*0.6,-size*0.5,size*0.5,size*0.3,0,size);pCtx.bezierCurveTo(-size*0.5,size*0.3,-size*0.6,-size*0.5,0,-size);pCtx.fill();pCtx.stroke();pCtx.strokeStyle=`rgba(0,255,65,${opacity*0.5})`;pCtx.beginPath();pCtx.moveTo(0,-size*0.8);pCtx.lineTo(0,size*0.7);pCtx.stroke();pCtx.restore()}
 function animatePetals(){pCtx.clearRect(0,0,petalCanvas.width,petalCanvas.height);for(const p of petals){p.y+=p.spd;p.drift+=p.driftSpd;p.x+=Math.sin(p.drift)*0.3;p.rot+=p.rotSpd;const dx=p.x-mouseX,dy=p.y-mouseY;const dist=Math.sqrt(dx*dx+dy*dy);if(dist<260){const f=(260-dist)/260;p.x+=dx/dist*f*5.5;p.y+=dy/dist*f*5.5;p.rot+=f*0.14;drawPetal(p.x,p.y,p.size*(1+f*0.35),p.rot,Math.min(1,p.opacity+f*0.3))}else drawPetal(p.x,p.y,p.size,p.rot,p.opacity);if(p.y>innerHeight+20){p.y=-20;p.x=Math.random()*innerWidth}}requestAnimationFrame(animatePetals)}
@@ -1134,7 +1153,7 @@ function toggleTMenu(){document.getElementById('t-menu').classList.toggle('open'
 document.addEventListener('click',e=>{const m=document.getElementById('t-menu'),tb=document.querySelector('.tb-start');if(m.classList.contains('open')&&!m.contains(e.target)&&!tb.contains(e.target))m.classList.remove('open')});
 
 // THEMES
-const themes={matrix:{bg:'#050505',volt:'#00FF41',slate:'#1E293B',slateL:'#334155',text:'#FFF',textMid:'#CBD5E1',textMuted:'#94A3B8',glass:'rgba(10,10,12,0.92)'},cyber:{bg:'#0a000a',volt:'#FF00FF',slate:'#2B1B3B',slateL:'#4A2D6B',text:'#FFF',textMid:'#D8B4FE',textMuted:'#A78BFA',glass:'rgba(15,5,20,0.92)'},retro:{bg:'#000080',volt:'#FFFF00',slate:'#00008B',slateL:'#0000CD',text:'#FFFF00',textMid:'#FFFFAA',textMuted:'#CCCC66',glass:'rgba(0,0,80,0.92)'},stark:{bg:'#e8ecf0',volt:'#00BFFF',slate:'#c0c8d0',slateL:'#a0a8b0',text:'#1a1a2e',textMid:'#334155',textMuted:'#64748B',glass:'rgba(240,244,248,0.92)'}};
+const themes={matrix:{bg:'#050505',volt:'#00FF41',slate:'#1E293B',slateL:'#334155',text:'#FFF',textMid:'#CBD5E1',textMuted:'#94A3B8',glass:'rgba(10,10,12,0.92)'},cyber:{bg:'#0a000a',volt:'#FF00FF',slate:'#2B1B3B',slateL:'#4A2D6B',text:'#FFF',textMid:'#D8B4FE',textMuted:'#A78BFA',glass:'rgba(15,5,20,0.92)'},retro:{bg:'#000080',volt:'#FFFF00',slate:'#00008B',slateL:'#0000CD',text:'#FFFF00',textMid:'#FFFFAA',textMuted:'#CCCC66',glass:'rgba(0,0,80,0.92)'},stark:{bg:'#f1f5f9',volt:'#1D4ED8',slate:'#64748B',slateL:'#475569',text:'#0F172A',textMid:'#1E293B',textMuted:'#475569',glass:'rgba(248,250,252,0.95)'}};
 function setTheme(name,el){const t=themes[name];if(!t)return;const r=document.documentElement.style;r.setProperty('--bg',t.bg);r.setProperty('--volt',t.volt);r.setProperty('--slate',t.slate);r.setProperty('--slate-light',t.slateL);r.setProperty('--text',t.text);r.setProperty('--text-mid',t.textMid);r.setProperty('--text-muted',t.textMuted);r.setProperty('--glass-bg',t.glass);document.querySelectorAll('.theme-card').forEach(c=>c.classList.remove('active'));if(el)el.classList.add('active');try{sessionStorage.setItem('ncava_theme',name)}catch(e){}}
 
 // SNAKE
@@ -1249,16 +1268,20 @@ function startArcadeGame(g){
   document.getElementById('arcade-menu').style.display='none';
   document.getElementById('arcade-dodge').style.display='none';
   document.getElementById('arcade-shoot').style.display='none';
+  document.getElementById('arcade-fight').style.display='none';
   document.getElementById('arcade-'+g).style.display='flex';
   if(g==='dodge')initDodge();
   if(g==='shoot')initShoot();
+  if(g==='fight')initFight();
 }
 function backToArcade(){
   document.getElementById('arcade-dodge').style.display='none';
   document.getElementById('arcade-shoot').style.display='none';
+  document.getElementById('arcade-fight').style.display='none';
   document.getElementById('arcade-menu').style.display='flex';
   if(window._dodgeLoop)cancelAnimationFrame(window._dodgeLoop);
   if(window._hackLoop)clearInterval(window._hackLoop);
+  if(window._fightLoop)cancelAnimationFrame(window._fightLoop);
 }
 
 // === MATRIX DODGE ===
@@ -1401,6 +1424,176 @@ function initShoot(){
   }
   spawn();tick();
 }
+
+// === NEON FIGHTER ===
+function initFight(){
+  var cv=document.getElementById('fight-canvas');if(!cv)return;
+  var cx=cv.getContext('2d');var W=480,H=380;
+  if(window._fightLoop)cancelAnimationFrame(window._fightLoop);
+  var GROUND=H-60;
+  var p1={x:120,y:GROUND,hp:100,face:1,atk:0,hurt:0,color:'#00FF41',glow:'rgba(0,255,65,0.6)',name:'VOUS'};
+  var p2={x:360,y:GROUND,hp:100,face:-1,atk:0,hurt:0,color:'#FF3B7F',glow:'rgba(255,59,127,0.6)',name:'CPU'};
+  var keys={};var over=false;var winner='';var round=1;var flash=0;
+  var roundEl=document.getElementById('fight-round');
+  function updR(){roundEl.textContent='ROUND '+round;}
+  updR();
+  function reset(full){
+    p1.x=120;p1.y=GROUND;p1.atk=0;p1.hurt=0;
+    p2.x=360;p2.y=GROUND;p2.atk=0;p2.hurt=0;
+    if(full){p1.hp=100;p2.hp=100;round=1;updR();}
+    over=false;winner='';flash=0;
+  }
+  function drawFighter(p){
+    var bob=Math.sin(Date.now()/180+p.x)*1.5;
+    var hx=p.x,hy=p.y+bob;
+    // Shadow
+    cx.fillStyle='rgba(0,0,0,0.4)';cx.beginPath();cx.ellipse(hx,GROUND+8,22,5,0,0,Math.PI*2);cx.fill();
+    // Glow
+    cx.shadowColor=p.glow;cx.shadowBlur=p.hurt>0?20:10;
+    // Body
+    cx.fillStyle=p.hurt>0?'#fff':p.color;
+    cx.fillRect(hx-10,hy-50,20,32);
+    // Head
+    cx.beginPath();cx.arc(hx,hy-58,10,0,Math.PI*2);cx.fill();
+    // Eyes
+    cx.shadowBlur=0;cx.fillStyle='#050505';
+    cx.fillRect(hx-4+p.face*2,hy-60,2,2);cx.fillRect(hx+2+p.face*2,hy-60,2,2);
+    // Legs
+    cx.fillStyle=p.hurt>0?'#fff':p.color;cx.shadowColor=p.glow;cx.shadowBlur=8;
+    var lo=Math.sin(Date.now()/120+p.x*0.1)*3;
+    cx.fillRect(hx-8,hy-18,6,18+lo);cx.fillRect(hx+2,hy-18,6,18-lo);
+    // Arms — attack states
+    if(p.atk===1){ // punch
+      cx.fillStyle='#FBBF24';cx.shadowColor='rgba(251,191,36,0.8)';cx.shadowBlur=14;
+      cx.fillRect(hx+p.face*10,hy-44,p.face*28,6);
+      cx.beginPath();cx.arc(hx+p.face*38,hy-41,6,0,Math.PI*2);cx.fill();
+    }else if(p.atk===2){ // kick
+      cx.fillStyle='#60A5FA';cx.shadowColor='rgba(96,165,250,0.8)';cx.shadowBlur=14;
+      cx.fillRect(hx+p.face*6,hy-26,p.face*34,7);
+      cx.beginPath();cx.arc(hx+p.face*42,hy-22,7,0,Math.PI*2);cx.fill();
+    }else{
+      cx.fillStyle=p.hurt>0?'#fff':p.color;cx.shadowColor=p.glow;cx.shadowBlur=6;
+      cx.fillRect(hx-14,hy-44,5,20);cx.fillRect(hx+9,hy-44,5,20);
+    }
+    cx.shadowBlur=0;
+  }
+  function drawHP(){
+    // P1 bar
+    cx.fillStyle='rgba(255,255,255,0.1)';cx.fillRect(20,15,180,14);
+    cx.fillStyle='#00FF41';cx.shadowColor='rgba(0,255,65,0.6)';cx.shadowBlur=8;
+    cx.fillRect(20,15,180*(p1.hp/100),14);cx.shadowBlur=0;
+    cx.strokeStyle='rgba(255,255,255,0.3)';cx.lineWidth=1;cx.strokeRect(20,15,180,14);
+    cx.fillStyle='#fff';cx.font='bold 10px "JetBrains Mono",monospace';cx.fillText('VOUS',20,11);
+    // P2 bar
+    cx.fillStyle='rgba(255,255,255,0.1)';cx.fillRect(W-200,15,180,14);
+    cx.fillStyle='#FF3B7F';cx.shadowColor='rgba(255,59,127,0.6)';cx.shadowBlur=8;
+    var w2=180*(p2.hp/100);cx.fillRect(W-20-w2,15,w2,14);cx.shadowBlur=0;
+    cx.strokeStyle='rgba(255,255,255,0.3)';cx.strokeRect(W-200,15,180,14);
+    cx.fillStyle='#fff';cx.textAlign='right';cx.fillText('CPU',W-20,11);cx.textAlign='start';
+  }
+  function drawArena(){
+    // Floor gradient
+    var grad=cx.createLinearGradient(0,GROUND,0,H);
+    grad.addColorStop(0,'#1E1B4B');grad.addColorStop(1,'#050505');
+    cx.fillStyle=grad;cx.fillRect(0,GROUND,W,H-GROUND);
+    // Grid lines (perspective)
+    cx.strokeStyle='rgba(0,255,65,0.1)';cx.lineWidth=1;
+    for(var i=0;i<8;i++){
+      var y=GROUND+i*8;
+      cx.beginPath();cx.moveTo(0,y);cx.lineTo(W,y);cx.stroke();
+    }
+    for(var i=0;i<12;i++){
+      var vp=W/2,x=vp+(i-6)*80;
+      cx.beginPath();cx.moveTo(x,GROUND);cx.lineTo(vp+(i-6)*200,H);cx.stroke();
+    }
+    // Horizon neon line
+    cx.strokeStyle='#FF3B7F';cx.shadowColor='rgba(255,59,127,0.8)';cx.shadowBlur=12;cx.lineWidth=2;
+    cx.beginPath();cx.moveTo(0,GROUND);cx.lineTo(W,GROUND);cx.stroke();cx.shadowBlur=0;
+    // Distant neon sun
+    var sg=cx.createRadialGradient(W/2,GROUND,10,W/2,GROUND,120);
+    sg.addColorStop(0,'rgba(255,59,127,0.35)');sg.addColorStop(1,'rgba(255,59,127,0)');
+    cx.fillStyle=sg;cx.fillRect(0,GROUND-120,W,120);
+  }
+  var aiTimer=0,aiMove=0;
+  function aiThink(){
+    aiTimer--;
+    if(aiTimer<=0){
+      var d=p1.x-p2.x;
+      if(Math.abs(d)>60){aiMove=d<0?-1:1;}
+      else if(Math.abs(d)<35){aiMove=d<0?1:-1;}
+      else{
+        // Attack
+        if(p2.atk===0&&Math.random()<0.5){
+          p2.atk=Math.random()<0.6?1:2;p2.face=d>0?1:-1;
+          setTimeout(function(){p2.atk=0;},p2.atk===2?280:180);
+        }else aiMove=0;
+      }
+      aiTimer=10+Math.random()*14;
+    }
+    p2.x+=aiMove*1.6;
+    if(p2.x<30)p2.x=30;if(p2.x>W-30)p2.x=W-30;
+    p2.face=p1.x<p2.x?-1:1;
+  }
+  function hit(att,def){
+    if(att.atk===0)return;
+    var reach=att.atk===1?40:48;
+    var dmg=att.atk===1?6:10;
+    var d=def.x-att.x;
+    if(Math.abs(d)<reach&&Math.sign(d)===att.face&&def.hurt<=0){
+      def.hp=Math.max(0,def.hp-dmg);
+      def.hurt=12;
+      def.x+=att.face*10;
+      if(def.x<30)def.x=30;if(def.x>W-30)def.x=W-30;
+      flash=6;
+    }
+  }
+  function tick(){
+    // BG
+    cx.fillStyle='rgba(5,5,5,0.35)';cx.fillRect(0,0,W,H);
+    drawArena();
+    if(!over){
+      // P1 movement
+      if(keys['ArrowLeft']){p1.x=Math.max(30,p1.x-2.4);p1.face=-1;}
+      if(keys['ArrowRight']){p1.x=Math.min(W-30,p1.x+2.4);p1.face=1;}
+      aiThink();
+      hit(p1,p2);hit(p2,p1);
+      if(p1.hurt>0)p1.hurt--;if(p2.hurt>0)p2.hurt--;
+      if(p1.hp<=0||p2.hp<=0){over=true;winner=p1.hp<=0?'CPU':'VOUS';}
+    }
+    if(p1.face<0)drawFighter(p2),drawFighter(p1);else drawFighter(p1),drawFighter(p2);
+    drawHP();
+    if(flash>0){cx.fillStyle='rgba(255,255,255,'+(flash/12)+')';cx.fillRect(0,0,W,H);flash--;}
+    if(over){
+      cx.fillStyle='rgba(0,0,0,0.7)';cx.fillRect(0,0,W,H);
+      cx.fillStyle=winner==='VOUS'?'#00FF41':'#FF3B7F';
+      cx.shadowColor=cx.fillStyle;cx.shadowBlur=20;
+      cx.font='bold 32px Orbitron,monospace';cx.textAlign='center';
+      cx.fillText('K.O.',W/2,H/2-20);
+      cx.font='bold 18px Orbitron,monospace';
+      cx.fillText(winner+' GAGNE',W/2,H/2+12);
+      cx.shadowBlur=0;cx.fillStyle='#fff';cx.font='11px "JetBrains Mono",monospace';
+      cx.fillText('SPACE pour rejouer',W/2,H/2+40);
+      cx.textAlign='start';
+    }
+    window._fightLoop=requestAnimationFrame(tick);
+  }
+  document.onkeydown=function(ev){
+    var w=document.getElementById('win-arcade');
+    if(!w||w.style.display==='none')return;
+    if(document.getElementById('arcade-fight').style.display==='none')return;
+    if(ev.key==='ArrowLeft'||ev.key==='ArrowRight'){keys[ev.key]=true;ev.preventDefault();}
+    if((ev.key==='a'||ev.key==='A')&&!over&&p1.atk===0){
+      p1.atk=1;setTimeout(function(){p1.atk=0;},180);ev.preventDefault();
+    }
+    if((ev.key==='s'||ev.key==='S')&&!over&&p1.atk===0){
+      p1.atk=2;setTimeout(function(){p1.atk=0;},260);ev.preventDefault();
+    }
+    if(ev.key===' '&&over){reset(true);ev.preventDefault();}
+  };
+  document.onkeyup=function(ev){keys[ev.key]=false;};
+  reset(true);tick();
+}
+
 
 // ============================================================
 // WINDOW TRANSITION SYSTEM
@@ -1812,7 +2005,7 @@ try{(function(){
     });
   }
   function scan(){
-    document.querySelectorAll('.prj-img img, .logo-item img, .edito-grid img').forEach(bindImage);
+    document.querySelectorAll('.prj-img img, .logo-item img, .edito-grid img, .prj-persona img').forEach(bindImage);
   }
   scan();
   // Re-scan periodically and on common triggers
