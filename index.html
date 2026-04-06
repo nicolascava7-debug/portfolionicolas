@@ -553,7 +553,7 @@ background-size:60px 60px}
 .anim-s{opacity:0;transform:translateY(25px);transition:opacity 0.6s ease,transform 0.6s ease}
 .anim-s.vis{opacity:1;transform:translateY(0)}
 .prj-stag{animation:sg 3s ease-in-out infinite}
-@keyframes sg{0%,100%{text-shadow:0 0 4px rgba(0,255,65,0.15)}50%{text-shadow:0 0 16px rgba(0,255,65,0.5)}}
+@keyframes sg{0%,100%{text-shadow:0 0 8px rgba(232,121,249,0.4),0 0 2px rgba(232,121,249,0.5)}50%{text-shadow:0 0 20px rgba(232,121,249,0.85),0 0 40px rgba(232,121,249,0.4),0 0 4px rgba(232,121,249,0.6)}}
 .prj-img{animation:in 4s ease-in-out infinite}
 @keyframes in{0%,100%{border-color:var(--slate);box-shadow:none}50%{border-color:rgba(0,255,65,0.3);box-shadow:0 0 15px rgba(0,255,65,0.1)}}
 .prj-img img{transition:transform 0.5s}
@@ -1049,6 +1049,68 @@ background-size:60px 60px}
 
 /* Problématique sits better when preceded by text */
 .prj-text + .prj-problematique{margin-top:28px!important}
+
+/* === SECTION TAGS — distinctive fuchsia, always visible across all themes === */
+.prj-stag{
+  color:#F0ABFC!important;
+  background:linear-gradient(90deg,rgba(232,121,249,0.18),rgba(232,121,249,0.06))!important;
+  border:1px solid rgba(232,121,249,0.55)!important;
+  border-left:4px solid #E879F9!important;
+  box-shadow:0 0 18px rgba(232,121,249,0.25),inset 0 0 12px rgba(232,121,249,0.08)!important;
+  text-shadow:0 0 14px rgba(232,121,249,0.75),0 0 4px rgba(232,121,249,0.5)!important;
+  font-weight:800!important;
+  letter-spacing:3.5px!important;
+  padding:8px 16px 8px 18px!important;
+  font-size:12px!important;
+  text-transform:uppercase!important
+}
+
+/* Full-width colored underline beneath titles (no more 60px segment) */
+.prj-stitle{
+  border-bottom:none!important;
+  padding-bottom:16px!important;
+  position:relative!important
+}
+.prj-stitle::after{
+  content:''!important;
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  width:auto!important;
+  height:3px!important;
+  background:var(--volt)!important;
+  box-shadow:0 0 14px var(--volt),0 0 28px rgba(0,255,65,0.4)!important;
+  border-radius:2px!important
+}
+.prj-page[class*="theme-"] .prj-stitle::after{
+  background:var(--accent)!important;
+  box-shadow:0 0 14px var(--accent),0 0 28px rgba(var(--accent-rgb),0.4)!important
+}
+.stage-page .prj-stitle::after{
+  background:#FB923C!important;
+  box-shadow:0 0 14px #FB923C,0 0 28px rgba(251,146,60,0.4)!important
+}
+
+/* === DEVICE MOCKUPS === */
+.mockup-laptop{position:relative;max-width:720px;margin:24px auto;padding:16px 28px 0;border-radius:18px 18px 4px 4px;background:linear-gradient(180deg,#2a2d34,#1a1c22);box-shadow:0 20px 50px rgba(0,0,0,0.55),inset 0 2px 0 rgba(255,255,255,0.08),inset 0 -2px 0 rgba(0,0,0,0.4);border:1px solid #0a0a0a}
+.mockup-laptop::before{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:50px;height:4px;background:#0a0a0a;border-radius:0 0 6px 6px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.05)}
+.mockup-laptop-screen{position:relative;aspect-ratio:16/10;background:#050505;border:2px solid #0a0a0a;border-radius:2px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.04)}
+.mockup-laptop-screen img{width:100%;height:100%;object-fit:cover;display:block}
+.mockup-laptop-screen::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.04) 0%,transparent 30%,transparent 70%,rgba(255,255,255,0.02) 100%);pointer-events:none}
+.mockup-laptop-base{position:relative;margin:0 -40px;height:16px;background:linear-gradient(180deg,#32353e,#1a1c22 40%,#0e1015);border-radius:0 0 16px 16px;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+.mockup-laptop-base::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:80px;height:5px;background:#0a0a0a;border-radius:0 0 8px 8px}
+
+.mockup-phone{position:relative;width:280px;margin:24px auto;padding:14px;background:linear-gradient(145deg,#1f2025,#0a0b0e);border-radius:42px;box-shadow:0 25px 60px rgba(0,0,0,0.6),inset 0 1px 0 rgba(255,255,255,0.08),inset 0 -1px 0 rgba(0,0,0,0.4),0 0 0 2px #0a0a0a}
+.mockup-phone::before{content:'';position:absolute;top:24px;left:50%;transform:translateX(-50%);width:100px;height:28px;background:#000;border-radius:18px;z-index:3;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.06)}
+.mockup-phone::after{content:'';position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:120px;height:5px;background:rgba(255,255,255,0.45);border-radius:3px;z-index:3}
+.mockup-phone-screen{position:relative;aspect-ratio:1/1;background:#000;border-radius:28px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.06)}
+.mockup-phone-screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.mockup-phone-side-l,.mockup-phone-side-r{position:absolute;width:3px;background:#0a0a0a;border-radius:2px}
+.mockup-phone-side-l{left:-4px;top:110px;height:32px;box-shadow:0 44px 0 #0a0a0a,0 88px 0 #0a0a0a}
+.mockup-phone-side-r{right:-4px;top:130px;height:54px;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.05)}
+
+.mockup-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:#F0ABFC;letter-spacing:3px;text-transform:uppercase;text-align:center;margin-top:14px;text-shadow:0 0 10px rgba(232,121,249,0.5);font-weight:700}
 </style>
 </head>
 <body>
@@ -1238,10 +1300,20 @@ background-size:60px 60px}
         </div>
       </div>
       <div class="prj-section"><div class="prj-stag">// section_04b — site & application</div><div class="prj-stitle">Site & Application Mobile</div>
-        <a href="https://nicolascava7.wixsite.com/my-site-1" target="_blank" class="site-link"><div class="prj-img"><img src="https://i.ibb.co/6c3GkSFC/Capture-d-cran-2026-04-04-162208.png" alt="Site Ça Match"></div></a>
-        <div class="prj-text">Nous avons conçu ce site web pour mettre en avant l'ensemble de nos contenus en format intégral et assurer le référencement SEO de notre média. Il sert de hub central pour les articles, vidéos et podcasts produits par l'équipe, offrant une expérience de navigation pensée comme un tunnel de conversion — de la découverte vers l'abonnement.</div>
-        <div class="prj-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/YFaykLIy3Ak?si=tMVIJ02LIhPQ4cuJ" title="Application Ça Match" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-muted);text-align:center;margin-top:8px;letter-spacing:2px">APPLICATION MOBILE — ÇA MATCH</div>
+        <a href="https://nicolascava7.wixsite.com/my-site-1" target="_blank" class="site-link" style="text-decoration:none">
+          <div class="mockup-laptop">
+            <div class="mockup-laptop-screen"><img src="https://i.ibb.co/6c3GkSFC/Capture-d-cran-2026-04-04-162208.png" alt="Site Ça Match"></div>
+            <div class="mockup-laptop-base"></div>
+          </div>
+          <div class="mockup-label">SITE WEB — NICOLASCAVA7.WIXSITE.COM/MY-SITE-1</div>
+        </a>
+        <div class="prj-text" style="margin-top:28px">Nous avons conçu ce site web pour mettre en avant l'ensemble de nos contenus en format intégral et assurer le référencement SEO de notre média. Il sert de hub central pour les articles, vidéos et podcasts produits par l'équipe, offrant une expérience de navigation pensée comme un tunnel de conversion — de la découverte vers l'abonnement.</div>
+        <div class="mockup-phone">
+          <div class="mockup-phone-side-l"></div>
+          <div class="mockup-phone-side-r"></div>
+          <div class="mockup-phone-screen"><iframe src="https://www.youtube.com/embed/YFaykLIy3Ak?si=tMVIJ02LIhPQ4cuJ" title="Application Ça Match" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        </div>
+        <div class="mockup-label">APPLICATION MOBILE — ÇA MATCH (GLIDE)</div>
       </div>
       <div class="prj-section"><div class="prj-stag">// section_05 — compétences</div><div class="prj-stitle">Compétences Validées</div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_01 — Contribution à l'élaboration et au pilotage de la stratégie de communication</div><div class="prj-bloc-item">Analyse du marché : Réalisation d'un benchmark complet pour positionner "Ça Match" comme un média de rupture.</div><div class="prj-bloc-item">Ciblage stratégique : Définition d'un persona précis et de ses besoins en matière de santé mentale et d'engagement social.</div><div class="prj-bloc-item">Élaboration de la problématique : Formulation d'un axe stratégique centré sur le sport comme levier de solutions sociétales.</div></div>
