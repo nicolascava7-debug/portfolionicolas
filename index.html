@@ -286,9 +286,10 @@ background-size:60px 60px}
 .prj-page-name{font-family:'Orbitron',sans-serif;font-size:16px;font-weight:900;letter-spacing:3px}
 .prj-scroll{flex:1;overflow-y:auto;padding:24px}.prj-scroll::-webkit-scrollbar{width:4px}.prj-scroll::-webkit-scrollbar-thumb{background:var(--slate)}
 .prj-section{margin-bottom:30px}
-.prj-stag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--volt);letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;padding-left:10px;border-left:3px solid var(--volt)}
-.prj-stitle{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;margin-bottom:14px}
-.prj-text{font-family:'Montserrat',sans-serif;font-size:14px;line-height:1.9;color:var(--text-mid);margin-bottom:12px}
+.prj-stag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--volt);letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;padding:5px 12px 5px 14px;border:1px solid rgba(0,255,65,0.3);border-left:3px solid var(--volt);background:rgba(0,255,65,0.06);border-radius:0 3px 3px 0;text-shadow:0 0 10px rgba(0,255,65,0.4)}
+.prj-stitle{font-family:'Orbitron',sans-serif;font-size:24px;font-weight:900;margin-bottom:18px;color:#fff;letter-spacing:1.5px;padding-bottom:12px;border-bottom:2px solid rgba(0,255,65,0.25);position:relative;text-shadow:0 0 20px rgba(255,255,255,0.15)}
+.prj-stitle::after{content:'';position:absolute;left:0;bottom:-2px;width:60px;height:2px;background:var(--volt);box-shadow:0 0 12px var(--volt)}
+.prj-text{font-family:'Montserrat',sans-serif;font-size:16px;line-height:1.8;color:#FFFFFF;margin-bottom:16px;font-weight:500;text-shadow:0 0 1px rgba(255,255,255,0.2)}
 .prj-img{border:1px solid var(--slate);overflow:hidden;margin:14px 0;border-radius:3px}
 .prj-img img{width:100%;display:block;object-fit:contain;max-height:450px;background:rgba(0,0,0,0.2)}
 .prj-video{margin:14px 0;border:1px solid var(--slate);border-radius:3px;overflow:hidden}
@@ -299,7 +300,7 @@ background-size:60px 60px}
 .prj-bloc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--volt);box-shadow:0 0 12px var(--volt)}
 .prj-bloc::after{content:'';position:absolute;top:0;right:0;width:60px;height:60px;background:radial-gradient(circle at top right,rgba(0,255,65,0.12),transparent 70%);pointer-events:none}
 .prj-bloc-title{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:900;color:var(--volt);letter-spacing:2.5px;margin-bottom:14px;text-transform:uppercase;text-shadow:0 0 15px rgba(0,255,65,0.5);padding-bottom:10px;border-bottom:1px solid rgba(0,255,65,0.2);line-height:1.4}
-.prj-bloc-item{font-family:'Montserrat',sans-serif;font-size:14px;color:var(--text);line-height:1.75;padding:8px 0 8px 18px;border-left:2px solid rgba(0,255,65,0.25);margin-bottom:6px;transition:all 0.25s;position:relative}
+.prj-bloc-item{font-family:'Montserrat',sans-serif;font-size:14px;color:#FFFFFF;line-height:1.75;padding:8px 0 8px 18px;border-left:2px solid rgba(0,255,65,0.25);margin-bottom:6px;transition:all 0.25s;position:relative;font-weight:500}
 .prj-bloc-item::before{content:'▸';position:absolute;left:4px;top:8px;color:var(--volt);font-size:11px;opacity:0.7}
 .prj-bloc-item:hover{border-left-color:var(--volt);color:var(--text);transform:translateX(4px)}
 .prj-badges{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
@@ -398,14 +399,14 @@ background-size:60px 60px}
 .prj-problematique{font-size:19px!important;color:#00FF41!important;padding:16px 20px;border:1px solid rgba(0,255,65,0.3);background:rgba(0,255,65,0.04);margin:14px 0;position:relative;overflow:hidden;animation:probPulse 3s ease-in-out infinite}
 .prj-problematique::before{content:'⚡';position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:22px;opacity:0.3}
 @keyframes probPulse{0%,100%{border-color:rgba(0,255,65,0.2);box-shadow:0 0 5px rgba(0,255,65,0)}50%{border-color:rgba(0,255,65,0.5);box-shadow:0 0 20px rgba(0,255,65,0.1)}}
-/* TEXT READABILITY */
-.prj-text{color:#e2e8f0!important}
-.prj-bloc-item{color:#e2e8f0!important}
+/* TEXT READABILITY — maximum visibility */
+.prj-text{color:#FFFFFF!important;font-weight:500!important;text-shadow:0 0 1px rgba(255,255,255,0.3)}
+.prj-bloc-item{color:#FFFFFF!important;font-weight:500!important;text-shadow:0 0 1px rgba(255,255,255,0.25)}
 
 /* BENCHMARK TABLES */
-.bench-table{width:100%;border-collapse:collapse;margin:14px 0;font-family:'Montserrat',sans-serif;font-size:14px}
-.bench-table th{font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:2px;color:var(--volt);background:rgba(0,255,65,0.06);padding:12px 14px;text-align:left;border:1px solid rgba(0,255,65,0.15);text-transform:uppercase}
-.bench-table td{padding:14px 16px;border:1px solid var(--slate);color:#e2e8f0;line-height:1.8;font-size:16px;vertical-align:top;transition:all 0.3s}
+.bench-table{width:100%;border-collapse:collapse;margin:14px 0;font-family:'Montserrat',sans-serif;font-size:15px;box-shadow:0 4px 20px rgba(0,0,0,0.3)}
+.bench-table th{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:900;letter-spacing:2.5px;color:var(--volt);background:linear-gradient(180deg,rgba(0,255,65,0.14),rgba(0,255,65,0.05));padding:14px;text-align:left;border:1px solid rgba(0,255,65,0.3);text-transform:uppercase;text-shadow:0 0 10px rgba(0,255,65,0.4)}
+.bench-table td{padding:16px 18px;border:1px solid rgba(100,116,139,0.35);color:#FFFFFF;line-height:1.75;font-size:15px;font-weight:500;vertical-align:top;transition:all 0.3s;background:rgba(0,0,0,0.15)}
 .bench-table tr{transition:all 0.3s}
 .bench-table tr:hover td{background:rgba(0,255,65,0.03);border-color:rgba(0,255,65,0.2)}
 .bench-table td:first-child{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;color:var(--volt);white-space:nowrap}
@@ -491,6 +492,11 @@ background-size:60px 60px}
 /* LOGO SHOWCASE */
 .logo-showcase{display:flex;flex-direction:column;gap:24px;margin:14px 0}
 .logo-item{text-align:center}
+.logo-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px 30px;justify-items:center;align-items:start}
+.logo-layout .logo-slot-left{grid-column:1;grid-row:1}
+.logo-layout .logo-slot-right{grid-column:2;grid-row:1}
+.logo-layout .logo-slot-center{grid-column:1 / span 2;grid-row:2;max-width:50%}
+.palette-showcase img{max-width:100%!important;max-height:520px!important;width:auto;padding:24px!important}
 .logo-item img{max-width:100%;max-height:300px;object-fit:contain;display:block;margin:0 auto;background:rgba(255,255,255,0.03);border:1px solid var(--slate);padding:12px;border-radius:4px;transition:all 0.3s}
 .logo-item img:hover{border-color:rgba(0,255,65,0.3);transform:scale(1.02)}
 .logo-caption{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--volt);letter-spacing:3px;text-transform:uppercase;margin-top:8px;text-align:center}
@@ -621,8 +627,13 @@ background-size:60px 60px}
 #lightbox-inner{position:relative;max-width:95vw;max-height:92vh;display:flex;flex-direction:column;align-items:center;gap:14px}
 #lightbox img{max-width:95vw;max-height:85vh;object-fit:contain;border:1px solid rgba(0,255,65,0.3);box-shadow:0 0 60px rgba(0,255,65,0.15),0 20px 80px rgba(0,0,0,0.8);background:rgba(0,0,0,0.4)}
 #lightbox-caption{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--volt);letter-spacing:3px;text-transform:uppercase;text-align:center;text-shadow:0 0 10px rgba(0,255,65,0.4)}
-#lightbox-close{position:absolute;top:-38px;right:0;width:32px;height:32px;background:transparent;border:1px solid var(--volt);color:var(--volt);font-family:'JetBrains Mono',monospace;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+#lightbox-close{position:absolute;top:-38px;right:0;width:32px;height:32px;background:transparent;border:1px solid var(--volt);color:var(--volt);font-family:'JetBrains Mono',monospace;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;z-index:10}
 #lightbox-close:hover{background:var(--volt);color:var(--bg);box-shadow:0 0 12px var(--volt)}
+#lightbox-prev,#lightbox-next{position:fixed;top:50%;transform:translateY(-50%);width:54px;height:54px;background:rgba(0,0,0,0.6);border:2px solid var(--volt);color:var(--volt);font-family:'Orbitron',sans-serif;font-size:34px;font-weight:900;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;z-index:20;border-radius:50%;backdrop-filter:blur(8px);box-shadow:0 0 20px rgba(0,255,65,0.2)}
+#lightbox-prev{left:32px}
+#lightbox-next{right:32px}
+#lightbox-prev:hover,#lightbox-next:hover{background:var(--volt);color:#050505;box-shadow:0 0 25px var(--volt),0 0 50px rgba(0,255,65,0.4);transform:translateY(-50%) scale(1.08)}
+#lightbox-counter{position:absolute;top:-38px;left:0;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--volt);letter-spacing:3px;font-weight:700;padding:6px 14px;border:1px solid rgba(0,255,65,0.35);background:rgba(0,255,65,0.06);text-shadow:0 0 8px rgba(0,255,65,0.4)}
 #lightbox-corners{position:absolute;inset:-8px;pointer-events:none}
 #lightbox-corners::before,#lightbox-corners::after{content:'';position:absolute;width:20px;height:20px;border:1px solid var(--volt)}
 #lightbox-corners::before{top:0;left:0;border-right:none;border-bottom:none}
@@ -634,7 +645,9 @@ background-size:60px 60px}
 .prj-folder.stage-folder:hover{background:var(--stage-bg);border-color:var(--stage-border)}
 .prj-folder.stage-folder .prj-folder-name{color:#FB923C}
 .prj-folder.stage-folder .stage-tag{display:inline-block;padding:2px 8px;background:rgba(251,146,60,0.15);color:#FB923C;border:1px solid rgba(251,146,60,0.4);border-radius:2px;font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2px;margin-left:6px}
-.stage-page .prj-stag{color:#FB923C!important;border-left-color:#FB923C!important}
+.stage-page .prj-stag{color:#FB923C!important;border-color:rgba(251,146,60,0.4)!important;border-left-color:#FB923C!important;background:rgba(251,146,60,0.08)!important;text-shadow:0 0 10px rgba(251,146,60,0.4)!important}
+.stage-page .prj-stitle{border-bottom-color:rgba(251,146,60,0.3)!important}
+.stage-page .prj-stitle::after{background:#FB923C!important;box-shadow:0 0 12px #FB923C!important}
 .stage-page .prj-bloc{border-color:rgba(251,146,60,0.15)!important;background:rgba(251,146,60,0.02)!important}
 .stage-page .prj-bloc-title{color:#FB923C!important}
 .stage-page .prj-bloc-item{border-left-color:rgba(251,146,60,0.2)!important}
@@ -687,6 +700,208 @@ background-size:60px 60px}
 .stage-page .prj-bloc-item{border-left-color:rgba(251,146,60,0.3)!important}
 .stage-page .prj-bloc-item::before{color:#FB923C!important}
 .stage-page .prj-bloc:hover{border-color:rgba(251,146,60,0.7)!important;background:linear-gradient(135deg,rgba(251,146,60,0.1),rgba(251,146,60,0.025))!important;box-shadow:0 0 0 1px rgba(251,146,60,0.25),0 10px 40px rgba(251,146,60,0.15)!important}
+
+/* === PER-PAGE ACCENT THEMES (variations de couleur) === */
+.theme-cyan{--accent:#22D3EE;--accent-rgb:34,211,238}
+.theme-pink{--accent:#EC4899;--accent-rgb:236,72,153}
+.theme-sky{--accent:#38BDF8;--accent-rgb:56,189,248}
+.theme-emerald{--accent:#34D399;--accent-rgb:52,211,153}
+.theme-violet{--accent:#A78BFA;--accent-rgb:167,139,250}
+.theme-yellow{--accent:#FDE047;--accent-rgb:253,224,71}
+
+.theme-cyan .prj-stag,.theme-pink .prj-stag,.theme-sky .prj-stag,.theme-emerald .prj-stag,.theme-violet .prj-stag,.theme-yellow .prj-stag{
+  color:var(--accent)!important;
+  border-color:rgba(var(--accent-rgb),0.4)!important;
+  border-left-color:var(--accent)!important;
+  background:rgba(var(--accent-rgb),0.1)!important;
+  text-shadow:0 0 12px rgba(var(--accent-rgb),0.5)!important
+}
+.theme-cyan .prj-stitle,.theme-pink .prj-stitle,.theme-sky .prj-stitle,.theme-emerald .prj-stitle,.theme-violet .prj-stitle,.theme-yellow .prj-stitle{
+  border-bottom-color:rgba(var(--accent-rgb),0.35)!important
+}
+.theme-cyan .prj-stitle::after,.theme-pink .prj-stitle::after,.theme-sky .prj-stitle::after,.theme-emerald .prj-stitle::after,.theme-violet .prj-stitle::after,.theme-yellow .prj-stitle::after{
+  background:var(--accent)!important;
+  box-shadow:0 0 14px var(--accent)!important
+}
+.theme-cyan .prj-problematique,.theme-pink .prj-problematique,.theme-sky .prj-problematique,.theme-emerald .prj-problematique,.theme-violet .prj-problematique,.theme-yellow .prj-problematique{
+  color:var(--accent)!important;
+  border-color:rgba(var(--accent-rgb),0.45)!important;
+  background:rgba(var(--accent-rgb),0.06)!important;
+  box-shadow:0 0 20px rgba(var(--accent-rgb),0.1)
+}
+.theme-cyan .prj-problematique::before,.theme-pink .prj-problematique::before,.theme-sky .prj-problematique::before,.theme-emerald .prj-problematique::before,.theme-violet .prj-problematique::before,.theme-yellow .prj-problematique::before{
+  color:var(--accent)
+}
+.theme-cyan .bench-table th,.theme-pink .bench-table th,.theme-sky .bench-table th,.theme-emerald .bench-table th,.theme-violet .bench-table th,.theme-yellow .bench-table th{
+  color:var(--accent)!important;
+  background:linear-gradient(180deg,rgba(var(--accent-rgb),0.18),rgba(var(--accent-rgb),0.06))!important;
+  border-color:rgba(var(--accent-rgb),0.35)!important;
+  text-shadow:0 0 12px rgba(var(--accent-rgb),0.5)!important
+}
+.theme-cyan .bench-table tr:hover td,.theme-pink .bench-table tr:hover td,.theme-sky .bench-table tr:hover td,.theme-emerald .bench-table tr:hover td,.theme-violet .bench-table tr:hover td,.theme-yellow .bench-table tr:hover td{
+  background:rgba(var(--accent-rgb),0.05)!important;
+  border-color:rgba(var(--accent-rgb),0.25)!important
+}
+.theme-cyan .prj-page-header,.theme-pink .prj-page-header,.theme-sky .prj-page-header,.theme-emerald .prj-page-header,.theme-violet .prj-page-header,.theme-yellow .prj-page-header{
+  background:linear-gradient(90deg,rgba(var(--accent-rgb),0.1),transparent 60%)!important;
+  border-bottom-color:rgba(var(--accent-rgb),0.3)!important
+}
+.theme-cyan .prj-page-header::after,.theme-pink .prj-page-header::after,.theme-sky .prj-page-header::after,.theme-emerald .prj-page-header::after,.theme-violet .prj-page-header::after,.theme-yellow .prj-page-header::after{
+  background:var(--accent)!important;
+  box-shadow:0 0 14px var(--accent)!important
+}
+.theme-cyan .prj-page-name,.theme-pink .prj-page-name,.theme-sky .prj-page-name,.theme-violet .prj-page-name,.theme-yellow .prj-page-name{
+  color:var(--accent)!important;
+  text-shadow:0 0 14px rgba(var(--accent-rgb),0.5)!important;
+  -webkit-text-fill-color:var(--accent)!important;
+  background:none!important
+}
+.theme-emerald .prj-page-name{
+  background:linear-gradient(90deg,var(--accent),#86EFAC)!important;
+  -webkit-background-clip:text!important;
+  -webkit-text-fill-color:transparent!important
+}
+.theme-cyan .prj-back,.theme-pink .prj-back,.theme-sky .prj-back,.theme-emerald .prj-back,.theme-violet .prj-back,.theme-yellow .prj-back{
+  color:var(--accent)!important;
+  border-color:var(--accent)!important
+}
+.theme-cyan .prj-back:hover,.theme-pink .prj-back:hover,.theme-sky .prj-back:hover,.theme-emerald .prj-back:hover,.theme-violet .prj-back:hover,.theme-yellow .prj-back:hover{
+  background:var(--accent)!important;
+  color:#050505!important;
+  box-shadow:0 0 15px var(--accent)
+}
+.theme-cyan .prj-section::before,.theme-pink .prj-section::before,.theme-sky .prj-section::before,.theme-emerald .prj-section::before,.theme-violet .prj-section::before,.theme-yellow .prj-section::before{
+  background:var(--accent)!important;
+  box-shadow:0 0 10px var(--accent)!important
+}
+.theme-cyan .prj-img:hover,.theme-pink .prj-img:hover,.theme-sky .prj-img:hover,.theme-emerald .prj-img:hover,.theme-violet .prj-img:hover,.theme-yellow .prj-img:hover{
+  border-color:rgba(var(--accent-rgb),0.4)
+}
+.theme-cyan .prj-badge,.theme-pink .prj-badge,.theme-sky .prj-badge,.theme-emerald .prj-badge,.theme-violet .prj-badge,.theme-yellow .prj-badge{
+  border-color:rgba(var(--accent-rgb),0.35);
+  color:var(--accent)
+}
+.theme-cyan .logo-caption,.theme-pink .logo-caption,.theme-sky .logo-caption,.theme-emerald .logo-caption,.theme-violet .logo-caption,.theme-yellow .logo-caption{
+  color:var(--accent)
+}
+.theme-cyan .prj-bloc-title,.theme-pink .prj-bloc-title,.theme-sky .prj-bloc-title,.theme-emerald .prj-bloc-title,.theme-violet .prj-bloc-title,.theme-yellow .prj-bloc-title{
+  color:var(--accent)!important;
+  text-shadow:0 0 15px rgba(var(--accent-rgb),0.5)!important;
+  border-bottom-color:rgba(var(--accent-rgb),0.25)!important
+}
+.theme-cyan .prj-bloc,.theme-pink .prj-bloc,.theme-sky .prj-bloc,.theme-emerald .prj-bloc,.theme-violet .prj-bloc,.theme-yellow .prj-bloc{
+  border-color:rgba(var(--accent-rgb),0.4)!important;
+  background:linear-gradient(135deg,rgba(var(--accent-rgb),0.06),rgba(var(--accent-rgb),0.015))!important;
+  box-shadow:0 0 0 1px rgba(var(--accent-rgb),0.1),0 4px 20px rgba(0,0,0,0.3)!important
+}
+.theme-cyan .prj-bloc::before,.theme-pink .prj-bloc::before,.theme-sky .prj-bloc::before,.theme-emerald .prj-bloc::before,.theme-violet .prj-bloc::before,.theme-yellow .prj-bloc::before{
+  background:var(--accent)!important;
+  box-shadow:0 0 12px var(--accent)!important
+}
+.theme-cyan .prj-bloc::after,.theme-pink .prj-bloc::after,.theme-sky .prj-bloc::after,.theme-emerald .prj-bloc::after,.theme-violet .prj-bloc::after,.theme-yellow .prj-bloc::after{
+  background:radial-gradient(circle at top right,rgba(var(--accent-rgb),0.15),transparent 70%)!important
+}
+.theme-cyan .prj-bloc-item,.theme-pink .prj-bloc-item,.theme-sky .prj-bloc-item,.theme-emerald .prj-bloc-item,.theme-violet .prj-bloc-item,.theme-yellow .prj-bloc-item{
+  border-left-color:rgba(var(--accent-rgb),0.3)!important
+}
+.theme-cyan .prj-bloc-item::before,.theme-pink .prj-bloc-item::before,.theme-sky .prj-bloc-item::before,.theme-emerald .prj-bloc-item::before,.theme-violet .prj-bloc-item::before,.theme-yellow .prj-bloc-item::before{
+  color:var(--accent)!important
+}
+.theme-cyan .prj-bloc:hover,.theme-pink .prj-bloc:hover,.theme-sky .prj-bloc:hover,.theme-emerald .prj-bloc:hover,.theme-violet .prj-bloc:hover,.theme-yellow .prj-bloc:hover{
+  border-color:rgba(var(--accent-rgb),0.7)!important;
+  box-shadow:0 0 0 1px rgba(var(--accent-rgb),0.25),0 10px 40px rgba(var(--accent-rgb),0.15)!important
+}
+.theme-cyan .kpi-table,.theme-pink .kpi-table,.theme-sky .kpi-table,.theme-emerald .kpi-table,.theme-violet .kpi-table,.theme-yellow .kpi-table{
+  border-color:rgba(var(--accent-rgb),0.3)!important
+}
+.theme-cyan .kpi-table thead th,.theme-pink .kpi-table thead th,.theme-sky .kpi-table thead th,.theme-emerald .kpi-table thead th,.theme-violet .kpi-table thead th,.theme-yellow .kpi-table thead th{
+  background:linear-gradient(180deg,rgba(var(--accent-rgb),0.18),rgba(var(--accent-rgb),0.05))!important;
+  color:var(--accent)!important;
+  border-bottom-color:rgba(var(--accent-rgb),0.4)!important;
+  text-shadow:0 0 12px rgba(var(--accent-rgb),0.5)!important
+}
+.theme-cyan .kpi-table tbody td:first-child,.theme-pink .kpi-table tbody td:first-child,.theme-sky .kpi-table tbody td:first-child,.theme-emerald .kpi-table tbody td:first-child,.theme-violet .kpi-table tbody td:first-child,.theme-yellow .kpi-table tbody td:first-child{
+  color:var(--accent)!important;
+  border-right-color:rgba(var(--accent-rgb),0.15)!important
+}
+.theme-cyan .kpi-table tbody tr:hover,.theme-pink .kpi-table tbody tr:hover,.theme-sky .kpi-table tbody tr:hover,.theme-emerald .kpi-table tbody tr:hover,.theme-violet .kpi-table tbody tr:hover,.theme-yellow .kpi-table tbody tr:hover{
+  background:rgba(var(--accent-rgb),0.05)!important
+}
+
+/* === KPI GRID (card-based) === */
+.kpi-grid{display:flex;flex-direction:column;gap:22px;margin:16px 0}
+.kpi-group{position:relative}
+.kpi-group-header{display:flex;align-items:center;gap:12px;font-family:'Orbitron',sans-serif;font-size:14px;font-weight:900;color:var(--volt);letter-spacing:2.5px;text-transform:uppercase;padding:10px 0 12px;margin-bottom:14px;border-bottom:1px solid rgba(0,255,65,0.2);text-shadow:0 0 12px rgba(0,255,65,0.45)}
+.kpi-group-dot{width:10px;height:10px;border-radius:50%;background:var(--volt);box-shadow:0 0 10px var(--volt),0 0 20px rgba(0,255,65,0.5);flex-shrink:0}
+.kpi-group-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.kpi-card{position:relative;padding:18px 20px;border:1px solid rgba(0,255,65,0.25);border-left:3px solid var(--volt);background:linear-gradient(135deg,rgba(0,255,65,0.04),rgba(0,0,0,0.25));border-radius:3px;transition:all 0.3s;box-shadow:0 2px 10px rgba(0,0,0,0.3)}
+.kpi-card:hover{border-color:rgba(0,255,65,0.5);border-left-color:var(--volt);background:linear-gradient(135deg,rgba(0,255,65,0.08),rgba(0,0,0,0.3));transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,255,65,0.1)}
+.kpi-card-ind{font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:#fff;letter-spacing:1px;margin-bottom:8px;line-height:1.35;text-shadow:0 0 10px rgba(255,255,255,0.15)}
+.kpi-card-desc{font-family:'Montserrat',sans-serif;font-size:14px;color:#F1F5F9;line-height:1.6;font-weight:400}
+
+/* Per-theme kpi overrides */
+.theme-cyan .kpi-group-header,.theme-pink .kpi-group-header,.theme-sky .kpi-group-header,.theme-emerald .kpi-group-header,.theme-violet .kpi-group-header,.theme-yellow .kpi-group-header{color:var(--accent)!important;border-bottom-color:rgba(var(--accent-rgb),0.3)!important;text-shadow:0 0 12px rgba(var(--accent-rgb),0.5)!important}
+.theme-cyan .kpi-group-dot,.theme-pink .kpi-group-dot,.theme-sky .kpi-group-dot,.theme-emerald .kpi-group-dot,.theme-violet .kpi-group-dot,.theme-yellow .kpi-group-dot{background:var(--accent)!important;box-shadow:0 0 10px var(--accent),0 0 20px rgba(var(--accent-rgb),0.5)!important}
+.theme-cyan .kpi-card,.theme-pink .kpi-card,.theme-sky .kpi-card,.theme-emerald .kpi-card,.theme-violet .kpi-card,.theme-yellow .kpi-card{border-color:rgba(var(--accent-rgb),0.3)!important;border-left-color:var(--accent)!important;background:linear-gradient(135deg,rgba(var(--accent-rgb),0.05),rgba(0,0,0,0.25))!important}
+.theme-cyan .kpi-card:hover,.theme-pink .kpi-card:hover,.theme-sky .kpi-card:hover,.theme-emerald .kpi-card:hover,.theme-violet .kpi-card:hover,.theme-yellow .kpi-card:hover{border-color:rgba(var(--accent-rgb),0.6)!important;box-shadow:0 8px 25px rgba(var(--accent-rgb),0.15)!important}
+.stage-page .kpi-group-header{color:#FB923C!important;border-bottom-color:rgba(251,146,60,0.35)!important;text-shadow:0 0 12px rgba(251,146,60,0.5)!important}
+.stage-page .kpi-group-dot{background:#FB923C!important;box-shadow:0 0 10px #FB923C,0 0 20px rgba(251,146,60,0.5)!important}
+.stage-page .kpi-card{border-color:rgba(251,146,60,0.3)!important;border-left-color:#FB923C!important;background:linear-gradient(135deg,rgba(251,146,60,0.05),rgba(0,0,0,0.25))!important}
+.stage-page .kpi-card:hover{border-color:rgba(251,146,60,0.6)!important;box-shadow:0 8px 25px rgba(251,146,60,0.15)!important}
+
+/* === THEMED PAGES: override remaining green elements with page accent === */
+[class*="theme-"] .prj-text:hover{text-shadow:0 0 8px rgba(var(--accent-rgb),0.3)!important}
+[class*="theme-"] .prj-stitle:hover{text-shadow:0 0 15px rgba(var(--accent-rgb),0.4)!important}
+[class*="theme-"] .prj-persona:hover{border-color:rgba(var(--accent-rgb),0.4)!important;box-shadow:0 0 25px rgba(var(--accent-rgb),0.15)!important}
+[class*="theme-"] .prj-bloc-item:hover{border-left-color:var(--accent)!important}
+[class*="theme-"] .prj-problematique{animation:none!important}
+[class*="theme-"] .prj-img{border-color:rgba(var(--accent-rgb),0.2)}
+[class*="theme-"] .prj-img:hover img{filter:drop-shadow(0 0 20px rgba(var(--accent-rgb),0.25))}
+[class*="theme-"] .logo-item img{border-color:rgba(var(--accent-rgb),0.2)}
+[class*="theme-"] .logo-item img:hover{border-color:rgba(var(--accent-rgb),0.5)!important}
+[class*="theme-"] .bench-table tr:hover td{background:rgba(var(--accent-rgb),0.06)!important;border-color:rgba(var(--accent-rgb),0.25)!important}
+[class*="theme-"] .bench-table td:first-child{color:var(--accent)!important;font-family:'Orbitron',sans-serif;font-weight:900}
+[class*="theme-"] .prj-video{border-color:rgba(var(--accent-rgb),0.25)}
+[class*="theme-"] .prj-section{position:relative;padding-left:14px}
+[class*="theme-"] .prj-section::before{content:'';position:absolute;left:0;top:6px;bottom:6px;width:3px;background:var(--accent);box-shadow:0 0 12px var(--accent);opacity:0.7}
+
+/* Stage pages (orange) — same treatment */
+.stage-page .prj-text:hover{text-shadow:0 0 8px rgba(251,146,60,0.3)!important}
+.stage-page .prj-bloc-item:hover{border-left-color:#FB923C!important}
+.stage-page .prj-problematique{animation:none!important}
+.stage-page .prj-img{border-color:rgba(251,146,60,0.25)}
+.stage-page .prj-img:hover img{filter:drop-shadow(0 0 20px rgba(251,146,60,0.25))}
+.stage-page .logo-item img{border-color:rgba(251,146,60,0.25)}
+.stage-page .bench-table tr:hover td{background:rgba(251,146,60,0.06)!important;border-color:rgba(251,146,60,0.3)!important}
+.stage-page .bench-table td:first-child{color:#FB923C!important;font-family:'Orbitron',sans-serif;font-weight:900}
+.stage-page .prj-video{border-color:rgba(251,146,60,0.25)}
+
+/* === TEXT BOOST: final push for maximum legibility === */
+.prj-text{font-size:17px!important;line-height:1.85!important;color:#FFFFFF!important;font-weight:500!important;letter-spacing:0.1px}
+.prj-bloc-item{font-size:15.5px!important;line-height:1.75!important;color:#FFFFFF!important;font-weight:500!important}
+.bench-table td{color:#FFFFFF!important;font-weight:500!important;font-size:15.5px!important}
+.kpi-card-desc{color:#FFFFFF!important;font-weight:500!important;font-size:14.5px!important}
+.kpi-card-ind{color:#FFFFFF!important;font-weight:800!important}
+.prj-stitle{color:#FFFFFF!important;text-shadow:0 0 20px rgba(255,255,255,0.2),0 0 2px rgba(255,255,255,0.4)}
+
+/* === TOOLS SHOWCASE (logiciels utilisés) === */
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:16px;margin:18px 0}
+.tool-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px 14px;border:1px solid rgba(0,255,65,0.25);background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(0,0,0,0.25));border-radius:6px;transition:all 0.3s;cursor:default;position:relative;overflow:hidden;min-height:150px}
+.tool-card::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.04),transparent);transition:left 0.6s}
+.tool-card:hover::before{left:100%}
+.tool-card:hover{transform:translateY(-4px);border-color:rgba(0,255,65,0.6);box-shadow:0 10px 30px rgba(0,0,0,0.4),0 0 0 1px rgba(0,255,65,0.2),0 0 25px rgba(0,255,65,0.12)}
+.tool-card img{width:64px;height:64px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.5));transition:transform 0.3s}
+.tool-card:hover img{transform:scale(1.1)}
+.tool-card-name{font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;color:#FFFFFF;letter-spacing:1.5px;text-align:center;line-height:1.3;text-transform:uppercase;text-shadow:0 0 8px rgba(0,255,65,0.35)}
+.tool-card-role{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--volt);letter-spacing:1px;text-align:center;opacity:0.85;text-transform:uppercase}
+[class*="theme-"] .tool-card{border-color:rgba(var(--accent-rgb),0.3)}
+[class*="theme-"] .tool-card:hover{border-color:rgba(var(--accent-rgb),0.65)!important;box-shadow:0 10px 30px rgba(0,0,0,0.4),0 0 0 1px rgba(var(--accent-rgb),0.25),0 0 25px rgba(var(--accent-rgb),0.15)!important}
+[class*="theme-"] .tool-card-name{text-shadow:0 0 8px rgba(var(--accent-rgb),0.4)!important}
+[class*="theme-"] .tool-card-role{color:var(--accent)!important}
+.stage-page .tool-card{border-color:rgba(251,146,60,0.3)}
+.stage-page .tool-card:hover{border-color:rgba(251,146,60,0.65)!important;box-shadow:0 10px 30px rgba(0,0,0,0.4),0 0 0 1px rgba(251,146,60,0.25),0 0 25px rgba(251,146,60,0.15)!important}
+.stage-page .tool-card-name{text-shadow:0 0 8px rgba(251,146,60,0.4)!important}
+.stage-page .tool-card-role{color:#FB923C!important}
 </style>
 </head>
 <body>
@@ -807,7 +1022,7 @@ background-size:60px 60px}
       <div class="prj-folder stage-folder" onclick="showPrj('digital','publicis')"><span>💼</span><span class="prj-folder-name">PUBLICIS_RAZORFISH.stage</span><span class="stage-tag">STAGE</span><span class="prj-folder-desc">Mai–Juil 2025</span><span class="prj-folder-desc">▸</span></div>
     </div></div>
     <!-- LOOP LEGACY PAGE -->
-    <div class="prj-page" id="digital-loop"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('digital')">← RETOUR</button><div class="prj-page-name">PROJECT: LOOP_LEGACY</div></div><div class="prj-scroll">
+    <div class="prj-page theme-cyan" id="digital-loop"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('digital')">← RETOUR</button><div class="prj-page-name">PROJECT: LOOP_LEGACY</div></div><div class="prj-scroll">
       <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div class="prj-stitle">Le Brief</div><div class="prj-text">Le studio indépendant Devolver Digital, reconnu pour ses jeux audacieux à l'identité forte, lance son nouveau projet ambitieux Loop Legacy. Ce jeu propose un concept où le joueur incarne un héros ou une héroïne pris dans une boucle temporelle, dans une mégalopole futuriste : Nox. Dans Loop Legacy, le héros Kortex ou l'héroïne Karma se bat pour briser une boucle temporelle qui piège Nox. Chaque jour se répète, mais les décisions du joueur modifient subtilement chaque boucle.</div><div class="prj-text">Le projet consiste à créer une identité visuelle marquante pour ce nouveau jeu vidéo. Les livrables sont la réalisation d'un moodboard, d'une palette de couleur, d'une typographie et d'un logo typographique, et d'une affiche pour le jeu.</div></div>
       <div class="prj-section"><div class="prj-stag">// section_02 — la cible</div><div class="prj-stitle">Persona : Alex</div><div class="prj-persona"><img src="https://i.ibb.co/nsbGHK9W/Capture-d-cran-2026-04-02-173110.png" alt="Persona Alex"></div></div>
       <div class="prj-section"><div class="prj-stag">// section_03 — moodboard & benchmark</div><div class="prj-stitle">Moodboard</div><div class="prj-img"><img src="https://i.ibb.co/k6xwL6bg/Capture-d-cran-2026-03-29-192237.png" alt="Moodboard"></div><div class="prj-stitle">Benchmark</div><table class="bench-table"><tr><th>Jeu</th><th>Style Visuel</th><th>Points Clés</th><th>Analyse pour Loop Legacy</th></tr>
@@ -816,7 +1031,13 @@ background-size:60px 60px}
 <tr><td>Hades</td><td>Néo-Classique / Isométrique. Très stylisé, jeux de lumières divines</td><td>La gestion de la narration dans la boucle. Chaque mort/répétition apporte une touche visuelle.</td><td>Design de Kortex ou Karma : silhouettes iconiques qui ressortent sur le décor sombre de Nox.</td></tr>
 <tr><td>Ghostrunner</td><td>Minimalisme High-Tech. Froid, tranchant, verticalité extrême</td><td>Le côté "Kortex/Karma contre la montre". L'esthétique des interfaces (HUD) futuristes.</td><td>Moodboard : textures de métal froid, verre brisé et reflets de pluie sur le bitume.</td></tr>
 </table></div>
-      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;margin:14px 0"><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/1tkD5Yf5/Capture-d-cran-2026-03-29-200104.png" alt="Affiche Loop Legacy"></div><div class="logo-caption" style="margin-top:8px">Affiche Loop Legacy</div></div><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/prhcwSs3/Capture-d-cran-2026-04-05-115509.png" alt="Mockup jeux PS5"></div><div class="logo-caption" style="margin-top:8px">Mockup Jeux PS5</div></div></div><div class="prj-badges"><span class="prj-badge">Adobe Illustrator — Logo</span><span class="prj-badge">Adobe Photoshop — Affiche</span></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;margin:14px 0"><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/1tkD5Yf5/Capture-d-cran-2026-03-29-200104.png" alt="Affiche Loop Legacy"></div><div class="logo-caption" style="margin-top:8px">Affiche Loop Legacy</div></div><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/prhcwSs3/Capture-d-cran-2026-04-05-115509.png" alt="Mockup jeux PS5"></div><div class="logo-caption" style="margin-top:8px">Mockup Jeux PS5</div></div></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_04b — outils</div><div class="prj-stitle">Logiciels utilisés</div>
+        <div class="tools-grid">
+          <div class="tool-card"><img src="https://i.ibb.co/tTYRqw4Z/Adobe-Illustrator-Logo-wine.png" alt="Adobe Illustrator"><div class="tool-card-name">Adobe Illustrator</div><div class="tool-card-role">Logo</div></div>
+          <div class="tool-card"><img src="https://i.ibb.co/prMphjbD/Photoshop-logo.png" alt="Adobe Photoshop"><div class="tool-card-name">Adobe Photoshop</div><div class="tool-card-role">Affiche</div></div>
+        </div>
+      </div>
       <div class="prj-section"><div class="prj-stag">// section_05 — compétences</div><div class="prj-stitle">Compétences Validées</div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_01 — Contribution à l'élaboration et au pilotage de la stratégie de communication</div><div class="prj-bloc-item">Analyse du diagnostic (Nox & Devolver) : Étude de l'ADN de Devolver Digital pour définir le positionnement de Loop Legacy.</div><div class="prj-bloc-item">Étude de la cible (Persona) : Création du persona "Alex" pour identifier les besoins et les attentes des joueurs de jeux indépendants.</div><div class="prj-bloc-item">Le Benchmark : Comparaison concurrentielle avec Cyberpunk 2077 et Hotline Miami pour différencier le projet sur le marché.</div><div class="prj-bloc-item">Veille créative : Réalisation du Moodboard pour établir une intention de communication cohérente avec l'univers de la boucle temporelle.</div></div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_02 — Conception et mise en œuvre de solutions de communication</div><div class="prj-bloc-item">Rédaction de la promesse : Traduction du concept "Briser la boucle dans Nox" en un message visuel percutant.</div><div class="prj-bloc-item">Création de l'identité visuelle : Conception du logo typographique (choix de la graisse, des symboles de cycle/glitch) et de la charte graphique (palette de couleurs néon/obscurité).</div><div class="prj-bloc-item">Production de l'affiche : Maîtrise des outils PAO pour hiérarchiser l'information et créer un visuel attractif.</div><div class="prj-bloc-item">Gestion des contraintes techniques : Respect des formats d'exportation, de la résolution (300 dpi) et des droits d'auteur.</div></div>
@@ -824,11 +1045,11 @@ background-size:60px 60px}
       </div>
       <div class="prj-section"><div class="prj-stag">// section_06 — kpi</div><div class="prj-stitle">KPI</div>
         
-        <table class="kpi-table"><thead><tr><th>Catégorie</th><th>Indicateur</th><th>Description</th></tr></thead><tbody><tr><td>Objectifs de Notoriété</td><td>Portée (Reach) sur les réseaux sociaux</td><td>Nombre de personnes uniques ayant vu les publications (Instagram, X/Twitter).</td></tr><tr><td>Objectifs de Notoriété</td><td>Nombre d'impressions de l'affiche</td><td>Estimation du nombre de passages devant les supports d'affichage urbain.</td></tr><tr><td>Objectifs de Notoriété</td><td>Volume de mentions</td><td>Suivi du hashtag #LoopLegacy durant la semaine de lancement.</td></tr><tr><td>Objectifs de Notoriété</td><td>Nombre de vues sur le trailer</td><td>Si l'identité visuelle est déclinée en vidéo (motion design du logo).</td></tr><tr><td>Objectifs d'Image</td><td>Taux d'engagement</td><td>(Likes + Commentaires + Partages) / Nombre d'abonnés.</td></tr><tr><td>Objectifs d'Image</td><td>Sentiment de marque</td><td>Analyse des commentaires pour vérifier si les mots-clés "Cyberpunk", "Original" reviennent souvent.</td></tr><tr><td>Objectifs d'Image</td><td>Taux de complétion des vidéos</td><td>Pourcentage ayant regardé l'animation du logo jusqu'à la fin.</td></tr><tr><td>Objectifs Comportementaux</td><td>Taux de clic (CTR)</td><td>Pourcentage ayant cliqué sur une bannière web pour accéder à la page Steam.</td></tr><tr><td>Objectifs Comportementaux</td><td>Scans du QR Code</td><td>Nombre de personnes ayant scanné le QR Code sur l'affiche papier.</td></tr><tr><td>Objectifs Comportementaux</td><td>Nombre d'ajouts à la "Wishlist"</td><td>Indicateur crucial dans le jeu vidéo.</td></tr><tr><td>Objectifs Comportementaux</td><td>Utilisation du filtre AR</td><td>Compter le nombre de fois où il a été utilisé et partagé.</td></tr></tbody></table>
+        <div class="kpi-grid"><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Objectifs de Notoriété</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-ind">Portée (Reach) sur les réseaux sociaux</div><div class="kpi-card-desc">Nombre de personnes uniques ayant vu les publications (Instagram, X/Twitter).</div></div><div class="kpi-card"><div class="kpi-card-ind">Nombre d'impressions de l'affiche</div><div class="kpi-card-desc">Estimation du nombre de passages devant les supports d'affichage urbain.</div></div><div class="kpi-card"><div class="kpi-card-ind">Volume de mentions</div><div class="kpi-card-desc">Suivi du hashtag #LoopLegacy durant la semaine de lancement.</div></div><div class="kpi-card"><div class="kpi-card-ind">Nombre de vues sur le trailer</div><div class="kpi-card-desc">Si l'identité visuelle est déclinée en vidéo (motion design du logo).</div></div></div></div><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Objectifs d'Image</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-ind">Taux d'engagement</div><div class="kpi-card-desc">(Likes + Commentaires + Partages) / Nombre d'abonnés.</div></div><div class="kpi-card"><div class="kpi-card-ind">Sentiment de marque</div><div class="kpi-card-desc">Analyse des commentaires pour vérifier si les mots-clés "Cyberpunk", "Original" reviennent souvent.</div></div><div class="kpi-card"><div class="kpi-card-ind">Taux de complétion des vidéos</div><div class="kpi-card-desc">Pourcentage ayant regardé l'animation du logo jusqu'à la fin.</div></div></div></div><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Objectifs Comportementaux</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-ind">Taux de clic (CTR)</div><div class="kpi-card-desc">Pourcentage ayant cliqué sur une bannière web pour accéder à la page Steam.</div></div><div class="kpi-card"><div class="kpi-card-ind">Scans du QR Code</div><div class="kpi-card-desc">Nombre de personnes ayant scanné le QR Code sur l'affiche papier.</div></div><div class="kpi-card"><div class="kpi-card-ind">Nombre d'ajouts à la "Wishlist"</div><div class="kpi-card-desc">Indicateur crucial dans le jeu vidéo.</div></div><div class="kpi-card"><div class="kpi-card-ind">Utilisation du filtre AR</div><div class="kpi-card-desc">Compter le nombre de fois où il a été utilisé et partagé.</div></div></div></div></div>
       </div>
     </div></div>
     <!-- ÇA MATCH PAGE -->
-    <div class="prj-page" id="digital-match"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('digital')">← RETOUR</button><div class="prj-page-name">PROJECT: ÇA_MATCH</div></div><div class="prj-scroll">
+    <div class="prj-page theme-yellow" id="digital-match"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('digital')">← RETOUR</button><div class="prj-page-name">PROJECT: ÇA_MATCH</div></div><div class="prj-scroll">
       <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div class="prj-stitle">Le Brief</div><div class="prj-text">Dans le cadre de ma formation en BTS Communication, j'ai co-créé "Ça Match", un média scolaire digital dédié au sport comme levier de transformation sociale. Ce projet part d'un constat : en 2026, les médias sportifs traditionnels se concentrent sur la performance et les scores, délaissant les enjeux environnementaux et humains. Notre mission est de raconter le sport qui "répare" la société.</div><div class="prj-problematique">Problématique : Comment le sport peut solutionner les enjeux sociétaux ?</div></div>
       <div class="prj-section"><div class="prj-stag">// section_01b — contraintes</div><div class="prj-stitle">Contraintes</div>
         <div class="prj-bloc"><div class="prj-bloc-title">Contrainte éditoriale</div><div class="prj-bloc-item">Réussir à parler de sujets graves (racisme, écologie, santé mentale) via le sport sans devenir un média purement politique ou trop moralisateur.</div></div>
@@ -841,12 +1062,12 @@ background-size:60px 60px}
 <tr><td>Marché Global</td><td>Manque de profondeur : traitement uniforme centré sur le divertissement</td><td>Déconnexion avec les enjeux de société contemporains.</td><td>Créer un média qui lie performance athlétique et responsabilité citoyenne.</td></tr>
 </table></div>
       <div class="prj-section"><div class="prj-stag">// section_03b — univers graphique</div><div class="prj-stitle">Univers Graphique</div>
-        <div class="logo-showcase">
-          <div class="logo-item"><img src="https://i.ibb.co/hxzdR9pr/Capture-d-cran-2025-10-11-195748-Photoroom.png" alt="Logo Principal"><div class="logo-caption">Logo Principal</div></div>
-          <div class="logo-item"><img src="https://i.ibb.co/g8LVnXB/Capture-d-cran-2026-01-05-154041-Photoroom.png" alt="Logo Secondaire"><div class="logo-caption">Logo Secondaire</div></div>
-          <div class="logo-item"><img src="https://i.ibb.co/SDrTwsNP/Capture-d-cran-2025-10-11-195823-Photoroom.png" alt="Pictogramme"><div class="logo-caption">Logo Pictogramme</div></div>
-          <div class="logo-item logo-item-lg"><img src="https://i.ibb.co/4R1TsfrK/Capture-d-cran-2026-04-04-161656.png" alt="Palette de couleurs"><div class="logo-caption">Palette de Couleurs</div></div>
+        <div class="logo-layout">
+          <div class="logo-item logo-slot-left"><img src="https://i.ibb.co/hxzdR9pr/Capture-d-cran-2025-10-11-195748-Photoroom.png" alt="Logo Principal"><div class="logo-caption">Logo Principal</div></div>
+          <div class="logo-item logo-slot-right"><img src="https://i.ibb.co/g8LVnXB/Capture-d-cran-2026-01-05-154041-Photoroom.png" alt="Logo Secondaire"><div class="logo-caption">Logo Secondaire</div></div>
+          <div class="logo-item logo-slot-center"><img src="https://i.ibb.co/SDrTwsNP/Capture-d-cran-2025-10-11-195823-Photoroom.png" alt="Pictogramme"><div class="logo-caption">Logo Pictogramme</div></div>
         </div>
+        <div class="logo-item palette-showcase" style="margin-top:26px"><img src="https://i.ibb.co/4R1TsfrK/Capture-d-cran-2026-04-04-161656.png" alt="Palette de couleurs"><div class="logo-caption" style="font-size:14px;margin-top:14px">Palette de Couleurs</div></div>
       </div>
       <div class="prj-section"><div class="prj-stag">// section_03c — ligne éditoriale</div><div class="prj-stitle">Ligne Éditoriale</div>
         <div class="edito-grid">
@@ -858,7 +1079,17 @@ background-size:60px 60px}
           <div class="prj-img" style="margin:0"><img src="https://i.ibb.co/9mttcXbX/Capture-d-cran-2026-04-04-162043.png" alt="Ligne éditoriale 4"></div>
         </div>
       </div>
-      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div class="prj-text">Instagram : @camatch__ | Site : nicolascava7.wixsite.com/my-site-1</div><div class="vid-grid"><div class="prj-video"><iframe src="https://www.youtube.com/embed/hVjH1LA5jn0" title="Ilona Adam" allowfullscreen></iframe></div><div class="prj-video"><iframe src="https://www.youtube.com/embed/il8nhAAks3A" title="Manifesto" allowfullscreen></iframe></div></div><div class="vid-center"><div class="prj-video"><iframe src="https://www.youtube.com/embed/453RTqCXtNM" title="Asya" allowfullscreen></iframe></div></div><div class="prj-badges"><span class="prj-badge">Adobe Illustrator — Logo</span><span class="prj-badge">Wix — Site</span><span class="prj-badge">Glide — Application</span><span class="prj-badge">Adobe Première Pro — Montage vidéo</span><span class="prj-badge">Audacity — Montage audio</span><span class="prj-badge">Canva — Moodboard et prez</span></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div class="prj-text">Instagram : @camatch__ | Site : nicolascava7.wixsite.com/my-site-1</div><div class="vid-grid"><div class="prj-video"><iframe src="https://www.youtube.com/embed/hVjH1LA5jn0" title="Ilona Adam" allowfullscreen></iframe></div><div class="prj-video"><iframe src="https://www.youtube.com/embed/il8nhAAks3A" title="Manifesto" allowfullscreen></iframe></div></div><div class="vid-center"><div class="prj-video"><iframe src="https://www.youtube.com/embed/453RTqCXtNM" title="Asya" allowfullscreen></iframe></div></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_04b — outils</div><div class="prj-stitle">Logiciels utilisés</div>
+        <div class="tools-grid">
+          <div class="tool-card"><img src="https://i.ibb.co/tTYRqw4Z/Adobe-Illustrator-Logo-wine.png" alt="Adobe Illustrator"><div class="tool-card-name">Adobe Illustrator</div><div class="tool-card-role">Logo</div></div>
+          <div class="tool-card"><img src="https://i.ibb.co/S4RJZJS3/5968753.png" alt="Wix"><div class="tool-card-name">Wix</div><div class="tool-card-role">Site web</div></div>
+          <div class="tool-card"><img src="https://i.ibb.co/qQmgd0c/glide-Photoroom.png" alt="Glide"><div class="tool-card-name">Glide</div><div class="tool-card-role">Application mobile</div></div>
+          <div class="tool-card"><img src="https://i.ibb.co/F4qmMQv6/Adobe-Premiere-Pro-CC-icon-svg.png" alt="Adobe Premiere Pro"><div class="tool-card-name">Premiere Pro</div><div class="tool-card-role">Montage vidéo</div></div>
+          <div class="tool-card"><img src="https://i.ibb.co/tT0hc5f7/Audacity-Logo-svg.png" alt="Audacity"><div class="tool-card-name">Audacity</div><div class="tool-card-role">Montage audio</div></div>
+          <div class="tool-card"><img src="https://i.ibb.co/Q74Pt4DZ/canva-circular-logo-glossy-modern-finish-free-png.webp" alt="Canva"><div class="tool-card-name">Canva</div><div class="tool-card-role">Moodboard & prez</div></div>
+        </div>
+      </div>
       <div class="prj-section"><div class="prj-stag">// section_04b — site & application</div><div class="prj-stitle">Site & Application Mobile</div>
         <a href="https://nicolascava7.wixsite.com/my-site-1" target="_blank" class="site-link"><div class="prj-img"><img src="https://i.ibb.co/6c3GkSFC/Capture-d-cran-2026-04-04-162208.png" alt="Site Ça Match"></div></a>
         <div class="prj-text">Nous avons conçu ce site web pour mettre en avant l'ensemble de nos contenus en format intégral et assurer le référencement SEO de notre média. Il sert de hub central pour les articles, vidéos et podcasts produits par l'équipe, offrant une expérience de navigation pensée comme un tunnel de conversion — de la découverte vers l'abonnement.</div>
@@ -872,7 +1103,7 @@ background-size:60px 60px}
       </div>
       <div class="prj-section"><div class="prj-stag">// section_06 — kpi</div><div class="prj-stitle">KPI</div>
         
-        <table class="kpi-table"><thead><tr><th>Catégorie</th><th>Indicateur</th><th>Description</th></tr></thead><tbody><tr><td>KPI de Notoriété</td><td>Trafic Web</td><td>Nombre de visiteurs uniques par mois sur le site Wix.</td></tr><tr><td>KPI de Notoriété</td><td>Impressions sociales</td><td>Nombre de fois où le tryptique After Effects a été vu sur Instagram/TikTok.</td></tr><tr><td>KPI de Notoriété</td><td>Audience Radio</td><td>Estimation du nombre d'auditeurs exposés au spot.</td></tr><tr><td>KPI d'Engagement</td><td>Taux d'interaction</td><td>Ratio likes/commentaires/partages sur les posts.</td></tr><tr><td>KPI d'Engagement</td><td>Temps passé</td><td>Durée moyenne de lecture des articles sur les 4 rubriques.</td></tr><tr><td>KPI d'Engagement</td><td>Taux de clic (CTR)</td><td>Pourcentage ayant cliqué sur le lien en bio ou le QR code.</td></tr><tr><td>KPI de Conversion</td><td>Nombre d'abonnés "Le Club"</td><td>Volume d'utilisateurs payant l'abonnement à prix "café".</td></tr><tr><td>KPI de Conversion</td><td>Téléchargements App</td><td>Nombre d'installations de l'application mobile.</td></tr><tr><td>KPI de Conversion</td><td>Taux de Mentors certifiés</td><td>Nombre d'utilisateurs passant du statut de lecteur à ambassadeur actif.</td></tr></tbody></table>
+        <div class="kpi-grid"><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>KPI de Notoriété</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-ind">Trafic Web</div><div class="kpi-card-desc">Nombre de visiteurs uniques par mois sur le site Wix.</div></div><div class="kpi-card"><div class="kpi-card-ind">Impressions sociales</div><div class="kpi-card-desc">Nombre de fois où le tryptique After Effects a été vu sur Instagram/TikTok.</div></div><div class="kpi-card"><div class="kpi-card-ind">Audience Radio</div><div class="kpi-card-desc">Estimation du nombre d'auditeurs exposés au spot.</div></div></div></div><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>KPI d'Engagement</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-ind">Taux d'interaction</div><div class="kpi-card-desc">Ratio likes/commentaires/partages sur les posts.</div></div><div class="kpi-card"><div class="kpi-card-ind">Temps passé</div><div class="kpi-card-desc">Durée moyenne de lecture des articles sur les 4 rubriques.</div></div><div class="kpi-card"><div class="kpi-card-ind">Taux de clic (CTR)</div><div class="kpi-card-desc">Pourcentage ayant cliqué sur le lien en bio ou le QR code.</div></div></div></div><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>KPI de Conversion</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-ind">Nombre d'abonnés "Le Club"</div><div class="kpi-card-desc">Volume d'utilisateurs payant l'abonnement à prix "café".</div></div><div class="kpi-card"><div class="kpi-card-ind">Téléchargements App</div><div class="kpi-card-desc">Nombre d'installations de l'application mobile.</div></div><div class="kpi-card"><div class="kpi-card-ind">Taux de Mentors certifiés</div><div class="kpi-card-desc">Nombre d'utilisateurs passant du statut de lecteur à ambassadeur actif.</div></div></div></div></div>
       </div>
       <div class="prj-section"><div class="prj-stag">// section_07 — retour d'expérience</div><div class="prj-stitle">Ce que j'aurais fait différemment ou rajouté</div>
         <div class="prj-bloc"><div class="prj-bloc-title">Optimisation de la stratégie de diffusion</div><div class="prj-bloc-item">Priorisation d'un canal social unique (Instagram ou TikTok) pour fédérer une communauté engagée avant le déploiement technique multi-supports (Wix/Glide), afin d'éviter l'éparpillement des ressources et de maximiser l'impact initial du média.</div></div>
@@ -915,7 +1146,7 @@ background-size:60px 60px}
       </div>
       <div class="prj-section"><div class="prj-stag">// section_07 — kpi</div><div class="prj-stitle">Indicateurs de Performance (KPI)</div>
         
-        <table class="kpi-table"><thead><tr><th>Catégorie</th><th>Indicateur</th><th>Description</th></tr></thead><tbody><tr><td>Respect des Deadlines</td><td>—</td><td>Taux de livraison des jalons de projet à 100 % dans les temps impartis.</td></tr><tr><td>Qualité UX</td><td>—</td><td>Nombre de feedbacks utilisateurs collectés via Screeb et taux de transformation de ces retours en tickets d'optimisation (backlog).</td></tr><tr><td>Fluidité de production</td><td>—</td><td>Réduction des allers-retours correctifs grâce à une rédaction de briefs plus précise et un suivi rigoureux.</td></tr></tbody></table>
+        <div class="kpi-grid"><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Respect des Deadlines</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-desc">Taux de livraison des jalons de projet à 100 % dans les temps impartis.</div></div></div></div><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Qualité UX</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-desc">Nombre de feedbacks utilisateurs collectés via Screeb et taux de transformation de ces retours en tickets d'optimisation (backlog).</div></div></div></div><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Fluidité de production</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-desc">Réduction des allers-retours correctifs grâce à une rédaction de briefs plus précise et un suivi rigoureux.</div></div></div></div></div>
       </div>
     </div></div>
   </div></div>
@@ -927,7 +1158,7 @@ background-size:60px 60px}
       <div class="prj-folder" onclick="showPrj('print','samu')"><span>📁</span><span class="prj-folder-name">SAMU_SOCIAL.prj</span><span class="prj-folder-desc">Campagne 360°</span><span class="prj-folder-desc">▸</span></div>
     </div></div>
     <!-- SAMU SOCIAL PAGE -->
-    <div class="prj-page" id="print-samu"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('print')">← RETOUR</button><div class="prj-page-name">PROJECT: SAMU_SOCIAL</div></div><div class="prj-scroll">
+    <div class="prj-page theme-sky" id="print-samu"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('print')">← RETOUR</button><div class="prj-page-name">PROJECT: SAMU_SOCIAL</div></div><div class="prj-scroll">
       <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div class="prj-stitle">Le Brief</div><div class="prj-text">Concours Mlle Pitch Awards pour le Samusocial de Paris. Mobiliser la générosité publique en valorisant les 30 ans d'actions de l'association. Campagne 360° : affichage urbain, réseaux sociaux et spot radio.</div><div class="prj-problematique">Problématique : Comment valoriser la diversité des missions du Samusocial pour briser l'indifférence et transformer la perception du sans-abrisme en levier de collecte durable ?</div></div>
       <div class="prj-section"><div class="prj-stag">// section_02 — la cible</div><div class="prj-stitle">Persona : Marc</div><div class="prj-persona"><img src="https://i.ibb.co/rKJpg099/Capture-d-cran-2026-04-02-173831.png" alt="Persona Marc"></div></div>
       <div class="prj-section"><div class="prj-stag">// section_03 — moodboard & benchmark</div><div class="prj-stitle">Moodboard & Benchmark</div><div class="prj-img"><img src="https://i.ibb.co/B5Ny4Xdw/Capture-d-cran-2026-04-02-174302.png" alt="Moodboard"></div><table class="bench-table"><tr><th>Acteur</th><th>Style de Communication</th><th>Axe Majeur</th><th>Opportunité pour le Projet</th></tr>
@@ -935,7 +1166,16 @@ background-size:60px 60px}
 <tr><td>Restos du Cœur</td><td>Urgence & Masse : message centré sur la survie et l'aide alimentaire</td><td>Réponse immédiate aux besoins primaires</td><td>Mettre en avant l'expertise humaine et médicale et l'accompagnement sur le long terme.</td></tr>
 <tr><td>Entourage</td><td>Digital & Lien Social : communication moderne et dynamique</td><td>Création de réseaux de solidarité de proximité</td><td>Adopter des codes dynamiques pour rajeunir l'image et faciliter le don instantané.</td></tr>
 </table></div>
-      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div class="prj-text">Site web : nicolascava7.wixsite.com/samu-social</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;margin:14px 0"><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/Cp3ynH1M/Capture-d-cran-2026-04-05-115137.png" alt="Affiche Samu Social"></div><div class="logo-caption" style="margin-top:8px">Affiche Samu Social</div></div><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/fGLHtYRb/Designer.png" alt="Mockup abri bus"></div><div class="logo-caption" style="margin-top:8px">Mockup Abri Bus</div></div></div><div class="vid-grid"><div class="prj-video"><iframe src="https://www.youtube.com/embed/ykhKnnESUDc" title="Tryptique - Samu Social" allowfullscreen></iframe></div><div class="prj-video"><iframe src="https://www.youtube.com/embed/8eGjr3xhmmo" title="Spot Radio" allowfullscreen></iframe></div></div><div class="prj-badges"><span class="prj-badge">Photoshop</span><span class="prj-badge">Illustrator</span><span class="prj-badge">After Effects</span><span class="prj-badge">Audacity</span><span class="prj-badge">Wix</span></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">Réalisations</div><div class="prj-text">Site web : nicolascava7.wixsite.com/samu-social</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;margin:14px 0"><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/Cp3ynH1M/Capture-d-cran-2026-04-05-115137.png" alt="Affiche Samu Social"></div><div class="logo-caption" style="margin-top:8px">Affiche Samu Social</div></div><div><div class="prj-img prj-img-lg" style="margin:0"><img src="https://i.ibb.co/fGLHtYRb/Designer.png" alt="Mockup abri bus"></div><div class="logo-caption" style="margin-top:8px">Mockup Abri Bus</div></div></div><div class="vid-grid"><div class="prj-video"><iframe src="https://www.youtube.com/embed/ykhKnnESUDc" title="Tryptique - Samu Social" allowfullscreen></iframe></div><div class="prj-video"><iframe src="https://www.youtube.com/embed/8eGjr3xhmmo" title="Spot Radio" allowfullscreen></iframe></div></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_04b — outils</div><div class="prj-stitle">Logiciels utilisés</div>
+        <div class="tools-grid">
+          <div class="tool-card"><img src="https://i.ibb.co/prMphjbD/Photoshop-logo.png" alt="Adobe Photoshop"><div class="tool-card-name">Photoshop</div><div class="tool-card-role">Affiches print</div></div>
+          <div class="tool-card"><img src="https://i.ibb.co/tTYRqw4Z/Adobe-Illustrator-Logo-wine.png" alt="Adobe Illustrator"><div class="tool-card-name">Illustrator</div><div class="tool-card-role">Posts & mockups</div></div>
+          <div class="tool-card"><img src="https://i.ibb.co/zWTXGW3c/Adobe-After-Effects-CC-icon-svg.png" alt="After Effects"><div class="tool-card-name">After Effects</div><div class="tool-card-role">Tryptique animé</div></div>
+          <div class="tool-card"><img src="https://i.ibb.co/tT0hc5f7/Audacity-Logo-svg.png" alt="Audacity"><div class="tool-card-name">Audacity</div><div class="tool-card-role">Spot radio</div></div>
+          <div class="tool-card"><img src="https://i.ibb.co/S4RJZJS3/5968753.png" alt="Wix"><div class="tool-card-name">Wix</div><div class="tool-card-role">Landing page</div></div>
+        </div>
+      </div>
       <div class="prj-section"><div class="prj-stag">// section_05 — compétences</div><div class="prj-stitle">Compétences Validées</div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_01 — Contribution à l'élaboration et au pilotage de la stratégie de communication</div><div class="prj-bloc-item">Analyse brief annonceur et diagnostic des missions</div><div class="prj-bloc-item">Définition cible (Persona Marc), problématique stratégique</div><div class="prj-bloc-item">Veille concurrentielle positionnement distinctif</div></div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_02 — Conception et mise en œuvre de solutions de communication</div><div class="prj-bloc-item">Univers graphique + copywriting affichage et digital</div><div class="prj-bloc-item">Réalisation supports print et web, charte éthique</div><div class="prj-bloc-item">Coordination Print/Radio/Digital cohérence 360°</div></div>
@@ -951,7 +1191,7 @@ background-size:60px 60px}
       <div class="prj-folder" onclick="showPrj('event','wlg')"><span>🎮</span><span class="prj-folder-name">WE_LOVE_GREEN.prj</span><span class="prj-folder-desc">Expérience Gaming Festival</span><span class="prj-folder-desc">▸</span></div>
     </div></div>
     <!-- WE LOVE GREEN PAGE -->
-    <div class="prj-page" id="event-wlg"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('event')">← RETOUR</button><div class="prj-page-name" style="background:linear-gradient(90deg,var(--volt),#39FF14);-webkit-background-clip:text;-webkit-text-fill-color:transparent">PROJECT: WE_LOVE_GREEN 🎮</div></div><div class="prj-scroll">
+    <div class="prj-page theme-emerald" id="event-wlg"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('event')">← RETOUR</button><div class="prj-page-name" style="background:linear-gradient(90deg,var(--volt),#39FF14);-webkit-background-clip:text;-webkit-text-fill-color:transparent">PROJECT: WE_LOVE_GREEN 🎮</div></div><div class="prj-scroll">
       <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div class="prj-stitle">Le Brief</div><div class="prj-text">Dans le cadre d'un projet scolaire, nous étudions le festival We Love Green, événement précurseur alliant programmation musicale et engagements écoresponsables. L'agence Fest'Event, spécialisée en digitalisation événementielle, a été mandatée pour concevoir une extension numérique interactive. L'enjeu n'est pas de substituer l'expérience physique, mais de l'enrichir via un univers digital inédit.</div><div class="prj-problematique">Problématique : Comment offrir à la Gen Z une expérience de festival virtuelle aussi immersive et engagée que l'événement physique, sans les contraintes de déplacement et avec un impact numérique réduit ?</div></div>
       <div class="prj-section"><div class="prj-stag">// section_02 — la cible</div><div class="prj-stitle">Persona : Elio</div><div class="prj-persona"><img src="https://i.ibb.co/SX5K9mJP/Capture-d-cran-2026-04-04-114358.png" alt="Persona Elio"></div></div>
       <div class="prj-section"><div class="prj-stag">// section_03 — moodboard & benchmark</div><div class="prj-stitle">Moodboard</div><div class="prj-img"><img src="https://i.ibb.co/9kzz4fLb/Capture-d-cran-2026-04-04-115303.png" alt="Moodboard"></div><div class="prj-stitle">Benchmark</div><table class="bench-table"><tr><th>Festival</th><th>Plateforme / Modèle</th><th>Points Forts</th><th>Mécaniques Clés</th><th>Leçon pour WLG</th></tr>
@@ -959,7 +1199,12 @@ background-size:60px 60px}
 <tr><td>Coachella</td><td>Coachellaverse (Metavers Gaming / Fortnite)</td><td>Accessoires réactifs à la musique et intégration de monuments iconiques</td><td>Gamification : collecte d'objets et personnalisation poussée d'avatars</td><td>Les skins et accessoires virtuels sont des moteurs de fidélisation majeurs.</td></tr>
 <tr><td>Ultra Music Festival</td><td>Roblox (Social Gaming)</td><td>Accessibilité massive auprès de la cible 15-25 ans</td><td>Socialisation : danses synchronisées et interactions en direct entre avatars</td><td>La dimension sociale est aussi cruciale que la programmation musicale.</td></tr>
 </table></div>
-      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">🎮 Réalisations — Expérience Gaming</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0"><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/1JYDxxym/Capture-d-cran-2026-04-04-121210.png" alt="Accueil App"></div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/wDmnwb3/Capture-d-cran-2026-04-04-121230.png" alt="Avatar"></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0"><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/zT6vYcYf/Capture-d-cran-2026-04-04-121243.png" alt="Carte Gaming"></div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/3YQdQp7b/Capture-d-cran-2026-04-04-121254.png" alt="Explore Cyberpunk"></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0"><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/FbCK8Xb8/Capture-d-cran-2026-04-04-121305.png" alt="Recyclage Game"></div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/sdhntFTV/Capture-d-cran-2026-04-04-121313.png" alt="Leaderboard"></div></div><div style="display:flex;justify-content:center;margin:14px 0"><div class="prj-img" style="margin:0;width:50%"><img src="https://i.ibb.co/8grTQMph/Capture-d-cran-2026-04-04-121326.png" alt="Récompense VIP"></div></div><div class="prj-badges"><span class="prj-badge">Figma</span></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_04 — réalisations</div><div class="prj-stitle">🎮 Réalisations — Expérience Gaming</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0"><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/1JYDxxym/Capture-d-cran-2026-04-04-121210.png" alt="Accueil App"></div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/wDmnwb3/Capture-d-cran-2026-04-04-121230.png" alt="Avatar"></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0"><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/zT6vYcYf/Capture-d-cran-2026-04-04-121243.png" alt="Carte Gaming"></div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/3YQdQp7b/Capture-d-cran-2026-04-04-121254.png" alt="Explore Cyberpunk"></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0"><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/FbCK8Xb8/Capture-d-cran-2026-04-04-121305.png" alt="Recyclage Game"></div><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/sdhntFTV/Capture-d-cran-2026-04-04-121313.png" alt="Leaderboard"></div></div><div style="display:flex;justify-content:center;margin:14px 0"><div class="prj-img" style="margin:0;width:50%"><img src="https://i.ibb.co/8grTQMph/Capture-d-cran-2026-04-04-121326.png" alt="Récompense VIP"></div></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_04b — outils</div><div class="prj-stitle">Logiciels utilisés</div>
+        <div class="tools-grid">
+          <div class="tool-card"><img src="https://i.ibb.co/Z6sFYMY2/Figma-logo-svg.png" alt="Figma"><div class="tool-card-name">Figma</div><div class="tool-card-role">UI / Maquettes</div></div>
+        </div>
+      </div>
       <div class="prj-section"><div class="prj-stag">// section_05 — compétences</div><div class="prj-stitle">Compétences Validées</div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_01 — Contribution à l'élaboration et au pilotage de la stratégie de communication</div><div class="prj-bloc-item">Analyser le diagnostic de l'annonceur : Saisir l'ADN de We Love Green (écologie, musique, société) pour s'assurer que l'extension numérique est cohérente.</div><div class="prj-bloc-item">Caractériser les cibles : Identifier les besoins de la Gen Z (15-25 ans), leur usage de Roblox/Twitch et leur préférence pour le Live interactif.</div><div class="prj-bloc-item">Définir les objectifs : Traduire les besoins en indicateurs de notoriété, d'engagement et d'éducation aux enjeux écologiques.</div><div class="prj-bloc-item">Élaborer la note d'intention : Justifier le concept créatif et le choix de la mécanique de jeu (Eco-Coins, quêtes).</div></div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_02 — Conception et mise en œuvre de solutions de communication</div><div class="prj-bloc-item">Concevoir un univers graphique : Définir une interface visuelle éco-responsable et futuriste (3D immersive, carte interactive).</div><div class="prj-bloc-item">Scénariser le parcours utilisateur : De la création d'avatar à l'accès aux scènes et aux interactions sociales.</div><div class="prj-bloc-item">Réaliser des maquettes (Wireframes) : Schématiser les écrans principaux de l'interface pour valider l'ergonomie mobile.</div></div>
@@ -967,7 +1212,7 @@ background-size:60px 60px}
       </div>
       <div class="prj-section"><div class="prj-stag">// section_06 — kpi</div><div class="prj-stitle">KPI</div>
         
-        <table class="kpi-table"><thead><tr><th>Catégorie</th><th>Indicateur</th><th>Description</th></tr></thead><tbody><tr><td>Notoriété</td><td>—</td><td>Nombre de visiteurs uniques sur la Web App.</td></tr><tr><td>Notoriété</td><td>Origine géographique</td><td>% d'utilisateurs hors Île-de-France.</td></tr><tr><td>Notoriété</td><td>Portée médiatique</td><td>Nombre de mentions et articles générés.</td></tr><tr><td>Engagement</td><td>—</td><td>Durée moyenne de session sur l'interface.</td></tr><tr><td>Engagement</td><td>—</td><td>Taux de complétion des quêtes collaboratives.</td></tr><tr><td>Engagement</td><td>—</td><td>Volume d'Eco-Coins générés par la communauté.</td></tr><tr><td>Engagement</td><td>—</td><td>Taux d'interaction sociale entre avatars.</td></tr><tr><td>Éducation & RSE</td><td>—</td><td>Taux de participation aux conférences éco-responsables.</td></tr><tr><td>Éducation & RSE</td><td>—</td><td>Score de quiz écologique.</td></tr><tr><td>Éducation & RSE</td><td>—</td><td>Poids carbone de la plateforme (éco-conception).</td></tr><tr><td>Conversion</td><td>—</td><td>Taux d'utilisation des récompenses (Eco-Coins → merch, rencontres).</td></tr><tr><td>Conversion</td><td>—</td><td>Taux de personnalisation d'avatar dès l'entrée.</td></tr></tbody></table>
+        <div class="kpi-grid"><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Notoriété</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-desc">Nombre de visiteurs uniques sur la Web App.</div></div><div class="kpi-card"><div class="kpi-card-ind">Origine géographique</div><div class="kpi-card-desc">% d'utilisateurs hors Île-de-France.</div></div><div class="kpi-card"><div class="kpi-card-ind">Portée médiatique</div><div class="kpi-card-desc">Nombre de mentions et articles générés.</div></div></div></div><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Engagement</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-desc">Durée moyenne de session sur l'interface.</div></div><div class="kpi-card"><div class="kpi-card-desc">Taux de complétion des quêtes collaboratives.</div></div><div class="kpi-card"><div class="kpi-card-desc">Volume d'Eco-Coins générés par la communauté.</div></div><div class="kpi-card"><div class="kpi-card-desc">Taux d'interaction sociale entre avatars.</div></div></div></div><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Éducation & RSE</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-desc">Taux de participation aux conférences éco-responsables.</div></div><div class="kpi-card"><div class="kpi-card-desc">Score de quiz écologique.</div></div><div class="kpi-card"><div class="kpi-card-desc">Poids carbone de la plateforme (éco-conception).</div></div></div></div><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Conversion</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-desc">Taux d'utilisation des récompenses (Eco-Coins → merch, rencontres).</div></div><div class="kpi-card"><div class="kpi-card-desc">Taux de personnalisation d'avatar dès l'entrée.</div></div></div></div></div>
       </div>
     </div></div>
   </div></div>
@@ -980,7 +1225,7 @@ background-size:60px 60px}
       <div class="prj-folder stage-folder" onclick="showPrj('instit','sos')"><span>💼</span><span class="prj-folder-name">SOS_RACISME.stage</span><span class="stage-tag">STAGE</span><span class="prj-folder-desc">Oct–Nov 2025</span><span class="prj-folder-desc">▸</span></div>
     </div></div>
     <!-- VEOLIA CARES PAGE -->
-    <div class="prj-page" id="instit-veolia"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('instit')">← RETOUR</button><div class="prj-page-name">PROJECT: VEOLIA_CARES</div></div><div class="prj-scroll">
+    <div class="prj-page theme-violet" id="instit-veolia"><div class="prj-page-header"><button class="prj-back" onclick="backToTree('instit')">← RETOUR</button><div class="prj-page-name">PROJECT: VEOLIA_CARES</div></div><div class="prj-scroll">
       <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div class="prj-stitle">Le Brief</div><div class="prj-text">Dans le cadre de ma formation en BTS Communication, j'ai réalisé une recommandation stratégique pour le groupe Veolia, leader mondial de la transformation écologique. Après le succès de leur campagne de marque employeur "#WeAreResourcers", l'enjeu était de communiquer sur le lancement de <strong>Veolia Cares</strong>. Ce programme inédit garantit un socle de protection sociale mondial (congé parental, santé, prévoyance, soutien aux aidants et bénévolat) à chaque collaborateur, peu importe son pays ou son poste. L'objectif : valoriser cet engagement sans tomber dans le "social-washing".</div><div class="prj-img" style="max-width:280px;margin:18px auto;background:#fff;padding:20px"><img src="https://i.ibb.co/p6t35bh2/VEOLIA-HD.png" alt="Logo Veolia" style="max-height:120px"></div><div class="prj-problematique">Problématique : Comment passer d'une marque qui célèbre l'effort du collaborateur pour la planète à une marque qui garantit la protection du collaborateur par l'entreprise ?</div></div>
       <div class="prj-section"><div class="prj-stag">// section_02 — la cible</div><div class="prj-stitle">Persona : Jérémy</div><div class="prj-persona"><img src="https://i.ibb.co/VWQNZ17y/Capture-d-cran-2026-04-05-122309.png" alt="Persona Jérémy"></div></div>
       <div class="prj-section"><div class="prj-stag">// section_03 — moodboard & benchmark</div><div class="prj-stitle">Moodboard</div><div class="prj-img"><img src="https://i.ibb.co/DHczvqyh/Capture-d-cran-2026-04-05-123940.png" alt="Moodboard Veolia Cares"></div><div class="prj-stitle">Benchmark</div><table class="bench-table"><tr><th>Concurrent</th><th>Campagne</th><th>Points Forts</th><th>Points Faibles</th></tr>
@@ -988,7 +1233,12 @@ background-size:60px 60px}
 <tr><td>Engie</td><td>"Transitions d'avenir"</td><td>Très moderne et digital</td><td>Image parfois perçue comme trop institutionnelle</td></tr>
 <tr><td>Veolia</td><td>#WeAreResourcers</td><td>Valorise l'utilité des métiers</td><td>Manquait de focus sur la protection individuelle</td></tr>
 </table></div>
-      <div class="prj-section"><div class="prj-stag">// section_04 — logiciels</div><div class="prj-stitle">Logiciels utilisés</div><div class="prj-badges"><span class="prj-badge">Adobe InDesign — Recommandation stratégique</span><span class="prj-badge">Canva — Moodboard</span></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_04 — logiciels</div><div class="prj-stitle">Logiciels utilisés</div>
+        <div class="tools-grid">
+          <div class="tool-card"><img src="https://i.ibb.co/B2FG72zj/Adobe-In-Design-CC-icon-svg.png" alt="Adobe InDesign"><div class="tool-card-name">Adobe InDesign</div><div class="tool-card-role">Recommandation stratégique</div></div>
+          <div class="tool-card"><img src="https://i.ibb.co/Q74Pt4DZ/canva-circular-logo-glossy-modern-finish-free-png.webp" alt="Canva"><div class="tool-card-name">Canva</div><div class="tool-card-role">Moodboard</div></div>
+        </div>
+      </div>
       <div class="prj-section"><div class="prj-stag">// section_05 — compétences</div><div class="prj-stitle">Compétences</div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_01 — Contribution à l'élaboration et au pilotage de la stratégie de communication</div><div class="prj-bloc-item">Analyse du diagnostic : Étude de la campagne précédente #WeAreResourcers pour identifier les leviers de réussite.</div><div class="prj-bloc-item">Ciblage et objectifs : Hiérarchisation des cibles (collaborateurs terrain, RH, futurs candidats) et définition des objectifs (Informer, Faire adhérer, Recruter).</div></div>
         <div class="prj-bloc"><div class="prj-bloc-title">BLOC_02 — Conception et mise en œuvre de solutions de communication</div><div class="prj-bloc-item">Élaboration du concept créatif : Définition du ton de voix (empathique et authentique) et rédaction des messages clés pour éviter le "social-washing".</div><div class="prj-bloc-item">Rédaction des contenus : Adaptation du discours pour rendre les notions de "protection sociale" accessibles et attractives.</div></div>
@@ -996,7 +1246,7 @@ background-size:60px 60px}
       </div>
       <div class="prj-section"><div class="prj-stag">// section_06 — kpi</div><div class="prj-stitle">KPI</div>
         
-        <table class="kpi-table"><thead><tr><th>Catégorie</th><th>Indicateur</th><th>Description</th></tr></thead><tbody><tr><td>Performance Interne (Adhésion)</td><td>Taux d'ouverture et de clic</td><td>mesurer l'intérêt pour les newsletters ou articles intranet dédiés à "Veolia Cares".</td></tr><tr><td>Performance Interne (Adhésion)</td><td>Taux d'utilisation du programme</td><td>suivi du nombre de collaborateurs demandant le congé parental de 10 semaines ou la journée de bénévolat.</td></tr><tr><td>Performance Digitale (Visibilité)</td><td>Engagement Social Media</td><td>nombre de partages et de commentaires sur LinkedIn et Instagram avec le hashtag de la campagne.</td></tr><tr><td>Performance Digitale (Visibilité)</td><td>Taux de complétion des vidéos</td><td>analyser si les vidéos de témoignages de collaborateurs sont regardées jusqu'au bout.</td></tr><tr><td>Performance Marque Employeur (Attractivité)</td><td>Volume de candidatures</td><td>suivi de l'augmentation des CV reçus mentionnant les avantages sociaux comme motivation.</td></tr><tr><td>Performance Marque Employeur (Attractivité)</td><td>Score Glassdoor / Great Place to Work</td><td>observation de l'évolution de la perception de l'entreprise par les salariés et les candidats.</td></tr></tbody></table>
+        <div class="kpi-grid"><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Performance Interne (Adhésion)</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-ind">Taux d'ouverture et de clic</div><div class="kpi-card-desc">mesurer l'intérêt pour les newsletters ou articles intranet dédiés à "Veolia Cares".</div></div><div class="kpi-card"><div class="kpi-card-ind">Taux d'utilisation du programme</div><div class="kpi-card-desc">suivi du nombre de collaborateurs demandant le congé parental de 10 semaines ou la journée de bénévolat.</div></div></div></div><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Performance Digitale (Visibilité)</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-ind">Engagement Social Media</div><div class="kpi-card-desc">nombre de partages et de commentaires sur LinkedIn et Instagram avec le hashtag de la campagne.</div></div><div class="kpi-card"><div class="kpi-card-ind">Taux de complétion des vidéos</div><div class="kpi-card-desc">analyser si les vidéos de témoignages de collaborateurs sont regardées jusqu'au bout.</div></div></div></div><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Performance Marque Employeur (Attractivité)</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-ind">Volume de candidatures</div><div class="kpi-card-desc">suivi de l'augmentation des CV reçus mentionnant les avantages sociaux comme motivation.</div></div><div class="kpi-card"><div class="kpi-card-ind">Score Glassdoor / Great Place to Work</div><div class="kpi-card-desc">observation de l'évolution de la perception de l'entreprise par les salariés et les candidats.</div></div></div></div></div>
       </div>
     </div></div>
     <!-- SOS RACISME STAGE PAGE -->
@@ -1044,7 +1294,7 @@ background-size:60px 60px}
       <div class="prj-section"><div class="prj-stag">// section_06 — kpi</div><div class="prj-stitle">KPI</div>
         <div class="prj-text" style="font-size:13px;font-style:italic">Le stage a permis de maintenir une présence digitale continue et d'atteindre les objectifs fixés en termes de mobilisation (signatures). Chaque production a fait l'objet d'un processus de validation rigoureux auprès de ma tutrice, garantissant la conformité des messages diffusés.</div>
         
-        <table class="kpi-table"><thead><tr><th>Catégorie</th><th>Indicateur</th><th>Description</th></tr></thead><tbody><tr><td>Performance Presse & Visibilité</td><td>Taux de reprise médiatique</td><td>nombre d'articles ou de citations obtenus dans la presse locale et nationale suite à l'envoi des CP.</td></tr><tr><td>Performance Presse & Visibilité</td><td>Réactivité de diffusion</td><td>capacité à diffuser un communiqué en moins de 2 heures après un événement d'actualité majeur (Fast-Checking et réaction à chaud).</td></tr><tr><td>Performance Digitale (Web & RS)</td><td>Taux d'engagement moyen</td><td>mesure des interactions (likes, partages, commentaires) sur les visuels Instagram et Twitter, comparé aux campagnes précédentes.</td></tr><tr><td>Performance Digitale (Web & RS)</td><td>Trafic Web (WordPress)</td><td>suivi du nombre de vues sur les nouveaux articles publiés et temps moyen passé sur la page.</td></tr><tr><td>Performance Digitale (Web & RS)</td><td>Croissance de l'audience</td><td>évolution du nombre d'abonnés sur les différents supports durant la période de stage.</td></tr><tr><td>Performance de Mobilisation (Terrain)</td><td>Volume de collecte</td><td>nombre de signatures physiques récoltées lors des opérations de sensibilisation (pétitions).</td></tr><tr><td>Performance de Mobilisation (Terrain)</td><td>Taux de conversion terrain</td><td>ratio entre le nombre de personnes abordées et le nombre de signatures effectives.</td></tr><tr><td>Qualité et Conformité</td><td>Indice de validation</td><td>100 % des supports produits (visuels et textes) validés par la tutrice de stage, garantissant le respect strict de la charte graphique et de la ligne éditoriale.</td></tr></tbody></table>
+        <div class="kpi-grid"><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Performance Presse & Visibilité</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-ind">Taux de reprise médiatique</div><div class="kpi-card-desc">nombre d'articles ou de citations obtenus dans la presse locale et nationale suite à l'envoi des CP.</div></div><div class="kpi-card"><div class="kpi-card-ind">Réactivité de diffusion</div><div class="kpi-card-desc">capacité à diffuser un communiqué en moins de 2 heures après un événement d'actualité majeur (Fast-Checking et réaction à chaud).</div></div></div></div><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Performance Digitale (Web & RS)</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-ind">Taux d'engagement moyen</div><div class="kpi-card-desc">mesure des interactions (likes, partages, commentaires) sur les visuels Instagram et Twitter, comparé aux campagnes précédentes.</div></div><div class="kpi-card"><div class="kpi-card-ind">Trafic Web (WordPress)</div><div class="kpi-card-desc">suivi du nombre de vues sur les nouveaux articles publiés et temps moyen passé sur la page.</div></div><div class="kpi-card"><div class="kpi-card-ind">Croissance de l'audience</div><div class="kpi-card-desc">évolution du nombre d'abonnés sur les différents supports durant la période de stage.</div></div></div></div><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Performance de Mobilisation (Terrain)</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-ind">Volume de collecte</div><div class="kpi-card-desc">nombre de signatures physiques récoltées lors des opérations de sensibilisation (pétitions).</div></div><div class="kpi-card"><div class="kpi-card-ind">Taux de conversion terrain</div><div class="kpi-card-desc">ratio entre le nombre de personnes abordées et le nombre de signatures effectives.</div></div></div></div><div class="kpi-group"><div class="kpi-group-header"><span class="kpi-group-dot"></span>Qualité et Conformité</div><div class="kpi-group-items"><div class="kpi-card"><div class="kpi-card-ind">Indice de validation</div><div class="kpi-card-desc">100 % des supports produits (visuels et textes) validés par la tutrice de stage, garantissant le respect strict de la charte graphique et de la ligne éditoriale.</div></div></div></div></div>
       </div>
     </div></div>
   </div></div>
@@ -2155,17 +2405,62 @@ try{(function(){
   var _p=showPillPage;showPillPage=function(c){_p(c);setTimeout(reveal,100);setTimeout(reveal,400);};
 })();}catch(e){console.warn(e)}
 
-// IMAGE LIGHTBOX
+// IMAGE LIGHTBOX WITH NAVIGATION
 try{(function(){
   var lb=document.createElement('div');
   lb.id='lightbox';
-  lb.innerHTML='<div id="lightbox-inner"><div id="lightbox-corners"></div><button id="lightbox-close" aria-label="Fermer">×</button><img id="lightbox-img" src="" alt=""><div id="lightbox-caption"></div></div>';
+  lb.innerHTML='<div id="lightbox-inner"><div id="lightbox-corners"></div><button id="lightbox-close" aria-label="Fermer">×</button><button id="lightbox-prev" aria-label="Précédent">‹</button><button id="lightbox-next" aria-label="Suivant">›</button><img id="lightbox-img" src="" alt=""><div id="lightbox-caption"></div><div id="lightbox-counter"></div></div>';
   document.body.appendChild(lb);
   var lbImg=document.getElementById('lightbox-img');
   var lbCap=document.getElementById('lightbox-caption');
-  function openLB(src,cap){lbImg.src=src;lbCap.textContent=cap||'';lb.classList.add('active');}
-  function closeLB(){lb.classList.remove('active');lbImg.src='';}
-  window._openLB=openLB;
+  var lbCounter=document.getElementById('lightbox-counter');
+  var lbPrev=document.getElementById('lightbox-prev');
+  var lbNext=document.getElementById('lightbox-next');
+  var currentList=[];var currentIdx=0;
+  function getImageData(img){
+    var cap=img.alt||'';
+    var wrapper=img.parentElement;
+    var capEl=wrapper&&wrapper.parentElement&&wrapper.parentElement.querySelector('.logo-caption');
+    if(!capEl){
+      var capEl2=wrapper&&wrapper.parentElement&&wrapper.parentElement.querySelector('.stage-caption');
+      if(capEl2)capEl=capEl2;
+    }
+    if(capEl)cap=capEl.textContent;
+    return {src:img.src,cap:cap};
+  }
+  function collectSiblings(img){
+    // Find the closest scroll container (prj-scroll or win-body)
+    var container=img.closest('.prj-scroll, .win-body');
+    if(!container)container=document.body;
+    var all=Array.prototype.slice.call(container.querySelectorAll('.prj-img img, .logo-item img, .edito-grid img, .prj-persona img'));
+    // Filter out images inside <a href> (they're excluded from binding)
+    all=all.filter(function(i){return !i.closest('a[href]');});
+    return all;
+  }
+  function render(){
+    if(!currentList.length)return;
+    var img=currentList[currentIdx];
+    var d=getImageData(img);
+    lbImg.src=d.src;
+    lbCap.textContent=d.cap||'';
+    lbCounter.textContent=(currentIdx+1)+' / '+currentList.length;
+    lbPrev.style.visibility=currentList.length>1?'visible':'hidden';
+    lbNext.style.visibility=currentList.length>1?'visible':'hidden';
+  }
+  function openLB(img){
+    currentList=collectSiblings(img);
+    currentIdx=Math.max(0,currentList.indexOf(img));
+    if(currentIdx<0)currentIdx=0;
+    render();
+    lb.classList.add('active');
+  }
+  function closeLB(){lb.classList.remove('active');lbImg.src='';currentList=[];currentIdx=0;}
+  function nav(dir){
+    if(!currentList.length)return;
+    currentIdx=(currentIdx+dir+currentList.length)%currentList.length;
+    render();
+  }
+  window._openLB=function(src,cap){lbImg.src=src;lbCap.textContent=cap||'';lb.classList.add('active');};
   function bindImage(img){
     if(img._lbBound)return;
     if(img.closest('a[href]'))return;
@@ -2173,24 +2468,36 @@ try{(function(){
     img.style.cursor='zoom-in';
     img.addEventListener('click',function(e){
       e.preventDefault();e.stopPropagation();
-      var cap=img.alt||'';
-      var wrapper=img.parentElement;
-      var capEl=wrapper&&wrapper.parentElement&&wrapper.parentElement.querySelector('.logo-caption');
-      if(capEl)cap=capEl.textContent;
-      openLB(img.src,cap);
+      openLB(img);
     });
   }
   function scan(){
     document.querySelectorAll('.prj-img img, .logo-item img, .edito-grid img, .prj-persona img').forEach(bindImage);
   }
   scan();
-  // Re-scan periodically and on common triggers
   setInterval(scan,1500);
   if(window.MutationObserver){
     new MutationObserver(scan).observe(document.body,{childList:true,subtree:true});
   }
-  lb.addEventListener('click',function(e){if(e.target===lb||e.target.id==='lightbox-inner'||e.target.id==='lightbox-close'||e.target.closest('#lightbox-close'))closeLB();});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('active'))closeLB();});
+  lb.addEventListener('click',function(e){
+    if(e.target===lb||e.target.id==='lightbox-inner'){closeLB();return;}
+    if(e.target.id==='lightbox-close'||e.target.closest('#lightbox-close')){closeLB();return;}
+    if(e.target.id==='lightbox-prev'){e.stopPropagation();nav(-1);return;}
+    if(e.target.id==='lightbox-next'){e.stopPropagation();nav(1);return;}
+  });
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('active'))return;
+    if(e.key==='Escape')closeLB();
+    else if(e.key==='ArrowLeft'){e.preventDefault();nav(-1);}
+    else if(e.key==='ArrowRight'){e.preventDefault();nav(1);}
+  });
+  // Touch swipe
+  var tsX=0;
+  lb.addEventListener('touchstart',function(e){tsX=e.touches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){
+    var dx=e.changedTouches[0].clientX-tsX;
+    if(Math.abs(dx)>50)nav(dx<0?1:-1);
+  },{passive:true});
 })();}catch(e){console.warn(e)}
 </script>
 </body>
