@@ -702,12 +702,12 @@ background-size:60px 60px}
 .stage-page .prj-bloc:hover{border-color:rgba(251,146,60,0.7)!important;background:linear-gradient(135deg,rgba(251,146,60,0.1),rgba(251,146,60,0.025))!important;box-shadow:0 0 0 1px rgba(251,146,60,0.25),0 10px 40px rgba(251,146,60,0.15)!important}
 
 /* === PER-PAGE ACCENT THEMES (variations de couleur) === */
-.theme-cyan{--accent:#22D3EE;--accent-rgb:34,211,238}
-.theme-pink{--accent:#EC4899;--accent-rgb:236,72,153}
-.theme-sky{--accent:#38BDF8;--accent-rgb:56,189,248}
-.theme-emerald{--accent:#34D399;--accent-rgb:52,211,153}
-.theme-violet{--accent:#A78BFA;--accent-rgb:167,139,250}
-.theme-yellow{--accent:#FDE047;--accent-rgb:253,224,71}
+.theme-cyan{--accent:#22D3EE;--accent-rgb:34,211,238;--accent2:#F472B6;--accent2-rgb:244,114,182}
+.theme-pink{--accent:#EC4899;--accent-rgb:236,72,153;--accent2:#FDE047;--accent2-rgb:253,224,71}
+.theme-sky{--accent:#38BDF8;--accent-rgb:56,189,248;--accent2:#FBBF24;--accent2-rgb:251,191,36}
+.theme-emerald{--accent:#34D399;--accent-rgb:52,211,153;--accent2:#FB7185;--accent2-rgb:251,113,133}
+.theme-violet{--accent:#A78BFA;--accent-rgb:167,139,250;--accent2:#2DD4BF;--accent2-rgb:45,212,191}
+.theme-yellow{--accent:#FDE047;--accent-rgb:253,224,71;--accent2:#3B82F6;--accent2-rgb:59,130,246}
 
 .theme-cyan .prj-stag,.theme-pink .prj-stag,.theme-sky .prj-stag,.theme-emerald .prj-stag,.theme-violet .prj-stag,.theme-yellow .prj-stag{
   color:var(--accent)!important;
@@ -850,20 +850,20 @@ background-size:60px 60px}
 .stage-page .kpi-card:hover{border-color:rgba(251,146,60,0.6)!important;box-shadow:0 8px 25px rgba(251,146,60,0.15)!important}
 
 /* === THEMED PAGES: override remaining green elements with page accent === */
-[class*="theme-"] .prj-text:hover{text-shadow:0 0 8px rgba(var(--accent-rgb),0.3)!important}
-[class*="theme-"] .prj-stitle:hover{text-shadow:0 0 15px rgba(var(--accent-rgb),0.4)!important}
-[class*="theme-"] .prj-persona:hover{border-color:rgba(var(--accent-rgb),0.4)!important;box-shadow:0 0 25px rgba(var(--accent-rgb),0.15)!important}
-[class*="theme-"] .prj-bloc-item:hover{border-left-color:var(--accent)!important}
-[class*="theme-"] .prj-problematique{animation:none!important}
-[class*="theme-"] .prj-img{border-color:rgba(var(--accent-rgb),0.2)}
-[class*="theme-"] .prj-img:hover img{filter:drop-shadow(0 0 20px rgba(var(--accent-rgb),0.25))}
-[class*="theme-"] .logo-item img{border-color:rgba(var(--accent-rgb),0.2)}
-[class*="theme-"] .logo-item img:hover{border-color:rgba(var(--accent-rgb),0.5)!important}
-[class*="theme-"] .bench-table tr:hover td{background:rgba(var(--accent-rgb),0.06)!important;border-color:rgba(var(--accent-rgb),0.25)!important}
-[class*="theme-"] .bench-table td:first-child{color:var(--accent)!important;font-family:'Orbitron',sans-serif;font-weight:900}
-[class*="theme-"] .prj-video{border-color:rgba(var(--accent-rgb),0.25)}
-[class*="theme-"] .prj-section{position:relative;padding-left:14px}
-[class*="theme-"] .prj-section::before{content:'';position:absolute;left:0;top:6px;bottom:6px;width:3px;background:var(--accent);box-shadow:0 0 12px var(--accent);opacity:0.7}
+.prj-page[class*="theme-"] .prj-text:hover{text-shadow:0 0 8px rgba(var(--accent-rgb),0.3)!important}
+.prj-page[class*="theme-"] .prj-stitle:hover{text-shadow:0 0 15px rgba(var(--accent-rgb),0.4)!important}
+.prj-page[class*="theme-"] .prj-persona:hover{border-color:rgba(var(--accent-rgb),0.4)!important;box-shadow:0 0 25px rgba(var(--accent-rgb),0.15)!important}
+.prj-page[class*="theme-"] .prj-bloc-item:hover{border-left-color:var(--accent)!important}
+.prj-page[class*="theme-"] .prj-problematique{animation:none!important}
+.prj-page[class*="theme-"] .prj-img{border-color:rgba(var(--accent-rgb),0.2)}
+.prj-page[class*="theme-"] .prj-img:hover img{filter:drop-shadow(0 0 20px rgba(var(--accent-rgb),0.25))}
+.prj-page[class*="theme-"] .logo-item img{border-color:rgba(var(--accent-rgb),0.2)}
+.prj-page[class*="theme-"] .logo-item img:hover{border-color:rgba(var(--accent-rgb),0.5)!important}
+.prj-page[class*="theme-"] .bench-table tr:hover td{background:rgba(var(--accent-rgb),0.06)!important;border-color:rgba(var(--accent-rgb),0.25)!important}
+.prj-page[class*="theme-"] .bench-table td:first-child{color:var(--accent)!important;font-family:'Orbitron',sans-serif;font-weight:900}
+.prj-page[class*="theme-"] .prj-video{border-color:rgba(var(--accent-rgb),0.25)}
+.prj-page[class*="theme-"] .prj-section{position:relative;padding-left:14px}
+.prj-page[class*="theme-"] .prj-section::before{content:'';position:absolute;left:0;top:6px;bottom:6px;width:3px;background:var(--accent);box-shadow:0 0 12px var(--accent);opacity:0.7}
 
 /* Stage pages (orange) — same treatment */
 .stage-page .prj-text:hover{text-shadow:0 0 8px rgba(251,146,60,0.3)!important}
@@ -894,14 +894,161 @@ background-size:60px 60px}
 .tool-card:hover img{transform:scale(1.1)}
 .tool-card-name{font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;color:#FFFFFF;letter-spacing:1.5px;text-align:center;line-height:1.3;text-transform:uppercase;text-shadow:0 0 8px rgba(0,255,65,0.35)}
 .tool-card-role{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--volt);letter-spacing:1px;text-align:center;opacity:0.85;text-transform:uppercase}
-[class*="theme-"] .tool-card{border-color:rgba(var(--accent-rgb),0.3)}
-[class*="theme-"] .tool-card:hover{border-color:rgba(var(--accent-rgb),0.65)!important;box-shadow:0 10px 30px rgba(0,0,0,0.4),0 0 0 1px rgba(var(--accent-rgb),0.25),0 0 25px rgba(var(--accent-rgb),0.15)!important}
-[class*="theme-"] .tool-card-name{text-shadow:0 0 8px rgba(var(--accent-rgb),0.4)!important}
-[class*="theme-"] .tool-card-role{color:var(--accent)!important}
+.prj-page[class*="theme-"] .tool-card{border-color:rgba(var(--accent-rgb),0.3)}
+.prj-page[class*="theme-"] .tool-card:hover{border-color:rgba(var(--accent-rgb),0.65)!important;box-shadow:0 10px 30px rgba(0,0,0,0.4),0 0 0 1px rgba(var(--accent-rgb),0.25),0 0 25px rgba(var(--accent-rgb),0.15)!important}
+.prj-page[class*="theme-"] .tool-card-name{text-shadow:0 0 8px rgba(var(--accent-rgb),0.4)!important}
+.prj-page[class*="theme-"] .tool-card-role{color:var(--accent)!important}
 .stage-page .tool-card{border-color:rgba(251,146,60,0.3)}
 .stage-page .tool-card:hover{border-color:rgba(251,146,60,0.65)!important;box-shadow:0 10px 30px rgba(0,0,0,0.4),0 0 0 1px rgba(251,146,60,0.25),0 0 25px rgba(251,146,60,0.15)!important}
 .stage-page .tool-card-name{text-shadow:0 0 8px rgba(251,146,60,0.4)!important}
 .stage-page .tool-card-role{color:#FB923C!important}
+
+/* === PROBLÉMATIQUE — mise en avant maximale avec couleur secondaire === */
+.stage-page{--accent2:#FDE68A;--accent2-rgb:253,230,138}
+.prj-page[class*="theme-"] .prj-problematique,.stage-page .prj-problematique{
+  color:var(--accent2)!important;
+  border:3px solid rgba(var(--accent2-rgb),0.7)!important;
+  background:
+    linear-gradient(135deg,rgba(var(--accent2-rgb),0.14),rgba(var(--accent2-rgb),0.03))!important;
+  box-shadow:
+    0 0 0 1px rgba(var(--accent2-rgb),0.25),
+    0 0 40px rgba(var(--accent2-rgb),0.25),
+    0 0 80px rgba(var(--accent2-rgb),0.1),
+    inset 0 0 30px rgba(var(--accent2-rgb),0.08)!important;
+  padding:24px 90px 24px 32px!important;
+  margin:24px 0!important;
+  font-size:20px!important;
+  font-weight:800!important;
+  line-height:1.5!important;
+  letter-spacing:0.3px!important;
+  text-shadow:0 0 18px rgba(var(--accent2-rgb),0.6),0 0 2px rgba(255,255,255,0.2)!important;
+  position:relative!important;
+  overflow:visible!important;
+  border-radius:4px!important;
+  animation:problematiquePulse 3s ease-in-out infinite!important
+}
+.prj-page[class*="theme-"] .prj-problematique::before,.stage-page .prj-problematique::before{
+  content:'⚡'!important;
+  position:absolute!important;
+  right:22px!important;
+  top:50%!important;
+  left:auto!important;
+  transform:translateY(-50%)!important;
+  font-size:56px!important;
+  color:var(--accent2)!important;
+  opacity:0.9!important;
+  text-shadow:0 0 24px var(--accent2),0 0 48px rgba(var(--accent2-rgb),0.7)!important;
+  filter:drop-shadow(0 0 10px var(--accent2))!important;
+  animation:boltFlicker 2.2s ease-in-out infinite!important;
+  line-height:1!important
+}
+.prj-page[class*="theme-"] .prj-problematique::after,.stage-page .prj-problematique::after{
+  content:''!important;
+  position:absolute!important;
+  inset:-3px!important;
+  border:1px solid rgba(var(--accent2-rgb),0.35)!important;
+  pointer-events:none!important;
+  animation:problematiqueRing 3s ease-in-out infinite!important;
+  border-radius:4px!important
+}
+@keyframes problematiquePulse{
+  0%,100%{box-shadow:0 0 0 1px rgba(var(--accent2-rgb),0.25),0 0 40px rgba(var(--accent2-rgb),0.2),0 0 80px rgba(var(--accent2-rgb),0.08),inset 0 0 30px rgba(var(--accent2-rgb),0.06)}
+  50%{box-shadow:0 0 0 2px rgba(var(--accent2-rgb),0.4),0 0 60px rgba(var(--accent2-rgb),0.35),0 0 120px rgba(var(--accent2-rgb),0.15),inset 0 0 40px rgba(var(--accent2-rgb),0.12)}
+}
+@keyframes problematiqueRing{
+  0%,100%{inset:-3px;opacity:0.5}
+  50%{inset:-8px;opacity:0.1}
+}
+@keyframes boltFlicker{
+  0%,100%{opacity:1;transform:translateY(-50%) scale(1)}
+  50%{opacity:0.85;transform:translateY(-50%) scale(1.08)}
+  55%{opacity:1;transform:translateY(-50%) scale(0.95)}
+}
+
+/* Annulation des surcharges accent2 ailleurs — retour à l'accent primaire */
+.prj-page[class*="theme-"] .prj-stitle::after{background:var(--accent)!important;box-shadow:0 0 14px var(--accent)!important}
+.prj-page[class*="theme-"] .bench-table td:first-child{color:var(--accent)!important;text-shadow:0 0 10px rgba(var(--accent-rgb),0.4)}
+.prj-page[class*="theme-"] .kpi-card-ind{color:#FFFFFF!important;text-shadow:0 0 10px rgba(var(--accent-rgb),0.3)!important}
+.prj-page[class*="theme-"] .kpi-group-dot{background:var(--accent)!important;box-shadow:0 0 10px var(--accent),0 0 20px rgba(var(--accent-rgb),0.5)!important}
+.prj-page[class*="theme-"] .stage-info-label{color:var(--accent)!important}
+.prj-page[class*="theme-"] .logo-caption{color:var(--accent)!important;text-shadow:0 0 8px rgba(var(--accent-rgb),0.35)}
+.prj-page[class*="theme-"] .stage-caption{color:var(--accent)!important}
+.prj-page[class*="theme-"] .prj-text strong,.prj-page[class*="theme-"] .prj-text b{color:var(--accent)!important;font-weight:700!important}
+.prj-page[class*="theme-"] .tool-card-role{color:var(--accent)!important}
+.stage-page .prj-stitle::after{background:#FB923C!important;box-shadow:0 0 14px #FB923C!important}
+.stage-page .bench-table td:first-child{color:#FB923C!important}
+.stage-page .kpi-card-ind{color:#FFFFFF!important}
+.stage-page .kpi-group-dot{background:#FB923C!important;box-shadow:0 0 10px #FB923C!important}
+.stage-page .stage-info-label{color:#FB923C!important}
+.stage-page .stage-caption{color:#FB923C!important}
+.stage-page .prj-text strong,.stage-page .prj-text b{color:#FB923C!important;font-weight:700!important}
+.stage-page .tool-card-role{color:#FB923C!important}
+
+/* === SPACING & BREATHING ROOM — uniform rhythm across all project pages === */
+.prj-scroll{padding:36px 40px 48px!important;scroll-behavior:smooth}
+.prj-section{margin-bottom:56px!important;padding-top:8px!important}
+.prj-section:last-child{margin-bottom:24px!important}
+/* visual separator between sections */
+.prj-section + .prj-section{position:relative}
+.prj-section + .prj-section::after{content:'';position:absolute;left:14px;right:0;top:-30px;height:1px;background:linear-gradient(90deg,rgba(255,255,255,0.08),transparent 85%);pointer-events:none}
+
+/* Section header spacing */
+.prj-stag{margin-bottom:18px!important}
+.prj-stitle{margin-bottom:24px!important;padding-bottom:14px!important}
+
+/* Paragraphs — more air */
+.prj-text{margin-bottom:18px!important;line-height:1.9!important}
+.prj-text + .prj-text{margin-top:-4px}
+
+/* Competence bloc spacing */
+.prj-bloc{margin-bottom:18px!important;padding:22px 24px!important}
+.prj-bloc-title{margin-bottom:16px!important;padding-bottom:12px!important}
+.prj-bloc-item{padding:9px 0 9px 20px!important;margin-bottom:8px!important}
+.prj-bloc-item:last-child{margin-bottom:0!important}
+
+/* Image blocks */
+.prj-img{margin:20px 0!important}
+.prj-persona{margin:20px 0!important}
+
+/* Tables */
+.bench-table{margin:20px 0 10px!important}
+.bench-table td{padding:18px 20px!important}
+.bench-table th{padding:16px 20px!important}
+
+/* KPI grid spacing */
+.kpi-grid{gap:32px!important;margin:24px 0 10px!important}
+.kpi-group-header{padding:12px 0 14px!important;margin-bottom:18px!important}
+.kpi-group-items{gap:16px!important}
+.kpi-card{padding:20px 22px!important}
+.kpi-card-ind{margin-bottom:10px!important}
+
+/* Tools grid spacing */
+.tools-grid{gap:18px!important;margin:22px 0 10px!important}
+.tool-card{padding:22px 16px!important;gap:14px!important;min-height:160px!important}
+
+/* Problématique — breathing room around it */
+.prj-problematique{margin:32px 0!important}
+
+/* Stage-specific spacing */
+.stage-info-grid{margin:18px 0 22px!important;padding:20px 22px!important;gap:14px 18px!important}
+.stage-gallery{margin:22px 0!important;gap:20px!important}
+.stage-carousel{margin:22px 0!important;gap:12px!important}
+.stage-caption{margin-top:12px!important}
+.logo-caption{margin-top:12px!important;padding-top:4px!important}
+
+/* Videos */
+.vid-grid{gap:16px!important;margin:20px 0!important}
+.vid-center{margin:20px 0!important}
+
+/* Logo layout extra breathing */
+.logo-layout{gap:32px 40px!important;margin:24px 0!important}
+.palette-showcase{margin-top:36px!important;padding:16px 0!important}
+
+/* Page header bottom border space */
+.prj-page-header{padding:18px 24px!important}
+
+/* Problématique sits better when preceded by text */
+.prj-text + .prj-problematique{margin-top:28px!important}
 </style>
 </head>
 <body>
