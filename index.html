@@ -2608,6 +2608,17 @@ html[style*="--bg: #0B1220"] body,body:has([data-theme="stark"]){color:#F8FAFC}
 /* VIDEO GRID — stagger */
 .theme-sos .vid-grid>div:nth-child(1),.theme-yellow .vid-grid>div:nth-child(1),.theme-sky .vid-grid>div:nth-child(1){animation:galFade 0.5s ease backwards;animation-delay:0.1s}
 .theme-sos .vid-grid>div:nth-child(2),.theme-yellow .vid-grid>div:nth-child(2),.theme-sky .vid-grid>div:nth-child(2){animation:galFade 0.5s ease backwards;animation-delay:0.3s}
+
+/* ═══ PAGE LOGOS — 3D spin like SOS ═══ */
+.page-logo-hero{
+  height:220px;width:auto;object-fit:contain;
+  opacity:0.9;filter:brightness(1.05);flex-shrink:0;
+  margin-top:-60px;
+  animation:logo3dSpin 6s linear infinite;
+  transform-style:preserve-3d
+}
+.match-logo-hero{height:200px;margin-top:-50px}
+.samu-logo-hero{height:200px;margin-top:-50px;animation-duration:6s!important}
 </style>
 </head>
 <body>
@@ -2756,7 +2767,7 @@ html[style*="--bg: #0B1220"] body,body:has([data-theme="stark"]){color:#F8FAFC}
     </div></div>
     <!-- ÇA MATCH PAGE -->
     <div class="prj-page theme-yellow" id="digital-match"><canvas class="rain-canvas" id="match-rain-canvas"></canvas><div class="prj-page-header"><button class="prj-back" onclick="backToTree('digital')">← RETOUR</button><div class="prj-page-name">PROJECT: ÇA_MATCH</div></div><div class="prj-scroll">
-      <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div class="prj-stitle">Le Brief</div><div class="prj-text">Dans le cadre de ma formation en BTS Communication, j'ai co-créé « Ça Match », un média scolaire digital qui dépasse la simple performance athlétique. À travers nos différents supports numériques, nous mettons en lumière le sport en tant que véritable vecteur de changement social, écologique et humain.</div><div class="match-hero-img"><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/pCSNRLd/Whats-App-Image-2026-04-28-at-13-24-46.jpg" alt="Ça Match - Visuel"></div></div></div>
+      <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:4px"><div class="prj-stitle" style="margin-bottom:0!important">Le Brief</div><img src="https://i.ibb.co/Q3B07X6G/Capture-d-cran-2026-01-05-153834-Photoroom.png" alt="Logo Ça Match" class="page-logo-hero match-logo-hero"></div><div class="prj-text">Dans le cadre de ma formation en BTS Communication, j'ai co-créé « Ça Match », un média scolaire digital qui dépasse la simple performance athlétique. À travers nos différents supports numériques, nous mettons en lumière le sport en tant que véritable vecteur de changement social, écologique et humain.</div><div class="match-hero-img"><div class="prj-img" style="margin:0"><img src="https://i.ibb.co/pCSNRLd/Whats-App-Image-2026-04-28-at-13-24-46.jpg" alt="Ça Match - Visuel"></div></div></div>
       <div class="prj-section"><div class="prj-stag">// section_01b — constat</div><div class="prj-stitle">Constat</div><div class="prj-text">En 2026, les médias sportifs saturent en restant focalisés sur le business et la performance, alors que 70 % de la Gen Z réclame des contenus engagés. Face à ce décalage, nous avons créé « Ça Match » : un média natif qui sort le sport de sa bulle de divertissement pour en faire un vecteur de solutions face aux enjeux sociétaux, qu'ils soient humains, solidaires ou environnementaux.</div></div>
       <div class="prj-section"><div class="prj-stag">// section_02 — benchmark</div><div class="prj-stitle">Benchmark</div><table class="bench-table"><tr><th>Acteur</th><th>Approche Actuelle</th><th>Limites Identifiées</th><th>Opportunité de Positionnement</th></tr>
 <tr><td>Groupe L'Équipe</td><td>Initiatives ponctuelles : pages dédiées au sport féminin, journées spéciales annuelles</td><td>Traitement de surface. L'humain et le social restent des sujets secondaires relégués en rubriques.</td><td>Intégrer le social au cœur de la ligne éditoriale permanente plutôt qu'en "bonus".</td></tr>
@@ -2920,7 +2931,7 @@ html[style*="--bg: #0B1220"] body,body:has([data-theme="stark"]){color:#F8FAFC}
     </div></div>
     <!-- SAMU SOCIAL PAGE -->
     <div class="prj-page theme-sky" id="print-samu"><canvas class="rain-canvas" id="samu-rain-canvas"></canvas><div class="prj-page-header"><button class="prj-back" onclick="backToTree('print')">← RETOUR</button><div class="prj-page-name">PROJECT: SAMU_SOCIAL</div></div><div class="prj-scroll">
-      <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div class="prj-stitle">Le Brief</div><div class="prj-text">Dans le cadre des Mlle Pitch Awards & CO, nous avons relevé le défi de concevoir la prochaine campagne de collecte hivernale du Samusocial de Paris. Notre mission, en tant qu'étudiants en BTS Communication, a été d'imaginer un concept créatif 360° pour interpeller les plus de 35 ans sur la réalité du sans-abrisme et déconstruire les préjugés, tout en valorisant la diversité des actions de terrain (soin, hébergement, insertion). À travers un ton positif et digne, loin des clichés misérabilistes, nous avons élaboré une stratégie complète incluant la création de campagnes d'affichage print (métro/abribus), de dispositifs DOOH (écrans numériques), d'un spot radio, ainsi qu'une campagne social média, centrés sur un appel au don immédiat.</div><div class="prj-problematique">Problématique : Comment valoriser la diversité des missions du Samusocial pour briser l'indifférence et transformer la perception du sans-abrisme en levier de collecte durable ?</div></div>
+      <div class="prj-section"><div class="prj-stag">// section_01 — le brief</div><div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:4px"><div class="prj-stitle" style="margin-bottom:0!important">Le Brief</div><img src="https://i.ibb.co/k204s3yZ/SAMUSOCIAL-logo-primaire-RVB-Bleu-max-345x345.png" alt="Logo Samu Social" class="page-logo-hero samu-logo-hero"></div><div class="prj-text">Dans le cadre des Mlle Pitch Awards & CO, nous avons relevé le défi de concevoir la prochaine campagne de collecte hivernale du Samusocial de Paris. Notre mission, en tant qu'étudiants en BTS Communication, a été d'imaginer un concept créatif 360° pour interpeller les plus de 35 ans sur la réalité du sans-abrisme et déconstruire les préjugés, tout en valorisant la diversité des actions de terrain (soin, hébergement, insertion). À travers un ton positif et digne, loin des clichés misérabilistes, nous avons élaboré une stratégie complète incluant la création de campagnes d'affichage print (métro/abribus), de dispositifs DOOH (écrans numériques), d'un spot radio, ainsi qu'une campagne social média, centrés sur un appel au don immédiat.</div><div class="prj-problematique">Problématique : Comment valoriser la diversité des missions du Samusocial pour briser l'indifférence et transformer la perception du sans-abrisme en levier de collecte durable ?</div></div>
       <div class="prj-section"><div class="prj-stag">// section_02 — la cible</div><div class="prj-stitle">Persona : Marc</div><div class="prj-persona"><img src="https://i.ibb.co/rKJpg099/Capture-d-cran-2026-04-02-173831.png" alt="Persona Marc"></div></div>
       <div class="prj-section"><div class="prj-stag">// section_03 — moodboard & benchmark</div><div class="prj-stitle">Moodboard & Benchmark</div><div class="prj-img"><img src="https://i.ibb.co/B5Ny4Xdw/Capture-d-cran-2026-04-02-174302.png" alt="Moodboard"></div><table class="bench-table"><tr><th>Acteur</th><th>Style de Communication</th><th>Axe Majeur</th><th>Opportunité pour le Projet</th></tr>
 <tr><td>Fondation pour le Logement des défavorisés</td><td>Indignation & Choc : images fortes pour marquer les esprits</td><td>Sensibilisation par l'émotion brute</td><td>Se différencier via une approche lumineuse axée sur les solutions et l'espoir.</td></tr>
@@ -3904,76 +3915,185 @@ function initFight(){
 
   // === DIGITAL: Blue pixel gamepads ===
   winAnims.digital=function(cx,W,H,done){
-    var pads=[];var f=0;
-    for(var i=0;i<50;i++){
-      pads.push({x:Math.random()*W,y:Math.random()*-H*1.5,v:2+Math.random()*4,r:Math.random()*0.5-0.25});
-    }
-    function drawPad(x,y,s,rot){
-      cx.save();cx.translate(x,y);cx.rotate(rot);
-      cx.fillStyle='rgba(59,130,246,0.8)';
-      // Body
-      cx.fillRect(-s*1.5,-s,s*3,s*2);
-      // D-pad
-      cx.fillStyle='rgba(30,80,200,0.9)';
-      cx.fillRect(-s*1.2,-s*0.15,s*0.8,s*0.3);
-      cx.fillRect(-s*0.95,-s*0.5,s*0.3,s);
-      // Buttons
-      cx.fillStyle='rgba(100,180,255,0.9)';
-      cx.fillRect(s*0.4,-s*0.3,s*0.3,s*0.3);
-      cx.fillRect(s*0.8,-s*0.1,s*0.3,s*0.3);
-      cx.restore();
-    }
+    var S=4,GY=H-50,px=40,py=GY-16,vy=0,onG=true,won=false,wf=0;
+    var keys={};var doorX=W-80;
+    // Platforms: {x,y,w}
+    var plats=[{x:0,y:GY,w:W}];
+    for(var i=0;i<6;i++)plats.push({x:120+i*110,y:GY-40-Math.random()*60,w:60+Math.random()*40});
+    // Bricks
+    var bricks=[];
+    for(var i=0;i<4;i++)bricks.push({x:180+i*140,y:GY-90-Math.random()*30,w:40,h:16});
+    function kd(e){keys[e.key]=true;if(e.key===' '||e.key==='ArrowUp')e.preventDefault()}
+    function ku(e){keys[e.key]=false}
+    document.addEventListener('keydown',kd);document.addEventListener('keyup',ku);
+    // Clouds
+    var clouds=[];for(var i=0;i<5;i++)clouds.push({x:Math.random()*W,y:20+Math.random()*60,w:40+Math.random()*50});
     function draw(){
-      cx.fillStyle='rgba(5,5,5,0.15)';cx.fillRect(0,0,W,H);
-      for(var i=0;i<pads.length;i++){
-        var p=pads[i];p.y+=p.v;p.r+=0.02;
-        drawPad(p.x,p.y,5+Math.random()*3,p.r);
-        if(p.y>H+20){p.y=-30;p.x=Math.random()*W;}
+      // Sky
+      cx.fillStyle='#6B8CFF';cx.fillRect(0,0,W,H);
+      // Clouds
+      cx.fillStyle='#fff';clouds.forEach(function(cl){
+        cx.beginPath();cx.arc(cl.x,cl.y,cl.w*0.3,0,Math.PI*2);cx.arc(cl.x+cl.w*0.25,cl.y-8,cl.w*0.25,0,Math.PI*2);cx.arc(cl.x+cl.w*0.5,cl.y,cl.w*0.2,0,Math.PI*2);cx.fill();
+        cl.x-=0.3;if(cl.x<-60)cl.x=W+60;
+      });
+      // Ground
+      cx.fillStyle='#8B5E3C';cx.fillRect(0,GY,W,H-GY);
+      cx.fillStyle='#5D8C3C';cx.fillRect(0,GY,W,6);
+      // Platforms
+      plats.forEach(function(p,i){if(i===0)return;
+        cx.fillStyle='#8B5E3C';cx.fillRect(p.x,p.y,p.w,10);
+        cx.fillStyle='#A0522D';cx.fillRect(p.x,p.y,p.w,4);
+      });
+      // Bricks
+      bricks.forEach(function(b){
+        cx.fillStyle='#C84A32';cx.fillRect(b.x,b.y,b.w,b.h);
+        cx.fillStyle='#A33A22';cx.fillRect(b.x,b.y+b.h-3,b.w,3);
+        for(var j=0;j<b.w;j+=10){cx.fillStyle='#8B2E18';cx.fillRect(b.x+j,b.y,1,b.h)}
+      });
+      // Door
+      cx.fillStyle='#FFD700';cx.fillRect(doorX,GY-36,24,36);
+      cx.fillStyle='#DAA520';cx.fillRect(doorX+2,GY-34,20,32);
+      cx.fillStyle='#B8860B';cx.fillRect(doorX+16,GY-18,4,4);
+      // Stars above door
+      cx.fillStyle='#FFD700';cx.font='14px sans-serif';cx.fillText('★',doorX+4,GY-42);
+      if(!won){
+        // Physics
+        if(keys['ArrowLeft']||keys['a'])px-=3.5;
+        if(keys['ArrowRight']||keys['d'])px+=3.5;
+        if((keys['ArrowUp']||keys[' ']||keys['w'])&&onG){vy=-8;onG=false}
+        vy+=0.4;py+=vy;
+        // Collisions
+        onG=false;
+        plats.forEach(function(p){if(px>p.x-8&&px<p.x+p.w+8&&py>=p.y-16&&py<=p.y&&vy>=0){py=p.y-16;vy=0;onG=true}});
+        bricks.forEach(function(b){if(px>b.x-8&&px<b.x+b.w+8&&py>=b.y-16&&py<=b.y&&vy>=0){py=b.y-16;vy=0;onG=true}
+          if(px>b.x-8&&px<b.x+b.w+8&&py+16>=b.y&&py+16<=b.y+b.h+4&&vy<0){vy=1}});
+        if(py>GY-16){py=GY-16;vy=0;onG=true}
+        if(px<8)px=8;if(px>W-8)px=W-8;
+        // Win check
+        if(Math.abs(px-doorX-12)<20&&py>GY-52){won=true;wf=0}
       }
-      f++;
-      if(f<85)requestAnimationFrame(draw);else done();
+      // Draw character (Mario-style)
+      var legA=Math.sin(Date.now()*0.01)*3;
+      // Legs
+      cx.fillStyle='#0000DD';cx.fillRect(px-5,py+8,4,8+legA);cx.fillRect(px+1,py+8,4,8-legA);
+      // Body
+      cx.fillStyle='#E03030';cx.fillRect(px-6,py,12,10);
+      // Head
+      cx.fillStyle='#FFB07C';cx.fillRect(px-4,py-8,8,8);
+      // Hat
+      cx.fillStyle='#E03030';cx.fillRect(px-5,py-11,10,4);cx.fillRect(px-2,py-13,7,3);
+      // Eyes
+      cx.fillStyle='#000';cx.fillRect(px-2,py-6,2,2);cx.fillRect(px+2,py-6,2,2);
+      // Instructions
+      cx.fillStyle='#fff';cx.font='bold 11px monospace';cx.fillText('← → : MOVE    SPACE : JUMP',10,20);
+      // Win state
+      if(won){
+        wf++;
+        cx.fillStyle='rgba(0,0,0,'+(Math.min(wf/40,0.6))+')';cx.fillRect(0,0,W,H);
+        if(wf>15){
+          cx.fillStyle='#FFD700';cx.font='bold 36px Orbitron,sans-serif';cx.textAlign='center';
+          cx.fillText('CONGRATULATIONS!',W/2,H/2-10);
+          cx.fillStyle='#fff';cx.font='16px Rajdhani,sans-serif';
+          cx.fillText('ACCESS GRANTED',W/2,H/2+25);
+          cx.textAlign='left';
+          // Fireworks
+          for(var i=0;i<8;i++){
+            var fx=W*0.2+Math.random()*W*0.6,fy=H*0.2+Math.random()*H*0.3;
+            cx.fillStyle=['#FF0000','#FFD700','#00FF00','#FF69B4','#00BFFF'][i%5];
+            cx.beginPath();cx.arc(fx,fy,2+Math.random()*3,0,Math.PI*2);cx.fill();
+          }
+        }
+        if(wf>80){document.removeEventListener('keydown',kd);document.removeEventListener('keyup',ku);done();return}
+      }
+      requestAnimationFrame(draw);
     }
     draw();
   };
 
   // === PRINT: Red pixel character walking ===
   winAnims.print=function(cx,W,H,done){
-    var px={x:-30,y:H/2};var f=0;var trail=[];
-    function drawChar(x,y,frame){
-      var s=6;var legOff=Math.sin(frame*0.3)*4;
-      cx.fillStyle='rgba(220,38,38,0.9)';
-      // Head
-      cx.fillRect(x-s,y-s*4,s*2,s*2);
-      // Body
-      cx.fillRect(x-s*0.7,y-s*2,s*1.4,s*2.5);
-      // Arms
-      cx.fillRect(x-s*2,y-s*1.5+Math.sin(frame*0.3)*3,s*1.2,s*0.5);
-      cx.fillRect(x+s*0.8,y-s*1.5-Math.sin(frame*0.3)*3,s*1.2,s*0.5);
-      // Legs
-      cx.fillRect(x-s*0.6,y+s*0.5,s*0.5,s*1.5+legOff);
-      cx.fillRect(x+s*0.1,y+s*0.5,s*0.5,s*1.5-legOff);
-      // Eyes
-      cx.fillStyle='#FFF';
-      cx.fillRect(x-s*0.6,y-s*3.2,s*0.4,s*0.4);
-      cx.fillRect(x+s*0.2,y-s*3.2,s*0.4,s*0.4);
+    var f=0,speed=2,roadOff=0;
+    var carX=W/2,carW=50,carH=30;
+    var roadY=H*0.45;// horizon
+    // Roadside objects
+    var trees=[];for(var i=0;i<6;i++)trees.push({z:0.2+i*0.15,side:i%2===0?-1:1});
+    function drawCar(x,y,w,h){
+      // Shadow
+      cx.fillStyle='rgba(0,0,0,0.3)';cx.fillRect(x-w/2-2,y+2,w+4,h*0.3);
+      // Body — yellow Lamborghini
+      cx.fillStyle='#FFD700';
+      cx.fillRect(x-w/2,y-h*0.6,w,h*0.6);// main body
+      cx.fillStyle='#E6C200';
+      cx.fillRect(x-w/2+4,y-h*0.9,w-8,h*0.35);// roof/cabin
+      // Windshield
+      cx.fillStyle='#1a1a3a';
+      cx.fillRect(x-w/2+8,y-h*0.85,w-16,h*0.25);
+      // Headlights
+      cx.fillStyle='#FF4444';cx.fillRect(x-w/2,y-h*0.2,6,4);cx.fillRect(x+w/2-6,y-h*0.2,6,4);
+      // Wheels
+      cx.fillStyle='#222';
+      cx.fillRect(x-w/2-2,y-h*0.15,8,8);cx.fillRect(x+w/2-6,y-h*0.15,8,8);
+      // Exhaust pipes
+      cx.fillStyle='#888';cx.fillRect(x-8,y,4,3);cx.fillRect(x+4,y,4,3);
+      // Detail lines
+      cx.fillStyle='#B8960A';cx.fillRect(x-w/2,y-h*0.3,w,2);
     }
     function draw(){
-      cx.fillStyle='rgba(5,5,5,0.08)';cx.fillRect(0,0,W,H);
-      px.x+=0;
-      trail.push({x:px.x,y:px.y,a:1});
-      // Draw trail
-      for(var i=trail.length-1;i>=0;i--){
-        trail[i].a-=0.03;
-        if(trail[i].a<=0){trail.splice(i,1);continue;}
-        cx.globalAlpha=trail[i].a*0.3;
-        drawChar(trail[i].x,trail[i].y,f);
+      speed+=0.04;roadOff+=speed;
+      // Sky gradient
+      var grd=cx.createLinearGradient(0,0,0,roadY);
+      grd.addColorStop(0,'#FF6B35');grd.addColorStop(0.4,'#FFA07A');grd.addColorStop(1,'#87CEEB');
+      cx.fillStyle=grd;cx.fillRect(0,0,W,roadY);
+      // Sun
+      cx.fillStyle='#FFD700';cx.beginPath();cx.arc(W*0.7,roadY*0.3,30,0,Math.PI*2);cx.fill();
+      // Ground
+      cx.fillStyle='#3A5F0B';cx.fillRect(0,roadY,W,H-roadY);
+      // Road
+      var rw1=W*0.8,rw2=80;// road width at bottom and horizon
+      cx.fillStyle='#333';
+      cx.beginPath();cx.moveTo(W/2-rw1/2,H);cx.lineTo(W/2-rw2/2,roadY);
+      cx.lineTo(W/2+rw2/2,roadY);cx.lineTo(W/2+rw1/2,H);cx.fill();
+      // Road lines (dashed, moving)
+      cx.strokeStyle='#FFD700';cx.lineWidth=3;
+      for(var i=0;i<12;i++){
+        var t=((i*0.08+roadOff*0.003)%1);
+        var y=roadY+(H-roadY)*t;
+        var rw=rw2+(rw1-rw2)*t;
+        var lx=W/2-rw*0.02,rx=W/2+rw*0.02;
+        if(Math.floor((i+roadOff*0.05))%2===0){
+          cx.fillStyle='#FFD700';cx.fillRect(lx-1,y,3,6*t+2);
+        }
       }
-      cx.globalAlpha=1;
-      drawChar(px.x,px.y,f);
-      // Red scan line
-      cx.fillStyle='rgba(220,38,38,0.04)';cx.fillRect(0,px.y-40,W,80);
+      // Edge lines
+      cx.strokeStyle='#fff';cx.lineWidth=2;
+      cx.beginPath();cx.moveTo(W/2-rw1/2,H);cx.lineTo(W/2-rw2/2,roadY);cx.stroke();
+      cx.beginPath();cx.moveTo(W/2+rw1/2,H);cx.lineTo(W/2+rw2/2,roadY);cx.stroke();
+      // Trees
+      trees.forEach(function(tr){
+        var t=((tr.z+roadOff*0.002)%1);
+        var y=roadY+(H-roadY)*t;
+        var rw=rw2+(rw1-rw2)*t;
+        var x=W/2+tr.side*(rw/2+20+t*30);
+        var sz=4+t*16;
+        cx.fillStyle='#2D5016';cx.fillRect(x-1,y-sz*2,3,sz*2);
+        cx.fillStyle='#3A7A20';cx.beginPath();cx.arc(x,y-sz*2,sz*0.8,0,Math.PI*2);cx.fill();
+      });
+      // Car with shake at high speed
+      var shake=speed>8?Math.sin(f*0.8)*(speed-8)*0.3:0;
+      drawCar(carX+shake,H-50,carW+speed*0.8,carH+speed*0.3);
+      // Speed lines at high speed
+      if(speed>6){for(var i=0;i<3;i++){
+        cx.fillStyle='rgba(255,255,255,'+(0.05+speed*0.005)+')';
+        cx.fillRect(W/2-100+Math.random()*200,roadY+Math.random()*(H-roadY),1,10+Math.random()*20);
+      }}
+      // Speed display
+      cx.fillStyle='#fff';cx.font='bold 14px monospace';
+      cx.fillText(Math.floor(speed*25)+' KM/H',W-130,30);
+      // Rev bar
+      cx.fillStyle='rgba(255,255,255,0.15)';cx.fillRect(W-130,38,100,8);
+      cx.fillStyle=speed>10?'#FF4444':'#FFD700';cx.fillRect(W-130,38,Math.min(speed*8,100),8);
       f++;
-      px.x+=5;if(px.x<W+40)requestAnimationFrame(draw);else done();
+      if(f<120)requestAnimationFrame(draw);else done();
     }
     draw();
   };
@@ -4565,13 +4685,13 @@ try{(function(){
     var ctx=cv.getContext('2d');
     var shapes=[];var w,h;
     function resize(){w=cv.width=page.offsetWidth;h=cv.height=page.offsetHeight;
-      if(!shapes.length){for(var i=0;i<15;i++)shapes.push({
+      if(!shapes.length){for(var i=0;i<45;i++)shapes.push({
         x:Math.random()*w,y:Math.random()*h,
         vx:(Math.random()-0.5)*0.3,vy:(Math.random()-0.5)*0.2,
         type:Math.floor(Math.random()*3),// 0=triangle,1=circle,2=square
-        size:8+Math.random()*16,
+        size:10+Math.random()*22,
         rot:Math.random()*6.28,rotV:(Math.random()-0.5)*0.01,
-        a:0.03+Math.random()*0.05
+        a:0.07+Math.random()*0.10
       })}}
     function draw(){
       ctx.clearRect(0,0,w,h);
@@ -4599,9 +4719,15 @@ try{(function(){
     if(page.classList.contains('active')){resize();draw()}
     window.addEventListener('resize',function(){if(page.classList.contains('active'))resize()});
   }
-  initFloatingShapes('instit-sos','rgba(252,207,28,0.5)');
-  initFloatingShapes('digital-match','rgba(188,32,184,0.5)');
-  initFloatingShapes('print-samu','rgba(91,156,245,0.5)');
+  initFloatingShapes('instit-sos','rgba(252,207,28,0.6)');
+  initFloatingShapes('digital-match','rgba(188,32,184,0.6)');
+  initFloatingShapes('print-samu','rgba(91,156,245,0.6)');
+  initFloatingShapes('digital-loop','rgba(6,182,212,0.5)');
+  initFloatingShapes('digital-publicis','rgba(249,115,22,0.5)');
+  initFloatingShapes('event-wlg','rgba(34,197,94,0.5)');
+  initFloatingShapes('instit-veolia','rgba(139,92,246,0.5)');
+  initFloatingShapes('pills-blue','rgba(59,130,246,0.5)');
+  initFloatingShapes('pills-red','rgba(239,68,68,0.5)');
 
   // 3. MOUSE LIGHT — subtle spotlight following cursor on themed pages
   var spotlight=document.createElement('div');
